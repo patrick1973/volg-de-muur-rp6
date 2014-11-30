@@ -1,0 +1,18 @@
+D:\Users\Patrick van Ieperen\Dropbox\RP6Projecten\Sharp afstand sensor\C#_RP6\FollowTheWall\FollowTheWall\bin\Debug\FollowTheWall.exe.config
+D:\Users\Patrick van Ieperen\Dropbox\RP6Projecten\Sharp afstand sensor\C#_RP6\FollowTheWall\FollowTheWall\bin\Debug\FollowTheWall.exe
+D:\Users\Patrick van Ieperen\Dropbox\RP6Projecten\Sharp afstand sensor\C#_RP6\FollowTheWall\FollowTheWall\bin\Debug\FollowTheWall.pdb
+D:\Users\Patrick van Ieperen\Dropbox\RP6Projecten\Sharp afstand sensor\C#_RP6\FollowTheWall\FollowTheWall\obj\Debug\FollowTheWall.csprojResolveAssemblyReference.cache
+D:\Users\Patrick van Ieperen\Dropbox\RP6Projecten\Sharp afstand sensor\C#_RP6\FollowTheWall\FollowTheWall\obj\Debug\FollowTheWall.Form1.resources
+D:\Users\Patrick van Ieperen\Dropbox\RP6Projecten\Sharp afstand sensor\C#_RP6\FollowTheWall\FollowTheWall\obj\Debug\FollowTheWall.Properties.Resources.resources
+D:\Users\Patrick van Ieperen\Dropbox\RP6Projecten\Sharp afstand sensor\C#_RP6\FollowTheWall\FollowTheWall\obj\Debug\FollowTheWall.csproj.GenerateResource.Cache
+D:\Users\Patrick van Ieperen\Dropbox\RP6Projecten\Sharp afstand sensor\C#_RP6\FollowTheWall\FollowTheWall\obj\Debug\FollowTheWall.exe
+D:\Users\Patrick van Ieperen\Dropbox\RP6Projecten\Sharp afstand sensor\C#_RP6\FollowTheWall\FollowTheWall\obj\Debug\FollowTheWall.pdb
+O:\RP6Projecten\Sharp afstand sensor\C#_RP6\FollowTheWall\FollowTheWall\bin\Debug\FollowTheWall.exe.config
+O:\RP6Projecten\Sharp afstand sensor\C#_RP6\FollowTheWall\FollowTheWall\obj\Debug\FollowTheWall.exe
+O:\RP6Projecten\Sharp afstand sensor\C#_RP6\FollowTheWall\FollowTheWall\obj\Debug\FollowTheWall.pdb
+O:\RP6Projecten\Sharp afstand sensor\C#_RP6\FollowTheWall\FollowTheWall\bin\Debug\FollowTheWall.exe
+O:\RP6Projecten\Sharp afstand sensor\C#_RP6\FollowTheWall\FollowTheWall\bin\Debug\FollowTheWall.pdb
+O:\RP6Projecten\Sharp afstand sensor\C#_RP6\FollowTheWall\FollowTheWall\obj\Debug\FollowTheWall.csprojResolveAssemblyReference.cache
+O:\RP6Projecten\Sharp afstand sensor\C#_RP6\FollowTheWall\FollowTheWall\obj\Debug\FollowTheWall.Form1.resources
+O:\RP6Projecten\Sharp afstand sensor\C#_RP6\FollowTheWall\FollowTheWall\obj\Debug\FollowTheWall.Properties.Resources.resources
+O:\RP6Projecten\Sharp afstand sensor\C#_RP6\FollowTheWall\FollowTheWall\obj\Debug\FollowTheWall.csproj.GenerateResource.Cache
