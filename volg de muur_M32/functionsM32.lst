@@ -1,0 +1,407 @@
+   1               		.file	"functionsM32.c"
+   2               	__SREG__ = 0x3f
+   3               	__SP_H__ = 0x3e
+   4               	__SP_L__ = 0x3d
+   5               	__CCP__  = 0x34
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+  15               	.Ltext0:
+  16               	.global	printDataToCSharpApplcation
+  18               	printDataToCSharpApplcation:
+  19               	.LFB10:
+  20               	.LM1:
+  21               	.LVL0:
+  22 0000 EF92      		push r14
+  23 0002 FF92      		push r15
+  24 0004 0F93      		push r16
+  25 0006 1F93      		push r17
+  26               	/* prologue: function */
+  27               	/* frame size = 0 */
+  28 0008 8C01      		movw r16,r24
+  29 000a 7B01      		movw r14,r22
+  30               	.LM2:
+  31 000c 84E2      		ldi r24,lo8(36)
+  32               	.LVL1:
+  33 000e 0E94 0000 		call writeChar
+  34               	.LVL2:
+  35               	.LM3:
+  36 0012 F801      		movw r30,r16
+  37 0014 8481      		ldd r24,Z+4
+  38 0016 9581      		ldd r25,Z+5
+  39 0018 6AE0      		ldi r22,lo8(10)
+  40 001a 0E94 0000 		call writeInteger
+  41               	.LM4:
+  42 001e 8CE2      		ldi r24,lo8(44)
+  43 0020 0E94 0000 		call writeChar
+  44               	.LM5:
+  45 0024 F801      		movw r30,r16
+  46 0026 8081      		ld r24,Z
+  47 0028 9181      		ldd r25,Z+1
+  48 002a 6AE0      		ldi r22,lo8(10)
+  49 002c 0E94 0000 		call writeInteger
+  50               	.LM6:
+  51 0030 8CE2      		ldi r24,lo8(44)
+  52 0032 0E94 0000 		call writeChar
+  53               	.LM7:
+  54 0036 F801      		movw r30,r16
+  55 0038 8681      		ldd r24,Z+6
+  56 003a 9781      		ldd r25,Z+7
+  57 003c 6AE0      		ldi r22,lo8(10)
+  58 003e 0E94 0000 		call writeInteger
+  59               	.LM8:
+  60 0042 8CE2      		ldi r24,lo8(44)
+  61 0044 0E94 0000 		call writeChar
+  62               	.LM9:
+  63 0048 F801      		movw r30,r16
+  64 004a 8281      		ldd r24,Z+2
+  65 004c 9381      		ldd r25,Z+3
+  66 004e 6AE0      		ldi r22,lo8(10)
+  67 0050 0E94 0000 		call writeInteger
+  68               	.LM10:
+  69 0054 8CE2      		ldi r24,lo8(44)
+  70 0056 0E94 0000 		call writeChar
+  71               	.LM11:
+  72 005a F801      		movw r30,r16
+  73 005c 8085      		ldd r24,Z+8
+  74 005e 9185      		ldd r25,Z+9
+  75 0060 6AE0      		ldi r22,lo8(10)
+  76 0062 0E94 0000 		call writeInteger
+  77               	.LM12:
+  78 0066 8CE2      		ldi r24,lo8(44)
+  79 0068 0E94 0000 		call writeChar
+  80               	.LM13:
+  81 006c F801      		movw r30,r16
+  82 006e 8285      		ldd r24,Z+10
+  83 0070 9385      		ldd r25,Z+11
+  84 0072 6AE0      		ldi r22,lo8(10)
+  85 0074 0E94 0000 		call writeInteger
+  86               	.LM14:
+  87 0078 8CE2      		ldi r24,lo8(44)
+  88 007a 0E94 0000 		call writeChar
+  89               	.LM15:
+  90 007e C701      		movw r24,r14
+  91 0080 6AE0      		ldi r22,lo8(10)
+  92 0082 0E94 0000 		call writeInteger
+  93               	.LM16:
+  94 0086 8CE2      		ldi r24,lo8(44)
+  95 0088 0E94 0000 		call writeChar
+  96               	.LM17:
+  97 008c 80E0      		ldi r24,lo8(0)
+  98 008e 90E0      		ldi r25,hi8(0)
+  99 0090 6AE0      		ldi r22,lo8(10)
+ 100 0092 0E94 0000 		call writeInteger
+ 101               	.LM18:
+ 102 0096 8CE2      		ldi r24,lo8(44)
+ 103 0098 0E94 0000 		call writeChar
+ 104               	.LM19:
+ 105 009c 83E2      		ldi r24,lo8(35)
+ 106 009e 0E94 0000 		call writeChar
+ 107               	.LM20:
+ 108 00a2 8AE0      		ldi r24,lo8(10)
+ 109 00a4 0E94 0000 		call writeChar
+ 110               	/* epilogue start */
+ 111               	.LM21:
+ 112 00a8 1F91      		pop r17
+ 113 00aa 0F91      		pop r16
+ 114               	.LVL3:
+ 115 00ac FF90      		pop r15
+ 116 00ae EF90      		pop r14
+ 117               	.LVL4:
+ 118 00b0 0895      		ret
+ 119               	.LFE10:
+ 121               		.data
+ 122               	.LC0:
+ 123 0000 4C00      		.string	"L"
+ 124               	.LC1:
+ 125 0002 444C 00   		.string	"DL"
+ 126               	.LC2:
+ 127 0005 5200      		.string	"R"
+ 128               	.LC3:
+ 129 0007 4452 00   		.string	"DR"
+ 130               		.text
+ 131               	.global	printScharpSensorsValues
+ 133               	printScharpSensorsValues:
+ 134               	.LFB8:
+ 135               	.LM22:
+ 136               	.LVL5:
+ 137 00b2 CF92      		push r12
+ 138 00b4 DF92      		push r13
+ 139 00b6 EF92      		push r14
+ 140 00b8 FF92      		push r15
+ 141 00ba 0F93      		push r16
+ 142 00bc 1F93      		push r17
+ 143               	/* prologue: function */
+ 144               	/* frame size = 0 */
+ 145 00be 8C01      		movw r16,r24
+ 146               	.LM23:
+ 147 00c0 0E94 0000 		call clearLCD
+ 148               	.LVL6:
+ 149               	.LM24:
+ 150 00c4 80E0      		ldi r24,lo8(0)
+ 151 00c6 60E0      		ldi r22,lo8(0)
+ 152 00c8 0E94 0000 		call setCursorPosLCD
+ 153               	.LM25:
+ 154 00cc 90E0      		ldi r25,lo8(.LC0)
+ 155 00ce C92E      		mov r12,r25
+ 156 00d0 90E0      		ldi r25,hi8(.LC0)
+ 157 00d2 D92E      		mov r13,r25
+ 158 00d4 C601      		movw r24,r12
+ 159 00d6 0E94 0000 		call writeStringLCD
+ 160               	.LM26:
+ 161 00da F801      		movw r30,r16
+ 162 00dc 8481      		ldd r24,Z+4
+ 163 00de 9581      		ldd r25,Z+5
+ 164 00e0 6AE0      		ldi r22,lo8(10)
+ 165 00e2 0E94 0000 		call writeIntegerLCD
+ 166               	.LM27:
+ 167 00e6 80E0      		ldi r24,lo8(0)
+ 168 00e8 65E0      		ldi r22,lo8(5)
+ 169 00ea 0E94 0000 		call setCursorPosLCD
+ 170               	.LM28:
+ 171 00ee 80E0      		ldi r24,lo8(.LC1)
+ 172 00f0 90E0      		ldi r25,hi8(.LC1)
+ 173 00f2 0E94 0000 		call writeStringLCD
+ 174               	.LM29:
+ 175 00f6 F801      		movw r30,r16
+ 176 00f8 8285      		ldd r24,Z+10
+ 177 00fa 9385      		ldd r25,Z+11
+ 178 00fc 6AE0      		ldi r22,lo8(10)
+ 179 00fe 0E94 0000 		call writeIntegerLCD
+ 180               	.LM30:
+ 181 0102 80E0      		ldi r24,lo8(0)
+ 182 0104 6CE0      		ldi r22,lo8(12)
+ 183 0106 0E94 0000 		call setCursorPosLCD
+ 184               	.LM31:
+ 185 010a 80E0      		ldi r24,lo8(.LC2)
+ 186 010c E82E      		mov r14,r24
+ 187 010e 80E0      		ldi r24,hi8(.LC2)
+ 188 0110 F82E      		mov r15,r24
+ 189 0112 C701      		movw r24,r14
+ 190 0114 0E94 0000 		call writeStringLCD
+ 191               	.LM32:
+ 192 0118 F801      		movw r30,r16
+ 193 011a 8081      		ld r24,Z
+ 194 011c 9181      		ldd r25,Z+1
+ 195 011e 6AE0      		ldi r22,lo8(10)
+ 196 0120 0E94 0000 		call writeIntegerLCD
+ 197               	.LM33:
+ 198 0124 81E0      		ldi r24,lo8(1)
+ 199 0126 60E0      		ldi r22,lo8(0)
+ 200 0128 0E94 0000 		call setCursorPosLCD
+ 201               	.LM34:
+ 202 012c C601      		movw r24,r12
+ 203 012e 0E94 0000 		call writeStringLCD
+ 204               	.LM35:
+ 205 0132 F801      		movw r30,r16
+ 206 0134 8681      		ldd r24,Z+6
+ 207 0136 9781      		ldd r25,Z+7
+ 208 0138 6AE0      		ldi r22,lo8(10)
+ 209 013a 0E94 0000 		call writeIntegerLCD
+ 210               	.LM36:
+ 211 013e 81E0      		ldi r24,lo8(1)
+ 212 0140 65E0      		ldi r22,lo8(5)
+ 213 0142 0E94 0000 		call setCursorPosLCD
+ 214               	.LM37:
+ 215 0146 80E0      		ldi r24,lo8(.LC3)
+ 216 0148 90E0      		ldi r25,hi8(.LC3)
+ 217 014a 0E94 0000 		call writeStringLCD
+ 218               	.LM38:
+ 219 014e F801      		movw r30,r16
+ 220 0150 8085      		ldd r24,Z+8
+ 221 0152 9185      		ldd r25,Z+9
+ 222 0154 6AE0      		ldi r22,lo8(10)
+ 223 0156 0E94 0000 		call writeIntegerLCD
+ 224               	.LM39:
+ 225 015a 81E0      		ldi r24,lo8(1)
+ 226 015c 6CE0      		ldi r22,lo8(12)
+ 227 015e 0E94 0000 		call setCursorPosLCD
+ 228               	.LM40:
+ 229 0162 C701      		movw r24,r14
+ 230 0164 0E94 0000 		call writeStringLCD
+ 231               	.LM41:
+ 232 0168 F801      		movw r30,r16
+ 233 016a 8281      		ldd r24,Z+2
+ 234 016c 9381      		ldd r25,Z+3
+ 235 016e 6AE0      		ldi r22,lo8(10)
+ 236 0170 0E94 0000 		call writeIntegerLCD
+ 237               	/* epilogue start */
+ 238               	.LM42:
+ 239 0174 1F91      		pop r17
+ 240 0176 0F91      		pop r16
+ 241               	.LVL7:
+ 242 0178 FF90      		pop r15
+ 243 017a EF90      		pop r14
+ 244 017c DF90      		pop r13
+ 245 017e CF90      		pop r12
+ 246 0180 0895      		ret
+ 247               	.LFE8:
+ 249               	.global	readRearDistanceSensors
+ 251               	readRearDistanceSensors:
+ 252               	.LFB7:
+ 253               	.LM43:
+ 254               	.LVL8:
+ 255 0182 EF92      		push r14
+ 256 0184 FF92      		push r15
+ 257 0186 0F93      		push r16
+ 258 0188 1F93      		push r17
+ 259               	/* prologue: function */
+ 260               	/* frame size = 0 */
+ 261 018a 8C01      		movw r16,r24
+ 262 018c 7B01      		movw r14,r22
+ 263               	.LM44:
+ 264 018e 83E0      		ldi r24,lo8(3)
+ 265               	.LVL9:
+ 266 0190 0E94 0000 		call readADC
+ 267               	.LVL10:
+ 268 0194 F801      		movw r30,r16
+ 269 0196 9183      		std Z+1,r25
+ 270 0198 8083      		st Z,r24
+ 271               	.LM45:
+ 272 019a 82E0      		ldi r24,lo8(2)
+ 273 019c 0E94 0000 		call readADC
+ 274 01a0 F701      		movw r30,r14
+ 275 01a2 9183      		std Z+1,r25
+ 276 01a4 8083      		st Z,r24
+ 277               	/* epilogue start */
+ 278               	.LM46:
+ 279 01a6 1F91      		pop r17
+ 280 01a8 0F91      		pop r16
+ 281               	.LVL11:
+ 282 01aa FF90      		pop r15
+ 283 01ac EF90      		pop r14
+ 284               	.LVL12:
+ 285 01ae 0895      		ret
+ 286               	.LFE7:
+ 288               	.global	getSharpSensorInfo
+ 290               	getSharpSensorInfo:
+ 291               	.LFB9:
+ 292               	.LM47:
+ 293               	.LVL13:
+ 294 01b0 0F93      		push r16
+ 295 01b2 1F93      		push r17
+ 296               	/* prologue: function */
+ 297               	/* frame size = 0 */
+ 298 01b4 8C01      		movw r16,r24
+ 299               	.LM48:
+ 300 01b6 0496      		adiw r24,4
+ 301               	.LVL14:
+ 302 01b8 B801      		movw r22,r16
+ 303 01ba 0E94 0000 		call readFrontDistanceSensors
+ 304               	.LM49:
+ 305 01be B801      		movw r22,r16
+ 306 01c0 6E5F      		subi r22,lo8(-(2))
+ 307 01c2 7F4F      		sbci r23,hi8(-(2))
+ 308 01c4 C801      		movw r24,r16
+ 309 01c6 0696      		adiw r24,6
+ 310 01c8 0E94 0000 		call readRearDistanceSensors
+ 311               	.LM50:
+ 312 01cc F801      		movw r30,r16
+ 313 01ce 8681      		ldd r24,Z+6
+ 314 01d0 9781      		ldd r25,Z+7
+ 315 01d2 2481      		ldd r18,Z+4
+ 316 01d4 3581      		ldd r19,Z+5
+ 317 01d6 821B      		sub r24,r18
+ 318 01d8 930B      		sbc r25,r19
+ 319 01da 9387      		std Z+11,r25
+ 320 01dc 8287      		std Z+10,r24
+ 321               	.LM51:
+ 322 01de 8281      		ldd r24,Z+2
+ 323 01e0 9381      		ldd r25,Z+3
+ 324 01e2 2081      		ld r18,Z
+ 325 01e4 3181      		ldd r19,Z+1
+ 326 01e6 821B      		sub r24,r18
+ 327 01e8 930B      		sbc r25,r19
+ 328 01ea 9187      		std Z+9,r25
+ 329 01ec 8087      		std Z+8,r24
+ 330               	/* epilogue start */
+ 331               	.LM52:
+ 332 01ee 1F91      		pop r17
+ 333 01f0 0F91      		pop r16
+ 334               	.LVL15:
+ 335 01f2 0895      		ret
+ 336               	.LFE9:
+ 338               	.global	runningLight
+ 340               	runningLight:
+ 341               	.LFB6:
+ 342               	.LM53:
+ 343               	/* prologue: function */
+ 344               	/* frame size = 0 */
+ 345               	.LM54:
+ 346 01f4 8091 0000 		lds r24,stopwatches+1
+ 347 01f8 9091 0000 		lds r25,(stopwatches+1)+1
+ 348 01fc 8536      		cpi r24,101
+ 349 01fe 9105      		cpc r25,__zero_reg__
+ 350 0200 00F0      		brlo .L15
+ 351               	.LM55:
+ 352 0202 8091 0000 		lds r24,runLight.1798
+ 353 0206 0E94 0000 		call setLEDs
+ 354               	.LM56:
+ 355 020a 8091 0000 		lds r24,dir.1799
+ 356 020e 9091 0000 		lds r25,runLight.1798
+ 357 0212 8823      		tst r24
+ 358 0214 01F4      		brne .L11
+ 359               	.LM57:
+ 360 0216 990F      		lsl r25
+ 361 0218 00C0      		rjmp .L16
+ 362               	.L11:
+ 363               	.LM58:
+ 364 021a 9695      		lsr r25
+ 365               	.L16:
+ 366 021c 9093 0000 		sts runLight.1798,r25
+ 367               	.LM59:
+ 368 0220 8091 0000 		lds r24,runLight.1798
+ 369 0224 8830      		cpi r24,lo8(8)
+ 370 0226 00F0      		brlo .L13
+ 371               	.LM60:
+ 372 0228 81E0      		ldi r24,lo8(1)
+ 373 022a 8093 0000 		sts dir.1799,r24
+ 374 022e 00C0      		rjmp .L14
+ 375               	.L13:
+ 376               	.LM61:
+ 377 0230 8230      		cpi r24,lo8(2)
+ 378 0232 00F4      		brsh .L14
+ 379               	.LM62:
+ 380 0234 1092 0000 		sts dir.1799,__zero_reg__
+ 381               	.L14:
+ 382               	.LM63:
+ 383 0238 1092 0000 		sts (stopwatches+1)+1,__zero_reg__
+ 384 023c 1092 0000 		sts stopwatches+1,__zero_reg__
+ 385               	.L15:
+ 386 0240 0895      		ret
+ 387               	.LFE6:
+ 389               		.lcomm dir.1799,1
+ 390               		.data
+ 393               	runLight.1798:
+ 394 000a 01        		.byte	1
+ 395               		.comm timer,2,1
+ 452               	.Letext0:
+DEFINED SYMBOLS
+                            *ABS*:00000000 functionsM32.c
+C:\Users\patje\AppData\Local\Temp/cce8OtBH.s:2      *ABS*:0000003f __SREG__
+C:\Users\patje\AppData\Local\Temp/cce8OtBH.s:3      *ABS*:0000003e __SP_H__
+C:\Users\patje\AppData\Local\Temp/cce8OtBH.s:4      *ABS*:0000003d __SP_L__
+C:\Users\patje\AppData\Local\Temp/cce8OtBH.s:5      *ABS*:00000034 __CCP__
+C:\Users\patje\AppData\Local\Temp/cce8OtBH.s:6      *ABS*:00000000 __tmp_reg__
+C:\Users\patje\AppData\Local\Temp/cce8OtBH.s:7      *ABS*:00000001 __zero_reg__
+C:\Users\patje\AppData\Local\Temp/cce8OtBH.s:18     .text:00000000 printDataToCSharpApplcation
+C:\Users\patje\AppData\Local\Temp/cce8OtBH.s:133    .text:000000b2 printScharpSensorsValues
+C:\Users\patje\AppData\Local\Temp/cce8OtBH.s:251    .text:00000182 readRearDistanceSensors
+C:\Users\patje\AppData\Local\Temp/cce8OtBH.s:290    .text:000001b0 getSharpSensorInfo
+C:\Users\patje\AppData\Local\Temp/cce8OtBH.s:340    .text:000001f4 runningLight
+C:\Users\patje\AppData\Local\Temp/cce8OtBH.s:393    .data:0000000a runLight.1798
+                             .bss:00000000 dir.1799
+                            *COM*:00000002 timer
+
+UNDEFINED SYMBOLS
+writeChar
+writeInteger
+clearLCD
+setCursorPosLCD
+writeStringLCD
+writeIntegerLCD
+readADC
+readFrontDistanceSensors
+stopwatches
+setLEDs
+__do_copy_data
+__do_clear_bss

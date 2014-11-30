@@ -1,0 +1,1055 @@
+Archive member included because of file (symbol)
+
+d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3.o)
+                              PIDcontrol.o (__subsf3)
+d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3x.o)
+                              d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3.o) (__addsf3x)
+d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(floatsisf.o)
+                              VolgDeMuurM32.o (__floatsisf)
+d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_inf.o)
+                              d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3x.o) (__fp_inf)
+d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_nan.o)
+                              d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3x.o) (__fp_nan)
+d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_pscA.o)
+                              d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3x.o) (__fp_pscA)
+d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_pscB.o)
+                              d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3x.o) (__fp_pscB)
+d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_round.o)
+                              d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3.o) (__fp_round)
+d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_split3.o)
+                              d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3x.o) (__fp_split3)
+d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_zero.o)
+                              d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3x.o) (__fp_zero)
+d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(mulsf3.o)
+                              PIDcontrol.o (__mulsf3)
+d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(mulsf3x.o)
+                              d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(mulsf3.o) (__mulsf3x)
+d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodqi4.o)
+                              Ds1307.o (__udivmodqi4)
+d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+                              CMP_S10_compass.o (__udivmodhi4)
+d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                              d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o (exit)
+d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+                              VolgDeMuurM32.o (__do_copy_data)
+d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+                              VolgDeMuurM32.o (__do_clear_bss)
+d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(itoa.o)
+                              ../RP6lib/RP6control/RP6ControlLib.o (itoa)
+d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strrev.o)
+                              d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(itoa.o) (strrev)
+
+Allocating common symbols
+Common symbol       size              file
+
+sharpSensor         0xc               VolgDeMuurM32.o
+pid                 0x4               VolgDeMuurM32.o
+timer               0x2               VolgDeMuurM32.o
+uart_status         0x1               ../RP6lib/RP6common/RP6uart.o
+transmit_buffer     0xa               I2Cmaster.o
+controlStatus       0x1               ../RP6lib/RP6control/RP6ControlLib.o
+compassModule       0x12              VolgDeMuurM32.o
+lcd_tmp_buffer      0x11              ../RP6lib/RP6control/RP6ControlLib.o
+stopwatches         0x11              ../RP6lib/RP6control/RP6ControlLib.o
+externalPort        0x1               ../RP6lib/RP6control/RP6ControlLib.o
+RP6data             0x20              I2Cmaster.o
+delay_timer         0x1               ../RP6lib/RP6control/RP6ControlLib.o
+ms_timer            0x1               ../RP6lib/RP6control/RP6ControlLib.o
+pidValues           0x20              VolgDeMuurM32.o
+uart_receive_buffer
+                    0x21              ../RP6lib/RP6common/RP6uart.o
+sound_timer         0x2               ../RP6lib/RP6control/RP6ControlLib.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x00000000         0x00020000         xr
+data             0x00800060         0x0000ffa0         rw !x
+eeprom           0x00810000         0x00010000         rw !x
+fuse             0x00820000         0x00000400         rw !x
+lock             0x00830000         0x00000400         rw !x
+signature        0x00840000         0x00000400         rw !x
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+LOAD VolgDeMuurM32.o
+LOAD ../RP6lib/RP6control/RP6ControlLib.o
+LOAD ../RP6lib/RP6common/RP6uart.o
+LOAD ../RP6lib/RP6common/RP6I2CmasterTWI.o
+LOAD functionsM32.o
+LOAD I2Cmaster.o
+LOAD PIDcontrol.o
+LOAD CMP_S10_compass.o
+LOAD Ds1307.o
+LOAD d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a
+LOAD d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
+LOAD d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a
+LOAD d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x00000000     0x2c1a
+ *(.vectors)
+ .vectors       0x00000000       0x54 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+                0x00000000                __vectors
+                0x00000000                __vector_default
+ *(.vectors)
+ *(.progmem.gcc*)
+ *(.progmem*)
+ .progmem.data  0x00000054      0x89c I2Cmaster.o
+ .progmem.data  0x000008f0      0x13e CMP_S10_compass.o
+ .progmem.data  0x00000a2e       0x19 Ds1307.o
+                0x00000a48                . = ALIGN (0x2)
+ *fill*         0x00000a47        0x1 00
+                0x00000a48                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x00000a48        0x0 linker stubs
+ *(.trampolines*)
+                0x00000a48                __trampolines_end = .
+ *(.jumptables)
+ *(.jumptables*)
+ *(.lowtext)
+ *(.lowtext*)
+                0x00000a48                __ctors_start = .
+ *(.ctors)
+                0x00000a48                __ctors_end = .
+                0x00000a48                __dtors_start = .
+ *(.dtors)
+                0x00000a48                __dtors_end = .
+ SORT(*)(.ctors)
+ SORT(*)(.dtors)
+ *(.init0)
+ .init0         0x00000a48        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+                0x00000a48                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x00000a48        0xc d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+ *(.init2)
+ *(.init3)
+ *(.init3)
+ *(.init4)
+ .init4         0x00000a54       0x16 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+                0x00000a54                __do_copy_data
+ .init4         0x00000a6a       0x10 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+                0x00000a6a                __do_clear_bss
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x00000a7a        0x8 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+ *(.init9)
+ *(.text)
+ .text          0x00000a82        0x4 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+                0x00000a82                __vector_12
+                0x00000a82                __bad_interrupt
+                0x00000a82                __vector_6
+                0x00000a82                __vector_11
+                0x00000a82                __vector_17
+                0x00000a82                __vector_7
+                0x00000a82                __vector_5
+                0x00000a82                __vector_4
+                0x00000a82                __vector_9
+                0x00000a82                __vector_15
+                0x00000a82                __vector_8
+                0x00000a82                __vector_14
+                0x00000a82                __vector_16
+                0x00000a82                __vector_18
+                0x00000a82                __vector_20
+ .text          0x00000a86      0x18a VolgDeMuurM32.o
+                0x00000a86                taskFrontSensors
+                0x00000abc                main
+ .text          0x00000c10      0x8d6 ../RP6lib/RP6control/RP6ControlLib.o
+                0x000013ea                initRP6Control
+                0x000013c0                mSleep
+                0x00000c1c                __vector_1
+                0x00001388                setBeeperPitch
+                0x00000db4                SPI_EEPROM_readByte
+                0x00000d82                writeBufferSPI
+                0x00000ed8                setLEDs
+                0x00000e36                SPI_EEPROM_writeBytes
+                0x00000f5a                initLCD
+                0x00001462                writeIntegerLengthLCD
+                0x000011aa                checkReleasedKeyEvent
+                0x00000f18                write4BitLCDData
+                0x000013a6                sleep
+                0x00000c6c                INT1_setEventHandler
+                0x00000cd0                __vector_3
+                0x000013de                delayCycles
+                0x00001188                checkPressedKeyEvent
+                0x00000d9a                readBufferSPI
+                0x00000e02                SPI_EEPROM_enableWrite
+                0x00000d1e                readADC
+                0x0000109e                writeStringLengthLCD
+                0x000011fc                getMicrophonePeak
+                0x00000f40                writeLCDCommand
+                0x00000eec                setLCDD
+                0x000010c8                setCursorPosLCD
+                0x00000ec4                outputExt
+                0x00001034                clearLCD
+                0x00000d74                writeWordSPI
+                0x00000d3e                writeSPI
+                0x00000c12                INT0_setEventHandler
+                0x00000c76                __vector_2
+                0x000011d4                dischargePeakDetector
+                0x0000104e                writeCharLCD
+                0x00001084                writeStringLCD
+                0x00000d46                readSPI
+                0x00000c6a                INT1_event_DUMMY
+                0x00001444                writeIntegerLCD
+                0x00000e8e                SPI_EEPROM_writeByte
+                0x00000cc6                INT2_setEventHandler
+                0x0000136c                beep
+                0x00001120                getPressedKeyNumber
+                0x00001106                clearPosLCD
+                0x00000c10                INT0_event_DUMMY
+                0x00000d52                readWordSPI
+                0x000010d8                _showScreenLCD_P
+                0x00000dd4                SPI_EEPROM_readBytes
+                0x0000121a                __vector_10
+                0x00001068                writeNStringLCD_P
+                0x00000e1e                SPI_EEPROM_getStatus
+                0x00000e10                SPI_EEPROM_disableWrite
+                0x00000cc4                INT2_event_DUMMY
+ .text          0x000014e6      0x22e ../RP6lib/RP6common/RP6uart.o
+                0x000015a2                readChar
+                0x000015e0                readChars
+                0x00001626                getBufferLength
+                0x00001632                clearReceptionBuffer
+                0x000014ee                writeString
+                0x00001696                writeIntegerLength
+                0x00001534                __vector_13
+                0x00001652                writeInteger
+                0x000014e6                writeChar
+                0x00001516                writeStringLength
+                0x00001502                writeNStringP
+ .text          0x00001714      0x668 ../RP6lib/RP6common/RP6I2CmasterTWI.o
+                0x00001c1e                I2CTWI_transmitBytes
+                0x00001b42                I2CTWI_transmit3Bytes
+                0x0000198e                I2CTWI_readBytes
+                0x00001730                I2CTWI_requestedDataReady_DUMMY
+                0x00001a8c                I2CTWI_transmitByte
+                0x00001714                __I2CTWI_initMaster
+                0x00001748                I2CTWI_delay
+                0x0000173e                I2CTWI_setTransmissionErrorHandler
+                0x0000185c                I2CTWI_requestDataFromDevice
+                0x00001732                I2CTWI_setRequestedDataReadyHandler
+                0x00001c98                __vector_19
+                0x00001bac                I2CTWI_transmit4Bytes
+                0x0000190c                I2CTWI_getState
+                0x00001768                task_I2CTWI
+                0x0000189a                I2CTWI_requestRegisterFromDevice
+                0x00001ae2                I2CTWI_transmit2Bytes
+                0x000018e2                I2CTWI_getReceivedData
+                0x0000173c                I2CTWI_transmissionError_DUMMY
+                0x00001918                I2CTWI_readRegisters
+                0x00001a18                I2CTWI_readByte
+ .text          0x00001d7c      0x242 functionsM32.o
+                0x00001f70                runningLight
+                0x00001efe                readRearDistanceSensors
+                0x00001d7c                printDataToCSharpApplcation
+                0x00001f2c                getSharpSensorInfo
+                0x00001e2e                printScharpSensorsValues
+ .text          0x00001fbe      0x342 I2Cmaster.o
+                0x00001fbe                RP6_rotate
+                0x00002112                I2C_transmissionError
+                0x00002044                getMotorLeftCurrent
+                0x0000200e                getMotorRightCurrent
+                0x0000207a                getbatteryLevel
+                0x00002286                readAllRegisters
+                0x00001fe6                moveAtSpeed
+                0x000020b0                readFrontDistanceSensors
+ .text          0x00002300       0xce PIDcontrol.o
+                0x00002300                pidController
+ .text          0x000023ce      0x35a CMP_S10_compass.o
+                0x0000246e                writeSerialCompass
+                0x000023ce                WriteLCD
+                0x000025c6                ReadCompass
+ .text          0x00002728      0x1a0 Ds1307.o
+                0x000027dc                readRtc
+                0x00002728                decToBcd
+                0x0000275e                I2C_requestedDataReadyRtc
+                0x00002768                setRtc
+                0x0000274a                bcdToDec
+ .text          0x000028c8        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3.o)
+ .text          0x000028c8        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3x.o)
+ .text          0x000028c8        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(floatsisf.o)
+ .text          0x000028c8        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_inf.o)
+ .text          0x000028c8        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_nan.o)
+ .text          0x000028c8        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_pscA.o)
+ .text          0x000028c8        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_pscB.o)
+ .text          0x000028c8        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_round.o)
+ .text          0x000028c8        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_split3.o)
+ .text          0x000028c8        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_zero.o)
+ .text          0x000028c8        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(mulsf3.o)
+ .text          0x000028c8        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(mulsf3x.o)
+ .text          0x000028c8        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodqi4.o)
+ .text          0x000028c8        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+ .text          0x000028c8        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text          0x000028c8        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .text          0x000028c8        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .text          0x000028c8        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(itoa.o)
+ .text          0x000028c8        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strrev.o)
+                0x000028c8                . = ALIGN (0x2)
+ *(.text.*)
+ .text.avr-libc.fplib
+                0x000028c8        0xa d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3.o)
+                0x000028c8                __subsf3
+                0x000028ca                __addsf3
+ .text.avr-libc.fplib
+                0x000028d2       0xc0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3x.o)
+                0x000028ec                __addsf3x
+ .text.avr-libc.fplib
+                0x00002992       0x7a d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(floatsisf.o)
+                0x00002996                __floatsisf
+                0x00002992                __floatunsisf
+ .text.avr-libc.fplib
+                0x00002a0c        0xc d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_inf.o)
+                0x00002a0c                __fp_inf
+ .text.avr-libc.fplib
+                0x00002a18        0x6 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_nan.o)
+                0x00002a18                __fp_nan
+ .text.avr-libc.fplib
+                0x00002a1e        0xe d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_pscA.o)
+                0x00002a1e                __fp_pscA
+ .text.avr-libc.fplib
+                0x00002a2c        0xe d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_pscB.o)
+                0x00002a2c                __fp_pscB
+ .text.avr-libc.fplib
+                0x00002a3a       0x22 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_round.o)
+                0x00002a3a                __fp_round
+ .text.avr-libc.fplib
+                0x00002a5c       0x44 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_split3.o)
+                0x00002a5c                __fp_split3
+                0x00002a6c                __fp_splitA
+ .text.avr-libc.fplib
+                0x00002aa0        0xe d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_zero.o)
+                0x00002aa0                __fp_zero
+                0x00002aa2                __fp_szero
+ .text.avr-libc.fplib
+                0x00002aae        0x4 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(mulsf3.o)
+                0x00002aae                __mulsf3
+ .text.avr-libc.fplib
+                0x00002ab2       0xc2 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(mulsf3x.o)
+                0x00002aca                __mulsf3_pse
+                0x00002ac6                __mulsf3x
+ .text.libgcc   0x00002b74       0x18 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodqi4.o)
+                0x00002b74                __udivmodqi4
+ .text.libgcc   0x00002b8c       0x28 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+                0x00002b8c                __udivmodhi4
+ .text.libgcc   0x00002bb4        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text.libgcc   0x00002bb4        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc   0x00002bb4        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .text.avr-libc
+                0x00002bb4       0x42 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(itoa.o)
+                0x00002bb4                itoa
+ .text.avr-libc
+                0x00002bf6       0x20 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strrev.o)
+                0x00002bf6                strrev
+                0x00002c16                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x00002c16        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                0x00002c16                exit
+                0x00002c16                _exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x00002c16        0x4 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ *(.fini0)
+                0x00002c1a                _etext = .
+
+.data           0x00800060       0x2a load address 0x00002c1a
+                0x00800060                PROVIDE (__data_start, .)
+ *(.data)
+ .data          0x00800060        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+ .data          0x00800060       0x14 VolgDeMuurM32.o
+                0x00800060                arrayString
+ .data          0x00800074        0x6 ../RP6lib/RP6control/RP6ControlLib.o
+ .data          0x0080007a        0x0 ../RP6lib/RP6common/RP6uart.o
+ .data          0x0080007a        0x4 ../RP6lib/RP6common/RP6I2CmasterTWI.o
+ .data          0x0080007e        0xb functionsM32.o
+ .data          0x00800089        0x0 I2Cmaster.o
+ .data          0x00800089        0x0 PIDcontrol.o
+ .data          0x00800089        0x0 CMP_S10_compass.o
+ .data          0x00800089        0x0 Ds1307.o
+ .data          0x00800089        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3.o)
+ .data          0x00800089        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3x.o)
+ .data          0x00800089        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(floatsisf.o)
+ .data          0x00800089        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_inf.o)
+ .data          0x00800089        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_nan.o)
+ .data          0x00800089        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_pscA.o)
+ .data          0x00800089        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_pscB.o)
+ .data          0x00800089        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_round.o)
+ .data          0x00800089        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_split3.o)
+ .data          0x00800089        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_zero.o)
+ .data          0x00800089        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(mulsf3.o)
+ .data          0x00800089        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(mulsf3x.o)
+ .data          0x00800089        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodqi4.o)
+ .data          0x00800089        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+ .data          0x00800089        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .data          0x00800089        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .data          0x00800089        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .data          0x00800089        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(itoa.o)
+ .data          0x00800089        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strrev.o)
+ *(.data*)
+ *(.rodata)
+ *(.rodata*)
+ *(.gnu.linkonce.d*)
+                0x0080008a                . = ALIGN (0x2)
+ *fill*         0x00800089        0x1 00
+                0x0080008a                _edata = .
+                0x0080008a                PROVIDE (__data_end, .)
+
+.bss            0x0080008a      0x12e
+                0x0080008a                PROVIDE (__bss_start, .)
+ *(.bss)
+ .bss           0x0080008a        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+ .bss           0x0080008a        0x0 VolgDeMuurM32.o
+ .bss           0x0080008a        0x2 ../RP6lib/RP6control/RP6ControlLib.o
+ .bss           0x0080008c        0x6 ../RP6lib/RP6common/RP6uart.o
+                0x0080008e                read_size
+                0x0080008d                write_pos
+                0x0080008f                write_size
+                0x0080008c                read_pos
+ .bss           0x00800092       0x4a ../RP6lib/RP6common/RP6I2CmasterTWI.o
+                0x00800095                I2CTWI_request_reg
+                0x00800094                I2CTWI_request_adr
+                0x00800097                I2CTWI_requestID
+                0x00800092                TWI_statusReg
+                0x00800093                TWI_TWSR_state
+                0x00800099                TWI_operation
+                0x00800096                I2CTWI_request_size
+ .bss           0x008000dc        0x1 functionsM32.o
+ .bss           0x008000dd        0x0 I2Cmaster.o
+ .bss           0x008000dd        0x4 PIDcontrol.o
+ .bss           0x008000e1       0x17 CMP_S10_compass.o
+ .bss           0x008000f8        0x8 Ds1307.o
+ .bss           0x00800100        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3.o)
+ .bss           0x00800100        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3x.o)
+ .bss           0x00800100        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(floatsisf.o)
+ .bss           0x00800100        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_inf.o)
+ .bss           0x00800100        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_nan.o)
+ .bss           0x00800100        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_pscA.o)
+ .bss           0x00800100        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_pscB.o)
+ .bss           0x00800100        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_round.o)
+ .bss           0x00800100        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_split3.o)
+ .bss           0x00800100        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_zero.o)
+ .bss           0x00800100        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(mulsf3.o)
+ .bss           0x00800100        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(mulsf3x.o)
+ .bss           0x00800100        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodqi4.o)
+ .bss           0x00800100        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+ .bss           0x00800100        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .bss           0x00800100        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .bss           0x00800100        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .bss           0x00800100        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(itoa.o)
+ .bss           0x00800100        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strrev.o)
+ *(.bss*)
+ *(COMMON)
+ COMMON         0x00800100       0x44 VolgDeMuurM32.o
+                0x00800100                sharpSensor
+                0x0080010c                pid
+                0x00800110                timer
+                0x00800112                compassModule
+                0x00800124                pidValues
+ COMMON         0x00800144       0x28 ../RP6lib/RP6control/RP6ControlLib.o
+                0x00800144                controlStatus
+                0x00800145                lcd_tmp_buffer
+                0x00800156                stopwatches
+                0x00800167                externalPort
+                0x00800168                delay_timer
+                0x00800169                ms_timer
+                0x0080016a                sound_timer
+ COMMON         0x0080016c       0x22 ../RP6lib/RP6common/RP6uart.o
+                0x0080016c                uart_status
+                0x0080016d                uart_receive_buffer
+ COMMON         0x0080018e       0x2a I2Cmaster.o
+                0x0080018e                transmit_buffer
+                0x00800198                RP6data
+                0x008001b8                PROVIDE (__bss_end, .)
+                0x00002c1a                __data_load_start = LOADADDR (.data)
+                0x00002c44                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x008001b8        0x0
+                0x008001b8                PROVIDE (__noinit_start, .)
+ *(.noinit*)
+                0x008001b8                PROVIDE (__noinit_end, .)
+                0x008001b8                _end = .
+                0x008001b8                PROVIDE (__heap_start, .)
+
+.eeprom         0x00810000        0x0
+ *(.eeprom*)
+                0x00810000                __eeprom_end = .
+
+.fuse
+ *(.fuse)
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature
+ *(.signature*)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment
+ *(.comment)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000      0x120
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x20 VolgDeMuurM32.o
+ .debug_aranges
+                0x00000020       0x20 ../RP6lib/RP6control/RP6ControlLib.o
+ .debug_aranges
+                0x00000040       0x20 ../RP6lib/RP6common/RP6uart.o
+ .debug_aranges
+                0x00000060       0x20 ../RP6lib/RP6common/RP6I2CmasterTWI.o
+ .debug_aranges
+                0x00000080       0x20 functionsM32.o
+ .debug_aranges
+                0x000000a0       0x20 I2Cmaster.o
+ .debug_aranges
+                0x000000c0       0x20 PIDcontrol.o
+ .debug_aranges
+                0x000000e0       0x20 CMP_S10_compass.o
+ .debug_aranges
+                0x00000100       0x20 Ds1307.o
+
+.debug_pubnames
+                0x00000000      0xb4b
+ *(.debug_pubnames)
+ .debug_pubnames
+                0x00000000       0x82 VolgDeMuurM32.o
+ .debug_pubnames
+                0x00000082      0x466 ../RP6lib/RP6control/RP6ControlLib.o
+ .debug_pubnames
+                0x000004e8      0x138 ../RP6lib/RP6common/RP6uart.o
+ .debug_pubnames
+                0x00000620      0x2b9 ../RP6lib/RP6common/RP6I2CmasterTWI.o
+ .debug_pubnames
+                0x000008d9       0x9d functionsM32.o
+ .debug_pubnames
+                0x00000976       0xec I2Cmaster.o
+ .debug_pubnames
+                0x00000a62       0x2e PIDcontrol.o
+ .debug_pubnames
+                0x00000a90       0x50 CMP_S10_compass.o
+ .debug_pubnames
+                0x00000ae0       0x6b Ds1307.o
+
+.debug_info     0x00000000     0x3423
+ *(.debug_info)
+ .debug_info    0x00000000      0x38a VolgDeMuurM32.o
+ .debug_info    0x0000038a     0x1086 ../RP6lib/RP6control/RP6ControlLib.o
+ .debug_info    0x00001410      0x3fd ../RP6lib/RP6common/RP6uart.o
+ .debug_info    0x0000180d      0x7e8 ../RP6lib/RP6common/RP6I2CmasterTWI.o
+ .debug_info    0x00001ff5      0x36b functionsM32.o
+ .debug_info    0x00002360      0x690 I2Cmaster.o
+ .debug_info    0x000029f0      0x195 PIDcontrol.o
+ .debug_info    0x00002b85      0x537 CMP_S10_compass.o
+ .debug_info    0x000030bc      0x367 Ds1307.o
+ *(.gnu.linkonce.wi.*)
+
+.debug_abbrev   0x00000000      0xd29
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000       0xe3 VolgDeMuurM32.o
+ .debug_abbrev  0x000000e3      0x359 ../RP6lib/RP6control/RP6ControlLib.o
+ .debug_abbrev  0x0000043c      0x1da ../RP6lib/RP6common/RP6uart.o
+ .debug_abbrev  0x00000616      0x245 ../RP6lib/RP6common/RP6I2CmasterTWI.o
+ .debug_abbrev  0x0000085b       0xee functionsM32.o
+ .debug_abbrev  0x00000949       0xf1 I2Cmaster.o
+ .debug_abbrev  0x00000a3a       0xd5 PIDcontrol.o
+ .debug_abbrev  0x00000b0f       0xfa CMP_S10_compass.o
+ .debug_abbrev  0x00000c09      0x120 Ds1307.o
+
+.debug_line     0x00000000     0x233c
+ *(.debug_line)
+ .debug_line    0x00000000      0x1c9 VolgDeMuurM32.o
+ .debug_line    0x000001c9      0xbf3 ../RP6lib/RP6control/RP6ControlLib.o
+ .debug_line    0x00000dbc      0x315 ../RP6lib/RP6common/RP6uart.o
+ .debug_line    0x000010d1      0x6d7 ../RP6lib/RP6common/RP6I2CmasterTWI.o
+ .debug_line    0x000017a8      0x2d6 functionsM32.o
+ .debug_line    0x00001a7e      0x33d I2Cmaster.o
+ .debug_line    0x00001dbb       0xe7 PIDcontrol.o
+ .debug_line    0x00001ea2      0x286 CMP_S10_compass.o
+ .debug_line    0x00002128      0x214 Ds1307.o
+
+.debug_frame    0x00000000      0x730
+ *(.debug_frame)
+ .debug_frame   0x00000000       0x30 VolgDeMuurM32.o
+ .debug_frame   0x00000030      0x340 ../RP6lib/RP6control/RP6ControlLib.o
+ .debug_frame   0x00000370       0xc0 ../RP6lib/RP6common/RP6uart.o
+ .debug_frame   0x00000430      0x150 ../RP6lib/RP6common/RP6I2CmasterTWI.o
+ .debug_frame   0x00000580       0x60 functionsM32.o
+ .debug_frame   0x000005e0       0x90 I2Cmaster.o
+ .debug_frame   0x00000670       0x20 PIDcontrol.o
+ .debug_frame   0x00000690       0x40 CMP_S10_compass.o
+ .debug_frame   0x000006d0       0x60 Ds1307.o
+
+.debug_str      0x00000000      0xed0
+ *(.debug_str)
+ .debug_str     0x00000000      0x2c0 VolgDeMuurM32.o
+                                0x31b (size before relaxing)
+ .debug_str     0x000002c0      0x4a4 ../RP6lib/RP6control/RP6ControlLib.o
+                                0x613 (size before relaxing)
+ .debug_str     0x00000764      0x114 ../RP6lib/RP6common/RP6uart.o
+                                0x246 (size before relaxing)
+ .debug_str     0x00000878      0x33c ../RP6lib/RP6common/RP6I2CmasterTWI.o
+                                0x461 (size before relaxing)
+ .debug_str     0x00000bb4       0xbb functionsM32.o
+                                0x31a (size before relaxing)
+ .debug_str     0x00000c6f      0x119 I2Cmaster.o
+                                0x200 (size before relaxing)
+ .debug_str     0x00000d88       0x39 PIDcontrol.o
+                                0x17e (size before relaxing)
+ .debug_str     0x00000dc1       0x4f CMP_S10_compass.o
+                                0x257 (size before relaxing)
+ .debug_str     0x00000e10       0xc0 Ds1307.o
+                                0x20f (size before relaxing)
+
+.debug_loc      0x00000000     0x10d2
+ *(.debug_loc)
+ .debug_loc     0x00000000      0x64b ../RP6lib/RP6control/RP6ControlLib.o
+ .debug_loc     0x0000064b      0x110 ../RP6lib/RP6common/RP6uart.o
+ .debug_loc     0x0000075b      0x58b ../RP6lib/RP6common/RP6I2CmasterTWI.o
+ .debug_loc     0x00000ce6       0xf0 functionsM32.o
+ .debug_loc     0x00000dd6      0x1f0 I2Cmaster.o
+ .debug_loc     0x00000fc6       0x28 PIDcontrol.o
+ .debug_loc     0x00000fee       0x78 CMP_S10_compass.o
+ .debug_loc     0x00001066       0x6c Ds1307.o
+
+.debug_macinfo
+ *(.debug_macinfo)
+OUTPUT(VolgDeMuurM32.elf elf32-avr)
+LOAD linker stubs
+
+.debug_ranges   0x00000000       0x48
+ .debug_ranges  0x00000000       0x48 ../RP6lib/RP6common/RP6uart.o
+
+Cross Reference Table
+
+Symbol                                            File
+I2CTWI_delay                                      ../RP6lib/RP6common/RP6I2CmasterTWI.o
+I2CTWI_getReceivedData                            ../RP6lib/RP6common/RP6I2CmasterTWI.o
+I2CTWI_getState                                   ../RP6lib/RP6common/RP6I2CmasterTWI.o
+I2CTWI_readByte                                   ../RP6lib/RP6common/RP6I2CmasterTWI.o
+                                                  Ds1307.o
+                                                  CMP_S10_compass.o
+I2CTWI_readBytes                                  ../RP6lib/RP6common/RP6I2CmasterTWI.o
+                                                  I2Cmaster.o
+I2CTWI_readRegisters                              ../RP6lib/RP6common/RP6I2CmasterTWI.o
+I2CTWI_requestDataFromDevice                      ../RP6lib/RP6common/RP6I2CmasterTWI.o
+I2CTWI_requestID                                  ../RP6lib/RP6common/RP6I2CmasterTWI.o
+I2CTWI_requestRegisterFromDevice                  ../RP6lib/RP6common/RP6I2CmasterTWI.o
+I2CTWI_request_adr                                ../RP6lib/RP6common/RP6I2CmasterTWI.o
+I2CTWI_request_reg                                ../RP6lib/RP6common/RP6I2CmasterTWI.o
+I2CTWI_request_size                               ../RP6lib/RP6common/RP6I2CmasterTWI.o
+I2CTWI_requestedDataReady_DUMMY                   ../RP6lib/RP6common/RP6I2CmasterTWI.o
+I2CTWI_setRequestedDataReadyHandler               ../RP6lib/RP6common/RP6I2CmasterTWI.o
+I2CTWI_setTransmissionErrorHandler                ../RP6lib/RP6common/RP6I2CmasterTWI.o
+                                                  VolgDeMuurM32.o
+I2CTWI_transmissionError_DUMMY                    ../RP6lib/RP6common/RP6I2CmasterTWI.o
+I2CTWI_transmit2Bytes                             ../RP6lib/RP6common/RP6I2CmasterTWI.o
+I2CTWI_transmit3Bytes                             ../RP6lib/RP6common/RP6I2CmasterTWI.o
+I2CTWI_transmit4Bytes                             ../RP6lib/RP6common/RP6I2CmasterTWI.o
+I2CTWI_transmitByte                               ../RP6lib/RP6common/RP6I2CmasterTWI.o
+                                                  Ds1307.o
+                                                  CMP_S10_compass.o
+                                                  I2Cmaster.o
+I2CTWI_transmitBytes                              ../RP6lib/RP6common/RP6I2CmasterTWI.o
+                                                  I2Cmaster.o
+I2C_requestedDataReadyRtc                         Ds1307.o
+I2C_transmissionError                             I2Cmaster.o
+                                                  VolgDeMuurM32.o
+INT0_event_DUMMY                                  ../RP6lib/RP6control/RP6ControlLib.o
+INT0_setEventHandler                              ../RP6lib/RP6control/RP6ControlLib.o
+INT1_event_DUMMY                                  ../RP6lib/RP6control/RP6ControlLib.o
+INT1_setEventHandler                              ../RP6lib/RP6control/RP6ControlLib.o
+INT2_event_DUMMY                                  ../RP6lib/RP6control/RP6ControlLib.o
+INT2_setEventHandler                              ../RP6lib/RP6control/RP6ControlLib.o
+RP6_rotate                                        I2Cmaster.o
+RP6data                                           I2Cmaster.o
+ReadCompass                                       CMP_S10_compass.o
+SPI_EEPROM_disableWrite                           ../RP6lib/RP6control/RP6ControlLib.o
+SPI_EEPROM_enableWrite                            ../RP6lib/RP6control/RP6ControlLib.o
+SPI_EEPROM_getStatus                              ../RP6lib/RP6control/RP6ControlLib.o
+SPI_EEPROM_readByte                               ../RP6lib/RP6control/RP6ControlLib.o
+SPI_EEPROM_readBytes                              ../RP6lib/RP6control/RP6ControlLib.o
+SPI_EEPROM_writeByte                              ../RP6lib/RP6control/RP6ControlLib.o
+SPI_EEPROM_writeBytes                             ../RP6lib/RP6control/RP6ControlLib.o
+TWI_TWSR_state                                    ../RP6lib/RP6common/RP6I2CmasterTWI.o
+TWI_operation                                     ../RP6lib/RP6common/RP6I2CmasterTWI.o
+                                                  Ds1307.o
+                                                  CMP_S10_compass.o
+TWI_statusReg                                     ../RP6lib/RP6common/RP6I2CmasterTWI.o
+WriteLCD                                          CMP_S10_compass.o
+__I2CTWI_initMaster                               ../RP6lib/RP6common/RP6I2CmasterTWI.o
+                                                  VolgDeMuurM32.o
+__addsf3                                          d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3.o)
+                                                  PIDcontrol.o
+__addsf3x                                         d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3x.o)
+                                                  d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3.o)
+__bad_interrupt                                   d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__bss_end                                         d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+__bss_start                                       d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+__data_end                                        d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+__data_load_start                                 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+__data_start                                      d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+__do_clear_bss                                    d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+                                                  Ds1307.o
+                                                  CMP_S10_compass.o
+                                                  PIDcontrol.o
+                                                  I2Cmaster.o
+                                                  functionsM32.o
+                                                  ../RP6lib/RP6common/RP6I2CmasterTWI.o
+                                                  ../RP6lib/RP6common/RP6uart.o
+                                                  ../RP6lib/RP6control/RP6ControlLib.o
+                                                  VolgDeMuurM32.o
+__do_copy_data                                    d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+                                                  functionsM32.o
+                                                  ../RP6lib/RP6common/RP6I2CmasterTWI.o
+                                                  ../RP6lib/RP6control/RP6ControlLib.o
+                                                  VolgDeMuurM32.o
+__floatsisf                                       d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(floatsisf.o)
+                                                  VolgDeMuurM32.o
+__floatunsisf                                     d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(floatsisf.o)
+__fp_inf                                          d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_inf.o)
+                                                  d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(mulsf3x.o)
+                                                  d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3x.o)
+__fp_nan                                          d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_nan.o)
+                                                  d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(mulsf3x.o)
+                                                  d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3x.o)
+__fp_pscA                                         d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_pscA.o)
+                                                  d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(mulsf3x.o)
+                                                  d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3x.o)
+__fp_pscB                                         d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_pscB.o)
+                                                  d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(mulsf3x.o)
+                                                  d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3x.o)
+__fp_round                                        d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_round.o)
+                                                  d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(mulsf3.o)
+                                                  d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3.o)
+__fp_split3                                       d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_split3.o)
+                                                  d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(mulsf3x.o)
+                                                  d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3x.o)
+__fp_splitA                                       d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_split3.o)
+__fp_szero                                        d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_zero.o)
+                                                  d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(mulsf3x.o)
+__fp_zero                                         d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_zero.o)
+                                                  d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3x.o)
+__heap_end                                        d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__init                                            d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__mulsf3                                          d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(mulsf3.o)
+                                                  PIDcontrol.o
+__mulsf3_pse                                      d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(mulsf3x.o)
+__mulsf3x                                         d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(mulsf3x.o)
+                                                  d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(mulsf3.o)
+__stack                                           d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__subsf3                                          d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3.o)
+                                                  PIDcontrol.o
+__udivmodhi4                                      d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+                                                  d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(itoa.o)
+                                                  CMP_S10_compass.o
+__udivmodqi4                                      d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodqi4.o)
+                                                  Ds1307.o
+__vector_1                                        ../RP6lib/RP6control/RP6ControlLib.o
+                                                  d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__vector_10                                       ../RP6lib/RP6control/RP6ControlLib.o
+                                                  d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__vector_11                                       d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__vector_12                                       d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__vector_13                                       ../RP6lib/RP6common/RP6uart.o
+                                                  d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__vector_14                                       d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__vector_15                                       d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__vector_16                                       d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__vector_17                                       d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__vector_18                                       d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__vector_19                                       ../RP6lib/RP6common/RP6I2CmasterTWI.o
+                                                  d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__vector_2                                        ../RP6lib/RP6control/RP6ControlLib.o
+                                                  d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__vector_20                                       d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__vector_3                                        ../RP6lib/RP6control/RP6ControlLib.o
+                                                  d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__vector_4                                        d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__vector_5                                        d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__vector_6                                        d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__vector_7                                        d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__vector_8                                        d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__vector_9                                        d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__vector_default                                  d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__vectors                                         d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+_exit                                             d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+_showScreenLCD_P                                  ../RP6lib/RP6control/RP6ControlLib.o
+arrayString                                       VolgDeMuurM32.o
+bcdToDec                                          Ds1307.o
+beep                                              ../RP6lib/RP6control/RP6ControlLib.o
+checkPressedKeyEvent                              ../RP6lib/RP6control/RP6ControlLib.o
+checkReleasedKeyEvent                             ../RP6lib/RP6control/RP6ControlLib.o
+clearLCD                                          ../RP6lib/RP6control/RP6ControlLib.o
+                                                  CMP_S10_compass.o
+                                                  functionsM32.o
+clearPosLCD                                       ../RP6lib/RP6control/RP6ControlLib.o
+clearReceptionBuffer                              ../RP6lib/RP6common/RP6uart.o
+compassModule                                     VolgDeMuurM32.o
+controlStatus                                     ../RP6lib/RP6control/RP6ControlLib.o
+decToBcd                                          Ds1307.o
+delayCycles                                       ../RP6lib/RP6control/RP6ControlLib.o
+delay_timer                                       ../RP6lib/RP6control/RP6ControlLib.o
+dischargePeakDetector                             ../RP6lib/RP6control/RP6ControlLib.o
+exit                                              d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                                                  d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+externalPort                                      ../RP6lib/RP6control/RP6ControlLib.o
+getBufferLength                                   ../RP6lib/RP6common/RP6uart.o
+getMicrophonePeak                                 ../RP6lib/RP6control/RP6ControlLib.o
+getMotorLeftCurrent                               I2Cmaster.o
+getMotorRightCurrent                              I2Cmaster.o
+getPressedKeyNumber                               ../RP6lib/RP6control/RP6ControlLib.o
+getSharpSensorInfo                                functionsM32.o
+                                                  VolgDeMuurM32.o
+getbatteryLevel                                   I2Cmaster.o
+                                                  VolgDeMuurM32.o
+initLCD                                           ../RP6lib/RP6control/RP6ControlLib.o
+                                                  VolgDeMuurM32.o
+initRP6Control                                    ../RP6lib/RP6control/RP6ControlLib.o
+                                                  VolgDeMuurM32.o
+itoa                                              d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(itoa.o)
+                                                  ../RP6lib/RP6common/RP6uart.o
+                                                  ../RP6lib/RP6control/RP6ControlLib.o
+lcd_tmp_buffer                                    ../RP6lib/RP6control/RP6ControlLib.o
+mSleep                                            ../RP6lib/RP6control/RP6ControlLib.o
+main                                              VolgDeMuurM32.o
+                                                  d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+moveAtSpeed                                       I2Cmaster.o
+ms_timer                                          ../RP6lib/RP6control/RP6ControlLib.o
+outputExt                                         ../RP6lib/RP6control/RP6ControlLib.o
+pid                                               VolgDeMuurM32.o
+pidController                                     PIDcontrol.o
+pidValues                                         VolgDeMuurM32.o
+printDataToCSharpApplcation                       functionsM32.o
+                                                  VolgDeMuurM32.o
+printScharpSensorsValues                          functionsM32.o
+                                                  VolgDeMuurM32.o
+readADC                                           ../RP6lib/RP6control/RP6ControlLib.o
+                                                  functionsM32.o
+readAllRegisters                                  I2Cmaster.o
+readBufferSPI                                     ../RP6lib/RP6control/RP6ControlLib.o
+readChar                                          ../RP6lib/RP6common/RP6uart.o
+readChars                                         ../RP6lib/RP6common/RP6uart.o
+readFrontDistanceSensors                          I2Cmaster.o
+                                                  functionsM32.o
+readRearDistanceSensors                           functionsM32.o
+readRtc                                           Ds1307.o
+readSPI                                           ../RP6lib/RP6control/RP6ControlLib.o
+readWordSPI                                       ../RP6lib/RP6control/RP6ControlLib.o
+read_pos                                          ../RP6lib/RP6common/RP6uart.o
+read_size                                         ../RP6lib/RP6common/RP6uart.o
+runningLight                                      functionsM32.o
+                                                  VolgDeMuurM32.o
+setBeeperPitch                                    ../RP6lib/RP6control/RP6ControlLib.o
+setCursorPosLCD                                   ../RP6lib/RP6control/RP6ControlLib.o
+                                                  CMP_S10_compass.o
+                                                  functionsM32.o
+setLCDD                                           ../RP6lib/RP6control/RP6ControlLib.o
+setLEDs                                           ../RP6lib/RP6control/RP6ControlLib.o
+                                                  functionsM32.o
+setRtc                                            Ds1307.o
+sharpSensor                                       VolgDeMuurM32.o
+sleep                                             ../RP6lib/RP6control/RP6ControlLib.o
+sound_timer                                       ../RP6lib/RP6control/RP6ControlLib.o
+stopwatches                                       Ds1307.o
+                                                  CMP_S10_compass.o
+                                                  functionsM32.o
+                                                  ../RP6lib/RP6control/RP6ControlLib.o
+                                                  VolgDeMuurM32.o
+strrev                                            d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strrev.o)
+                                                  d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(itoa.o)
+taskFrontSensors                                  VolgDeMuurM32.o
+task_I2CTWI                                       ../RP6lib/RP6common/RP6I2CmasterTWI.o
+timer                                             Ds1307.o
+                                                  CMP_S10_compass.o
+                                                  PIDcontrol.o
+                                                  I2Cmaster.o
+                                                  functionsM32.o
+                                                  ../RP6lib/RP6control/RP6ControlLib.o
+                                                  VolgDeMuurM32.o
+transmit_buffer                                   I2Cmaster.o
+uart_receive_buffer                               ../RP6lib/RP6common/RP6uart.o
+uart_status                                       ../RP6lib/RP6common/RP6uart.o
+write4BitLCDData                                  ../RP6lib/RP6control/RP6ControlLib.o
+writeBufferSPI                                    ../RP6lib/RP6control/RP6ControlLib.o
+writeChar                                         ../RP6lib/RP6common/RP6uart.o
+                                                  I2Cmaster.o
+                                                  functionsM32.o
+writeCharLCD                                      ../RP6lib/RP6control/RP6ControlLib.o
+                                                  CMP_S10_compass.o
+writeInteger                                      ../RP6lib/RP6common/RP6uart.o
+                                                  Ds1307.o
+                                                  CMP_S10_compass.o
+                                                  functionsM32.o
+writeIntegerLCD                                   ../RP6lib/RP6control/RP6ControlLib.o
+                                                  CMP_S10_compass.o
+                                                  functionsM32.o
+writeIntegerLength                                ../RP6lib/RP6common/RP6uart.o
+                                                  I2Cmaster.o
+writeIntegerLengthLCD                             ../RP6lib/RP6control/RP6ControlLib.o
+writeLCDCommand                                   ../RP6lib/RP6control/RP6ControlLib.o
+writeNStringLCD_P                                 ../RP6lib/RP6control/RP6ControlLib.o
+                                                  CMP_S10_compass.o
+writeNStringP                                     ../RP6lib/RP6common/RP6uart.o
+                                                  Ds1307.o
+                                                  CMP_S10_compass.o
+                                                  I2Cmaster.o
+writeSPI                                          ../RP6lib/RP6control/RP6ControlLib.o
+writeSerialCompass                                CMP_S10_compass.o
+writeString                                       ../RP6lib/RP6common/RP6uart.o
+writeStringLCD                                    ../RP6lib/RP6control/RP6ControlLib.o
+                                                  functionsM32.o
+writeStringLength                                 ../RP6lib/RP6common/RP6uart.o
+writeStringLengthLCD                              ../RP6lib/RP6control/RP6ControlLib.o
+writeWordSPI                                      ../RP6lib/RP6control/RP6ControlLib.o
+write_pos                                         ../RP6lib/RP6common/RP6uart.o
+write_size                                        ../RP6lib/RP6common/RP6uart.o

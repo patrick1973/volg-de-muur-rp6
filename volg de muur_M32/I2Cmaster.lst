@@ -1,0 +1,942 @@
+   1               		.file	"I2Cmaster.c"
+   2               	__SREG__ = 0x3f
+   3               	__SP_H__ = 0x3e
+   4               	__SP_L__ = 0x3d
+   5               	__CCP__  = 0x34
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+  15               	.Ltext0:
+  16               	.global	RP6_rotate
+  18               	RP6_rotate:
+  19               	.LFB13:
+  20               	.LM1:
+  21               	.LVL0:
+  22               	/* prologue: function */
+  23               	/* frame size = 0 */
+  24               	.LM2:
+  25 0000 1092 0000 		sts transmit_buffer,__zero_reg__
+  26               	.LM3:
+  27 0004 98E0      		ldi r25,lo8(8)
+  28 0006 9093 0000 		sts transmit_buffer+1,r25
+  29               	.LM4:
+  30 000a 8093 0000 		sts transmit_buffer+2,r24
+  31               	.LM5:
+  32 000e 6093 0000 		sts transmit_buffer+3,r22
+  33               	.LM6:
+  34 0012 5093 0000 		sts transmit_buffer+4,r21
+  35               	.LVL1:
+  36               	.LM7:
+  37 0016 4093 0000 		sts transmit_buffer+5,r20
+  38               	.LM8:
+  39 001a 8AE0      		ldi r24,lo8(10)
+  40               	.LVL2:
+  41 001c 60E0      		ldi r22,lo8(transmit_buffer)
+  42 001e 70E0      		ldi r23,hi8(transmit_buffer)
+  43               	.LVL3:
+  44 0020 46E0      		ldi r20,lo8(6)
+  45               	.LVL4:
+  46 0022 0E94 0000 		call I2CTWI_transmitBytes
+  47               	.LVL5:
+  48               	/* epilogue start */
+  49               	.LM9:
+  50 0026 0895      		ret
+  51               	.LFE13:
+  53               	.global	moveAtSpeed
+  55               	moveAtSpeed:
+  56               	.LFB12:
+  57               	.LM10:
+  58               	.LVL6:
+  59               	/* prologue: function */
+  60               	/* frame size = 0 */
+  61               	.LM11:
+  62 0028 1092 0000 		sts transmit_buffer,__zero_reg__
+  63               	.LM12:
+  64 002c 95E0      		ldi r25,lo8(5)
+  65 002e 9093 0000 		sts transmit_buffer+1,r25
+  66               	.LM13:
+  67 0032 8093 0000 		sts transmit_buffer+2,r24
+  68               	.LM14:
+  69 0036 6093 0000 		sts transmit_buffer+3,r22
+  70               	.LM15:
+  71 003a 1092 0000 		sts transmit_buffer+4,__zero_reg__
+  72               	.LM16:
+  73 003e 1092 0000 		sts transmit_buffer+5,__zero_reg__
+  74               	.LM17:
+  75 0042 8AE0      		ldi r24,lo8(10)
+  76               	.LVL7:
+  77 0044 60E0      		ldi r22,lo8(transmit_buffer)
+  78 0046 70E0      		ldi r23,hi8(transmit_buffer)
+  79               	.LVL8:
+  80 0048 46E0      		ldi r20,lo8(6)
+  81 004a 0E94 0000 		call I2CTWI_transmitBytes
+  82               	/* epilogue start */
+  83               	.LM18:
+  84 004e 0895      		ret
+  85               	.LFE12:
+  87               	.global	getMotorRightCurrent
+  89               	getMotorRightCurrent:
+  90               	.LFB11:
+  91               	.LM19:
+  92 0050 DF93      		push r29
+  93 0052 CF93      		push r28
+  94 0054 00D0      		rcall .
+  95 0056 CDB7      		in r28,__SP_L__
+  96 0058 DEB7      		in r29,__SP_H__
+  97               	/* prologue: function */
+  98               	/* frame size = 2 */
+  99               	.LM20:
+ 100 005a 8AE0      		ldi r24,lo8(10)
+ 101 005c 63E1      		ldi r22,lo8(19)
+ 102 005e 0E94 0000 		call I2CTWI_transmitByte
+ 103               	.LM21:
+ 104 0062 8AE0      		ldi r24,lo8(10)
+ 105 0064 BE01      		movw r22,r28
+ 106 0066 6F5F      		subi r22,lo8(-(1))
+ 107 0068 7F4F      		sbci r23,hi8(-(1))
+ 108 006a 42E0      		ldi r20,lo8(2)
+ 109 006c 0E94 0000 		call I2CTWI_readBytes
+ 110 0070 3A81      		ldd r19,Y+2
+ 111 0072 20E0      		ldi r18,lo8(0)
+ 112 0074 8981      		ldd r24,Y+1
+ 113 0076 280F      		add r18,r24
+ 114 0078 311D      		adc r19,__zero_reg__
+ 115               	.LM22:
+ 116 007a C901      		movw r24,r18
+ 117               	/* epilogue start */
+ 118 007c 0F90      		pop __tmp_reg__
+ 119 007e 0F90      		pop __tmp_reg__
+ 120 0080 CF91      		pop r28
+ 121 0082 DF91      		pop r29
+ 122 0084 0895      		ret
+ 123               	.LFE11:
+ 125               	.global	getMotorLeftCurrent
+ 127               	getMotorLeftCurrent:
+ 128               	.LFB10:
+ 129               	.LM23:
+ 130 0086 DF93      		push r29
+ 131 0088 CF93      		push r28
+ 132 008a 00D0      		rcall .
+ 133 008c CDB7      		in r28,__SP_L__
+ 134 008e DEB7      		in r29,__SP_H__
+ 135               	/* prologue: function */
+ 136               	/* frame size = 2 */
+ 137               	.LM24:
+ 138 0090 8AE0      		ldi r24,lo8(10)
+ 139 0092 61E1      		ldi r22,lo8(17)
+ 140 0094 0E94 0000 		call I2CTWI_transmitByte
+ 141               	.LM25:
+ 142 0098 8AE0      		ldi r24,lo8(10)
+ 143 009a BE01      		movw r22,r28
+ 144 009c 6F5F      		subi r22,lo8(-(1))
+ 145 009e 7F4F      		sbci r23,hi8(-(1))
+ 146 00a0 42E0      		ldi r20,lo8(2)
+ 147 00a2 0E94 0000 		call I2CTWI_readBytes
+ 148 00a6 3A81      		ldd r19,Y+2
+ 149 00a8 20E0      		ldi r18,lo8(0)
+ 150 00aa 8981      		ldd r24,Y+1
+ 151 00ac 280F      		add r18,r24
+ 152 00ae 311D      		adc r19,__zero_reg__
+ 153               	.LM26:
+ 154 00b0 C901      		movw r24,r18
+ 155               	/* epilogue start */
+ 156 00b2 0F90      		pop __tmp_reg__
+ 157 00b4 0F90      		pop __tmp_reg__
+ 158 00b6 CF91      		pop r28
+ 159 00b8 DF91      		pop r29
+ 160 00ba 0895      		ret
+ 161               	.LFE10:
+ 163               	.global	getbatteryLevel
+ 165               	getbatteryLevel:
+ 166               	.LFB9:
+ 167               	.LM27:
+ 168 00bc DF93      		push r29
+ 169 00be CF93      		push r28
+ 170 00c0 00D0      		rcall .
+ 171 00c2 CDB7      		in r28,__SP_L__
+ 172 00c4 DEB7      		in r29,__SP_H__
+ 173               	/* prologue: function */
+ 174               	/* frame size = 2 */
+ 175               	.LM28:
+ 176 00c6 8AE0      		ldi r24,lo8(10)
+ 177 00c8 65E1      		ldi r22,lo8(21)
+ 178 00ca 0E94 0000 		call I2CTWI_transmitByte
+ 179               	.LM29:
+ 180 00ce 8AE0      		ldi r24,lo8(10)
+ 181 00d0 BE01      		movw r22,r28
+ 182 00d2 6F5F      		subi r22,lo8(-(1))
+ 183 00d4 7F4F      		sbci r23,hi8(-(1))
+ 184 00d6 42E0      		ldi r20,lo8(2)
+ 185 00d8 0E94 0000 		call I2CTWI_readBytes
+ 186 00dc 3A81      		ldd r19,Y+2
+ 187 00de 20E0      		ldi r18,lo8(0)
+ 188 00e0 8981      		ldd r24,Y+1
+ 189 00e2 280F      		add r18,r24
+ 190 00e4 311D      		adc r19,__zero_reg__
+ 191               	.LM30:
+ 192 00e6 C901      		movw r24,r18
+ 193               	/* epilogue start */
+ 194 00e8 0F90      		pop __tmp_reg__
+ 195 00ea 0F90      		pop __tmp_reg__
+ 196 00ec CF91      		pop r28
+ 197 00ee DF91      		pop r29
+ 198 00f0 0895      		ret
+ 199               	.LFE9:
+ 201               	.global	readFrontDistanceSensors
+ 203               	readFrontDistanceSensors:
+ 204               	.LFB8:
+ 205               	.LM31:
+ 206               	.LVL9:
+ 207 00f2 EF92      		push r14
+ 208 00f4 FF92      		push r15
+ 209 00f6 0F93      		push r16
+ 210 00f8 1F93      		push r17
+ 211 00fa DF93      		push r29
+ 212 00fc CF93      		push r28
+ 213 00fe 00D0      		rcall .
+ 214 0100 0F92      		push __tmp_reg__
+ 215 0102 CDB7      		in r28,__SP_L__
+ 216 0104 DEB7      		in r29,__SP_H__
+ 217               	/* prologue: function */
+ 218               	/* frame size = 3 */
+ 219 0106 8C01      		movw r16,r24
+ 220 0108 7B01      		movw r14,r22
+ 221               	.LM32:
+ 222 010a 8AE0      		ldi r24,lo8(10)
+ 223               	.LVL10:
+ 224 010c 67E1      		ldi r22,lo8(23)
+ 225               	.LVL11:
+ 226 010e 0E94 0000 		call I2CTWI_transmitByte
+ 227               	.LM33:
+ 228 0112 8AE0      		ldi r24,lo8(10)
+ 229 0114 BE01      		movw r22,r28
+ 230 0116 6F5F      		subi r22,lo8(-(1))
+ 231 0118 7F4F      		sbci r23,hi8(-(1))
+ 232 011a 44E0      		ldi r20,lo8(4)
+ 233 011c 0E94 0000 		call I2CTWI_readBytes
+ 234               	.LM34:
+ 235 0120 9A81      		ldd r25,Y+2
+ 236 0122 80E0      		ldi r24,lo8(0)
+ 237 0124 2981      		ldd r18,Y+1
+ 238 0126 820F      		add r24,r18
+ 239 0128 911D      		adc r25,__zero_reg__
+ 240 012a F801      		movw r30,r16
+ 241 012c 9183      		std Z+1,r25
+ 242 012e 8083      		st Z,r24
+ 243               	.LM35:
+ 244 0130 9C81      		ldd r25,Y+4
+ 245 0132 80E0      		ldi r24,lo8(0)
+ 246 0134 2B81      		ldd r18,Y+3
+ 247 0136 820F      		add r24,r18
+ 248 0138 911D      		adc r25,__zero_reg__
+ 249 013a F701      		movw r30,r14
+ 250 013c 9183      		std Z+1,r25
+ 251 013e 8083      		st Z,r24
+ 252               	/* epilogue start */
+ 253               	.LM36:
+ 254 0140 0F90      		pop __tmp_reg__
+ 255 0142 0F90      		pop __tmp_reg__
+ 256 0144 0F90      		pop __tmp_reg__
+ 257 0146 CF91      		pop r28
+ 258 0148 DF91      		pop r29
+ 259 014a 1F91      		pop r17
+ 260 014c 0F91      		pop r16
+ 261               	.LVL12:
+ 262 014e FF90      		pop r15
+ 263 0150 EF90      		pop r14
+ 264               	.LVL13:
+ 265 0152 0895      		ret
+ 266               	.LFE8:
+ 268               	.global	I2C_transmissionError
+ 270               	I2C_transmissionError:
+ 271               	.LFB6:
+ 272               	.LM37:
+ 273               	.LVL14:
+ 274               	/* prologue: function */
+ 275               	/* frame size = 0 */
+ 276               	.LM38:
+ 277 0154 8836      		cpi r24,lo8(104)
+ 278 0156 01F4      		brne .+2
+ 279 0158 00C0      		rjmp .L28
+ 280 015a 8936      		cpi r24,lo8(105)
+ 281 015c 00F4      		brsh .L42
+ 282 015e 8033      		cpi r24,lo8(48)
+ 283 0160 01F4      		brne .+2
+ 284 0162 00C0      		rjmp .L21
+ 285 0164 8133      		cpi r24,lo8(49)
+ 286 0166 00F4      		brsh .L43
+ 287 0168 8031      		cpi r24,lo8(16)
+ 288 016a 01F4      		brne .+2
+ 289 016c 00C0      		rjmp .L17
+ 290 016e 8131      		cpi r24,lo8(17)
+ 291 0170 00F4      		brsh .L44
+ 292 0172 8823      		tst r24
+ 293 0174 01F4      		brne .+2
+ 294 0176 00C0      		rjmp .L15
+ 295 0178 8830      		cpi r24,lo8(8)
+ 296 017a 01F0      		breq .+2
+ 297 017c 00C0      		rjmp .L14
+ 298 017e 00C0      		rjmp .L52
+ 299               	.L44:
+ 300 0180 8032      		cpi r24,lo8(32)
+ 301 0182 01F4      		brne .+2
+ 302 0184 00C0      		rjmp .L19
+ 303 0186 8832      		cpi r24,lo8(40)
+ 304 0188 01F4      		brne .+2
+ 305 018a 00C0      		rjmp .L20
+ 306 018c 8831      		cpi r24,lo8(24)
+ 307 018e 01F0      		breq .+2
+ 308 0190 00C0      		rjmp .L14
+ 309 0192 00C0      		rjmp .L53
+ 310               	.L43:
+ 311 0194 8834      		cpi r24,lo8(72)
+ 312 0196 01F4      		brne .+2
+ 313 0198 00C0      		rjmp .L24
+ 314 019a 8934      		cpi r24,lo8(73)
+ 315 019c 00F4      		brsh .L45
+ 316 019e 8833      		cpi r24,lo8(56)
+ 317 01a0 01F4      		brne .+2
+ 318 01a2 00C0      		rjmp .L22
+ 319 01a4 8034      		cpi r24,lo8(64)
+ 320 01a6 01F0      		breq .+2
+ 321 01a8 00C0      		rjmp .L14
+ 322 01aa 00C0      		rjmp .L54
+ 323               	.L45:
+ 324 01ac 8835      		cpi r24,lo8(88)
+ 325 01ae 01F4      		brne .+2
+ 326 01b0 00C0      		rjmp .L26
+ 327 01b2 8036      		cpi r24,lo8(96)
+ 328 01b4 01F4      		brne .+2
+ 329 01b6 00C0      		rjmp .L27
+ 330 01b8 8035      		cpi r24,lo8(80)
+ 331 01ba 01F0      		breq .+2
+ 332 01bc 00C0      		rjmp .L14
+ 333 01be 00C0      		rjmp .L55
+ 334               	.L42:
+ 335 01c0 803A      		cpi r24,lo8(-96)
+ 336 01c2 01F4      		brne .+2
+ 337 01c4 00C0      		rjmp .L35
+ 338 01c6 813A      		cpi r24,lo8(-95)
+ 339 01c8 00F4      		brsh .L46
+ 340 01ca 8038      		cpi r24,lo8(-128)
+ 341 01cc 01F4      		brne .+2
+ 342 01ce 00C0      		rjmp .L31
+ 343 01d0 8138      		cpi r24,lo8(-127)
+ 344 01d2 00F4      		brsh .L47
+ 345 01d4 8037      		cpi r24,lo8(112)
+ 346 01d6 01F4      		brne .+2
+ 347 01d8 00C0      		rjmp .L29
+ 348 01da 8837      		cpi r24,lo8(120)
+ 349 01dc 01F0      		breq .+2
+ 350 01de 00C0      		rjmp .L14
+ 351 01e0 00C0      		rjmp .L56
+ 352               	.L47:
+ 353 01e2 8039      		cpi r24,lo8(-112)
+ 354 01e4 01F4      		brne .+2
+ 355 01e6 00C0      		rjmp .L33
+ 356 01e8 8839      		cpi r24,lo8(-104)
+ 357 01ea 01F4      		brne .+2
+ 358 01ec 00C0      		rjmp .L34
+ 359 01ee 8838      		cpi r24,lo8(-120)
+ 360 01f0 01F0      		breq .+2
+ 361 01f2 00C0      		rjmp .L14
+ 362 01f4 00C0      		rjmp .L57
+ 363               	.L46:
+ 364 01f6 883B      		cpi r24,lo8(-72)
+ 365 01f8 01F0      		breq .L38
+ 366 01fa 893B      		cpi r24,lo8(-71)
+ 367 01fc 00F4      		brsh .L48
+ 368 01fe 883A      		cpi r24,lo8(-88)
+ 369 0200 01F0      		breq .L36
+ 370 0202 803B      		cpi r24,lo8(-80)
+ 371 0204 01F0      		breq .+2
+ 372 0206 00C0      		rjmp .L14
+ 373 0208 00C0      		rjmp .L58
+ 374               	.L48:
+ 375 020a 883C      		cpi r24,lo8(-56)
+ 376 020c 01F0      		breq .L40
+ 377 020e 883F      		cpi r24,lo8(-8)
+ 378 0210 01F4      		brne .+2
+ 379 0212 00C0      		rjmp .L41
+ 380 0214 803C      		cpi r24,lo8(-64)
+ 381 0216 01F0      		breq .+2
+ 382 0218 00C0      		rjmp .L14
+ 383 021a 00C0      		rjmp .L59
+ 384               	.L52:
+ 385               	.LM39:
+ 386 021c 80E0      		ldi r24,lo8(__c.1837)
+ 387 021e 90E0      		ldi r25,hi8(__c.1837)
+ 388               	.LVL15:
+ 389 0220 00C0      		rjmp .L51
+ 390               	.LVL16:
+ 391               	.L17:
+ 392               	.LM40:
+ 393 0222 80E0      		ldi r24,lo8(__c.1841)
+ 394 0224 90E0      		ldi r25,hi8(__c.1841)
+ 395               	.LVL17:
+ 396 0226 00C0      		rjmp .L51
+ 397               	.LVL18:
+ 398               	.L22:
+ 399               	.LM41:
+ 400 0228 80E0      		ldi r24,lo8(__c.1844)
+ 401 022a 90E0      		ldi r25,hi8(__c.1844)
+ 402               	.LVL19:
+ 403 022c 00C0      		rjmp .L51
+ 404               	.LVL20:
+ 405               	.L19:
+ 406               	.LM42:
+ 407 022e 80E0      		ldi r24,lo8(__c.1847)
+ 408 0230 90E0      		ldi r25,hi8(__c.1847)
+ 409               	.LVL21:
+ 410 0232 00C0      		rjmp .L51
+ 411               	.LVL22:
+ 412               	.L53:
+ 413               	.LM43:
+ 414 0234 80E0      		ldi r24,lo8(__c.1850)
+ 415 0236 90E0      		ldi r25,hi8(__c.1850)
+ 416               	.LVL23:
+ 417 0238 00C0      		rjmp .L51
+ 418               	.LVL24:
+ 419               	.L20:
+ 420               	.LM44:
+ 421 023a 80E0      		ldi r24,lo8(__c.1853)
+ 422 023c 90E0      		ldi r25,hi8(__c.1853)
+ 423               	.LVL25:
+ 424 023e 00C0      		rjmp .L51
+ 425               	.LVL26:
+ 426               	.L21:
+ 427               	.LM45:
+ 428 0240 80E0      		ldi r24,lo8(__c.1856)
+ 429 0242 90E0      		ldi r25,hi8(__c.1856)
+ 430               	.LVL27:
+ 431 0244 00C0      		rjmp .L51
+ 432               	.LVL28:
+ 433               	.L54:
+ 434               	.LM46:
+ 435 0246 80E0      		ldi r24,lo8(__c.1859)
+ 436 0248 90E0      		ldi r25,hi8(__c.1859)
+ 437               	.LVL29:
+ 438 024a 00C0      		rjmp .L51
+ 439               	.LVL30:
+ 440               	.L24:
+ 441               	.LM47:
+ 442 024c 80E0      		ldi r24,lo8(__c.1862)
+ 443 024e 90E0      		ldi r25,hi8(__c.1862)
+ 444               	.LVL31:
+ 445 0250 00C0      		rjmp .L51
+ 446               	.LVL32:
+ 447               	.L55:
+ 448               	.LM48:
+ 449 0252 80E0      		ldi r24,lo8(__c.1865)
+ 450 0254 90E0      		ldi r25,hi8(__c.1865)
+ 451               	.LVL33:
+ 452 0256 00C0      		rjmp .L51
+ 453               	.LVL34:
+ 454               	.L26:
+ 455               	.LM49:
+ 456 0258 80E0      		ldi r24,lo8(__c.1868)
+ 457 025a 90E0      		ldi r25,hi8(__c.1868)
+ 458               	.LVL35:
+ 459 025c 00C0      		rjmp .L51
+ 460               	.LVL36:
+ 461               	.L36:
+ 462               	.LM50:
+ 463 025e 80E0      		ldi r24,lo8(__c.1871)
+ 464 0260 90E0      		ldi r25,hi8(__c.1871)
+ 465               	.LVL37:
+ 466 0262 00C0      		rjmp .L51
+ 467               	.LVL38:
+ 468               	.L58:
+ 469               	.LM51:
+ 470 0264 80E0      		ldi r24,lo8(__c.1874)
+ 471 0266 90E0      		ldi r25,hi8(__c.1874)
+ 472               	.LVL39:
+ 473 0268 00C0      		rjmp .L51
+ 474               	.LVL40:
+ 475               	.L38:
+ 476               	.LM52:
+ 477 026a 80E0      		ldi r24,lo8(__c.1877)
+ 478 026c 90E0      		ldi r25,hi8(__c.1877)
+ 479               	.LVL41:
+ 480 026e 00C0      		rjmp .L51
+ 481               	.LVL42:
+ 482               	.L59:
+ 483               	.LM53:
+ 484 0270 80E0      		ldi r24,lo8(__c.1880)
+ 485 0272 90E0      		ldi r25,hi8(__c.1880)
+ 486               	.LVL43:
+ 487 0274 00C0      		rjmp .L51
+ 488               	.LVL44:
+ 489               	.L40:
+ 490               	.LM54:
+ 491 0276 80E0      		ldi r24,lo8(__c.1883)
+ 492 0278 90E0      		ldi r25,hi8(__c.1883)
+ 493               	.LVL45:
+ 494 027a 00C0      		rjmp .L51
+ 495               	.LVL46:
+ 496               	.L27:
+ 497               	.LM55:
+ 498 027c 80E0      		ldi r24,lo8(__c.1886)
+ 499 027e 90E0      		ldi r25,hi8(__c.1886)
+ 500               	.LVL47:
+ 501 0280 00C0      		rjmp .L51
+ 502               	.LVL48:
+ 503               	.L28:
+ 504               	.LM56:
+ 505 0282 80E0      		ldi r24,lo8(__c.1889)
+ 506 0284 90E0      		ldi r25,hi8(__c.1889)
+ 507               	.LVL49:
+ 508 0286 00C0      		rjmp .L51
+ 509               	.LVL50:
+ 510               	.L29:
+ 511               	.LM57:
+ 512 0288 80E0      		ldi r24,lo8(__c.1892)
+ 513 028a 90E0      		ldi r25,hi8(__c.1892)
+ 514               	.LVL51:
+ 515 028c 00C0      		rjmp .L51
+ 516               	.LVL52:
+ 517               	.L56:
+ 518               	.LM58:
+ 519 028e 80E0      		ldi r24,lo8(__c.1895)
+ 520 0290 90E0      		ldi r25,hi8(__c.1895)
+ 521               	.LVL53:
+ 522 0292 00C0      		rjmp .L51
+ 523               	.LVL54:
+ 524               	.L31:
+ 525               	.LM59:
+ 526 0294 80E0      		ldi r24,lo8(__c.1898)
+ 527 0296 90E0      		ldi r25,hi8(__c.1898)
+ 528               	.LVL55:
+ 529 0298 00C0      		rjmp .L51
+ 530               	.LVL56:
+ 531               	.L57:
+ 532               	.LM60:
+ 533 029a 80E0      		ldi r24,lo8(__c.1901)
+ 534 029c 90E0      		ldi r25,hi8(__c.1901)
+ 535               	.LVL57:
+ 536 029e 00C0      		rjmp .L51
+ 537               	.LVL58:
+ 538               	.L33:
+ 539               	.LM61:
+ 540 02a0 80E0      		ldi r24,lo8(__c.1904)
+ 541 02a2 90E0      		ldi r25,hi8(__c.1904)
+ 542               	.LVL59:
+ 543 02a4 00C0      		rjmp .L51
+ 544               	.LVL60:
+ 545               	.L34:
+ 546               	.LM62:
+ 547 02a6 80E0      		ldi r24,lo8(__c.1907)
+ 548 02a8 90E0      		ldi r25,hi8(__c.1907)
+ 549               	.LVL61:
+ 550 02aa 00C0      		rjmp .L51
+ 551               	.LVL62:
+ 552               	.L35:
+ 553               	.LM63:
+ 554 02ac 80E0      		ldi r24,lo8(__c.1910)
+ 555 02ae 90E0      		ldi r25,hi8(__c.1910)
+ 556               	.LVL63:
+ 557 02b0 00C0      		rjmp .L51
+ 558               	.LVL64:
+ 559               	.L41:
+ 560               	.LM64:
+ 561 02b2 80E0      		ldi r24,lo8(__c.1913)
+ 562 02b4 90E0      		ldi r25,hi8(__c.1913)
+ 563               	.LVL65:
+ 564 02b6 00C0      		rjmp .L51
+ 565               	.LVL66:
+ 566               	.L15:
+ 567               	.LM65:
+ 568 02b8 80E0      		ldi r24,lo8(__c.1916)
+ 569 02ba 90E0      		ldi r25,hi8(__c.1916)
+ 570               	.LVL67:
+ 571 02bc 00C0      		rjmp .L51
+ 572               	.LVL68:
+ 573               	.L14:
+ 574               	.LM66:
+ 575 02be 80E0      		ldi r24,lo8(__c.1919)
+ 576 02c0 90E0      		ldi r25,hi8(__c.1919)
+ 577               	.LVL69:
+ 578               	.L51:
+ 579 02c2 0E94 0000 		call writeNStringP
+ 580 02c6 0895      		ret
+ 581               	.LFE6:
+ 583               	.global	readAllRegisters
+ 585               	readAllRegisters:
+ 586               	.LFB7:
+ 587               	.LM67:
+ 588 02c8 CF93      		push r28
+ 589 02ca DF93      		push r29
+ 590               	/* prologue: function */
+ 591               	/* frame size = 0 */
+ 592               	.LM68:
+ 593 02cc 8AE0      		ldi r24,lo8(10)
+ 594 02ce 60E0      		ldi r22,lo8(0)
+ 595 02d0 0E94 0000 		call I2CTWI_transmitByte
+ 596               	.LM69:
+ 597 02d4 8AE0      		ldi r24,lo8(10)
+ 598 02d6 60E0      		ldi r22,lo8(RP6data)
+ 599 02d8 70E0      		ldi r23,hi8(RP6data)
+ 600 02da 4EE1      		ldi r20,lo8(30)
+ 601 02dc 0E94 0000 		call I2CTWI_readBytes
+ 602               	.LM70:
+ 603 02e0 80E0      		ldi r24,lo8(__c.1926)
+ 604 02e2 90E0      		ldi r25,hi8(__c.1926)
+ 605 02e4 0E94 0000 		call writeNStringP
+ 606 02e8 C0E0      		ldi r28,lo8(0)
+ 607 02ea D0E0      		ldi r29,hi8(0)
+ 608               	.L63:
+ 609               	.LM71:
+ 610 02ec CE01      		movw r24,r28
+ 611 02ee 8770      		andi r24,lo8(7)
+ 612 02f0 9070      		andi r25,hi8(7)
+ 613 02f2 892B      		or r24,r25
+ 614 02f4 01F4      		brne .L61
+ 615               	.LM72:
+ 616 02f6 8AE0      		ldi r24,lo8(10)
+ 617 02f8 0E94 0000 		call writeChar
+ 618 02fc 00C0      		rjmp .L62
+ 619               	.L61:
+ 620               	.LM73:
+ 621 02fe 80E0      		ldi r24,lo8(__c.1929)
+ 622 0300 90E0      		ldi r25,hi8(__c.1929)
+ 623 0302 0E94 0000 		call writeNStringP
+ 624               	.L62:
+ 625               	.LM74:
+ 626 0306 83E2      		ldi r24,lo8(35)
+ 627 0308 0E94 0000 		call writeChar
+ 628               	.LM75:
+ 629 030c CE01      		movw r24,r28
+ 630 030e 6AE0      		ldi r22,lo8(10)
+ 631 0310 42E0      		ldi r20,lo8(2)
+ 632 0312 0E94 0000 		call writeIntegerLength
+ 633               	.LM76:
+ 634 0316 8AE3      		ldi r24,lo8(58)
+ 635 0318 0E94 0000 		call writeChar
+ 636               	.LM77:
+ 637 031c FE01      		movw r30,r28
+ 638 031e E050      		subi r30,lo8(-(RP6data))
+ 639 0320 F040      		sbci r31,hi8(-(RP6data))
+ 640 0322 8081      		ld r24,Z
+ 641 0324 90E0      		ldi r25,lo8(0)
+ 642 0326 6AE0      		ldi r22,lo8(10)
+ 643 0328 43E0      		ldi r20,lo8(3)
+ 644 032a 0E94 0000 		call writeIntegerLength
+ 645 032e 2196      		adiw r28,1
+ 646               	.LM78:
+ 647 0330 CE31      		cpi r28,30
+ 648 0332 D105      		cpc r29,__zero_reg__
+ 649 0334 01F4      		brne .L63
+ 650               	.LM79:
+ 651 0336 8AE0      		ldi r24,lo8(10)
+ 652 0338 0E94 0000 		call writeChar
+ 653               	/* epilogue start */
+ 654               	.LM80:
+ 655 033c DF91      		pop r29
+ 656 033e CF91      		pop r28
+ 657 0340 0895      		ret
+ 658               	.LFE7:
+ 660               		.section	.progmem.data,"a",@progbits
+ 663               	__c.1929:
+ 664 0000 207C 2000 		.string	" | "
+ 667               	__c.1926:
+ 668 0004 0A52 4541 		.string	"\nREADING ALL RP6 REGISTERS:"
+ 668      4449 4E47 
+ 668      2041 4C4C 
+ 668      2052 5036 
+ 668      2052 4547 
+ 671               	__c.1919:
+ 672 0020 0A41 6C6C 		.string	"\nAll oke\n"
+ 672      206F 6B65 
+ 672      0A00 
+ 675               	__c.1916:
+ 676 002a 0A49 3243 		.ascii	"\nI2C E"
+ 676      2045 
+ 677 0030 5252 4F52 		.string	"RROR - 0x00 Bus error due to an illegal START or STOP condition\n"
+ 677      202D 2030 
+ 677      7830 3020 
+ 677      4275 7320 
+ 677      6572 726F 
+ 680               	__c.1913:
+ 681 0071 0A49 3243 		.ascii	"\nI2C ER"
+ 681      2045 52
+ 682 0078 524F 5220 		.string	"ROR - 0xF8 No relevant state information available; TWINT = \2230\224\n"
+ 682      2D20 3078 
+ 682      4638 204E 
+ 682      6F20 7265 
+ 682      6C65 7661 
+ 685               	__c.1910:
+ 686 00b9 0A49 3243 		.ascii	"\nI2C ERROR - 0xA0 A STOP condition or repeated S"
+ 686      2045 5252 
+ 686      4F52 202D 
+ 686      2030 7841 
+ 686      3020 4120 
+ 687 00e9 5441 5254 		.string	"TART condition has been received while still addressed as Slave\n"
+ 687      2063 6F6E 
+ 687      6469 7469 
+ 687      6F6E 2068 
+ 687      6173 2062 
+ 690               	__c.1907:
+ 691 012a 0A49 3243 		.ascii	"\nI2C ERROR - 0x98 Previously addressed with "
+ 691      2045 5252 
+ 691      4F52 202D 
+ 691      2030 7839 
+ 691      3820 5072 
+ 692 0156 6765 6E65 		.string	"general call; data has been received; NOT ACK has been returned\n"
+ 692      7261 6C20 
+ 692      6361 6C6C 
+ 692      3B20 6461 
+ 692      7461 2068 
+ 695               	__c.1904:
+ 696 0197 0A49 3243 		.ascii	"\nI2C ERROR - 0x90 Previously addressed w"
+ 696      2045 5252 
+ 696      4F52 202D 
+ 696      2030 7839 
+ 696      3020 5072 
+ 697 01bf 6974 6820 		.string	"ith general call; data has been received; ACK has been returned\n"
+ 697      6765 6E65 
+ 697      7261 6C20 
+ 697      6361 6C6C 
+ 697      3B20 6461 
+ 700               	__c.1901:
+ 701 0200 0A49 3243 		.ascii	"\nI2C ERROR - 0x88 Previously addressed wi"
+ 701      2045 5252 
+ 701      4F52 202D 
+ 701      2030 7838 
+ 701      3820 5072 
+ 702 0229 7468 206F 		.string	"th own SLA+W; data has been received; NOT ACK has been returned\n"
+ 702      776E 2053 
+ 702      4C41 2B57 
+ 702      3B20 6461 
+ 702      7461 2068 
+ 705               	__c.1898:
+ 706 026a 0A49 3243 		.ascii	"\nI2C ERROR - 0x80 Previously addresse"
+ 706      2045 5252 
+ 706      4F52 202D 
+ 706      2030 7838 
+ 706      3020 5072 
+ 707 028f 6420 7769 		.string	"d with own SLA+W; data has been received; ACK has been returned\n"
+ 707      7468 206F 
+ 707      776E 2053 
+ 707      4C41 2B57 
+ 707      3B20 6461 
+ 710               	__c.1895:
+ 711 02d0 0A49 3243 		.ascii	"\nI2C ERROR - 0x78 Arbitration lost in SLA+R/W as Master"
+ 711      2045 5252 
+ 711      4F52 202D 
+ 711      2030 7837 
+ 711      3820 4172 
+ 712 0307 3B20 4765 		.string	"; General call address has been received; ACK has been returned\n"
+ 712      6E65 7261 
+ 712      6C20 6361 
+ 712      6C6C 2061 
+ 712      6464 7265 
+ 715               	__c.1892:
+ 716 0348 0A49 3243 		.ascii	"\nI2C ERROR - 0x7"
+ 716      2045 5252 
+ 716      4F52 202D 
+ 716      2030 7837 
+ 717 0358 3020 4765 		.string	"0 General call address has been received; ACK has been returned\n"
+ 717      6E65 7261 
+ 717      6C20 6361 
+ 717      6C6C 2061 
+ 717      6464 7265 
+ 720               	__c.1889:
+ 721 0399 0A49 3243 		.ascii	"\nI2C ERROR - 0x68 Arbitration lost in SLA+R/"
+ 721      2045 5252 
+ 721      4F52 202D 
+ 721      2030 7836 
+ 721      3820 4172 
+ 722 03c5 5720 6173 		.string	"W as Master; own SLA+W has been received; ACK has been returned\n"
+ 722      204D 6173 
+ 722      7465 723B 
+ 722      206F 776E 
+ 722      2053 4C41 
+ 725               	__c.1886:
+ 726 0406 0A49 3243 		.ascii	"\nI2C"
+ 727 040a 2045 5252 		.string	" ERROR - 0x60 Own SLA+W has been received ACK has been returned\n"
+ 727      4F52 202D 
+ 727      2030 7836 
+ 727      3020 4F77 
+ 727      6E20 534C 
+ 730               	__c.1883:
+ 731 044b 0A49 3243 		.ascii	"\nI2C ERROR - 0xC8 Last data byte i"
+ 731      2045 5252 
+ 731      4F52 202D 
+ 731      2030 7843 
+ 731      3820 4C61 
+ 732 046d 6E20 5457 		.string	"n TWDR has been transmitted (TWEA = \2230\224); ACK has been received\n"
+ 732      4452 2068 
+ 732      6173 2062 
+ 732      6565 6E20 
+ 732      7472 616E 
+ 735               	__c.1880:
+ 736 04ae 0A49 3243 		.ascii	"\nI2C ERROR - 0xC0 Da"
+ 736      2045 5252 
+ 736      4F52 202D 
+ 736      2030 7843 
+ 736      3020 4461 
+ 737 04c2 7461 2062 		.string	"ta byte in TWDR has been transmitted; NOT ACK has been received\n"
+ 737      7974 6520 
+ 737      696E 2054 
+ 737      5744 5220 
+ 737      6861 7320 
+ 740               	__c.1877:
+ 741 0503 0A49 3243 		.ascii	"\nI2C ERROR - 0xB"
+ 741      2045 5252 
+ 741      4F52 202D 
+ 741      2030 7842 
+ 742 0513 3820 4461 		.string	"8 Data byte in TWDR has been transmitted; ACK has been received\n"
+ 742      7461 2062 
+ 742      7974 6520 
+ 742      696E 2054 
+ 742      5744 5220 
+ 745               	__c.1874:
+ 746 0554 0A49 3243 		.ascii	"\nI2C ERROR - 0xB0 Arbitration lost in SLA+R/"
+ 746      2045 5252 
+ 746      4F52 202D 
+ 746      2030 7842 
+ 746      3020 4172 
+ 747 0580 5720 6173 		.string	"W as Master; own SLA+R has been received; ACK has been returned\n"
+ 747      204D 6173 
+ 747      7465 723B 
+ 747      206F 776E 
+ 747      2053 4C41 
+ 750               	__c.1871:
+ 751 05c1 0A49 3243 		.ascii	"\nI2C "
+ 751      20
+ 752 05c6 4552 524F 		.string	"ERROR - 0xA8 Own SLA+R has been received; ACK has been returned\n"
+ 752      5220 2D20 
+ 752      3078 4138 
+ 752      204F 776E 
+ 752      2053 4C41 
+ 755               	__c.1868:
+ 756 0607 0A49 32   		.ascii	"\nI2"
+ 757 060a 4320 4552 		.string	"C ERROR - 0x58 Data byte has been received and NACK transmitted\n"
+ 757      524F 5220 
+ 757      2D20 3078 
+ 757      3538 2044 
+ 757      6174 6120 
+ 760               	__c.1865:
+ 761 064b 0A49      		.ascii	"\nI"
+ 762 064d 3243 2045 		.string	"2C ERROR - 0x50 Data byte has been received and ACK transmitted\n"
+ 762      5252 4F52 
+ 762      202D 2030 
+ 762      7835 3020 
+ 762      4461 7461 
+ 765               	__c.1862:
+ 766 068e 0A49 3243 		.string	"\nI2C ERROR - 0x48 SLA+R has been transmitted and NACK received\n"
+ 766      2045 5252 
+ 766      4F52 202D 
+ 766      2030 7834 
+ 766      3820 534C 
+ 769               	__c.1859:
+ 770 06ce 0A49 3243 		.string	"\nI2C ERROR - 0x40 SLA+R has been transmitted and ACK received\n"
+ 770      2045 5252 
+ 770      4F52 202D 
+ 770      2030 7834 
+ 770      3020 534C 
+ 773               	__c.1856:
+ 774 070d 0A49 32   		.ascii	"\nI2"
+ 775 0710 4320 4552 		.string	"C ERROR - 0x30 Data byte has been transmitted and NACK received\n"
+ 775      524F 5220 
+ 775      2D20 3078 
+ 775      3330 2044 
+ 775      6174 6120 
+ 778               	__c.1853:
+ 779 0751 0A49      		.ascii	"\nI"
+ 780 0753 3243 2045 		.string	"2C ERROR - 0x28 Data byte has been transmitted and ACK received\n"
+ 780      5252 4F52 
+ 780      202D 2030 
+ 780      7832 3820 
+ 780      4461 7461 
+ 783               	__c.1850:
+ 784 0794 0A49 3243 		.string	"\nI2C ERROR - 0x18 SLA+W has been transmitted and ACK received\n"
+ 784      2045 5252 
+ 784      4F52 202D 
+ 784      2030 7831 
+ 784      3820 534C 
+ 787               	__c.1847:
+ 788 07d3 0A49 3243 		.string	"\nI2C ERROR - 0x20 SLA+W has been transmitted and NACK received\n"
+ 788      2045 5252 
+ 788      4F52 202D 
+ 788      2030 7832 
+ 788      3020 534C 
+ 791               	__c.1844:
+ 792 0813 0A49 3243 		.string	"\nI2C ERROR - 0x38 Arbitration lost\n"
+ 792      2045 5252 
+ 792      4F52 202D 
+ 792      2030 7833 
+ 792      3820 4172 
+ 795               	__c.1841:
+ 796 0837 0A49 3243 		.string	"\nI2C ERROR - 0x10 Repeated START has been transmitted\n"
+ 796      2045 5252 
+ 796      4F52 202D 
+ 796      2030 7831 
+ 796      3020 5265 
+ 799               	__c.1837:
+ 800 086e 0A49 3243 		.string	"\nI2C ERROR - 0x08 START has been transmitted\n"
+ 800      2045 5252 
+ 800      4F52 202D 
+ 800      2030 7830 
+ 800      3820 5354 
+ 801               		.comm timer,2,1
+ 802               		.comm RP6data,32,1
+ 803               		.comm transmit_buffer,10,1
+ 884               	.Letext0:
+DEFINED SYMBOLS
+                            *ABS*:00000000 I2Cmaster.c
+C:\Users\patje\AppData\Local\Temp/ccoffo8Q.s:2      *ABS*:0000003f __SREG__
+C:\Users\patje\AppData\Local\Temp/ccoffo8Q.s:3      *ABS*:0000003e __SP_H__
+C:\Users\patje\AppData\Local\Temp/ccoffo8Q.s:4      *ABS*:0000003d __SP_L__
+C:\Users\patje\AppData\Local\Temp/ccoffo8Q.s:5      *ABS*:00000034 __CCP__
+C:\Users\patje\AppData\Local\Temp/ccoffo8Q.s:6      *ABS*:00000000 __tmp_reg__
+C:\Users\patje\AppData\Local\Temp/ccoffo8Q.s:7      *ABS*:00000001 __zero_reg__
+C:\Users\patje\AppData\Local\Temp/ccoffo8Q.s:18     .text:00000000 RP6_rotate
+                            *COM*:0000000a transmit_buffer
+C:\Users\patje\AppData\Local\Temp/ccoffo8Q.s:55     .text:00000028 moveAtSpeed
+C:\Users\patje\AppData\Local\Temp/ccoffo8Q.s:89     .text:00000050 getMotorRightCurrent
+C:\Users\patje\AppData\Local\Temp/ccoffo8Q.s:127    .text:00000086 getMotorLeftCurrent
+C:\Users\patje\AppData\Local\Temp/ccoffo8Q.s:165    .text:000000bc getbatteryLevel
+C:\Users\patje\AppData\Local\Temp/ccoffo8Q.s:203    .text:000000f2 readFrontDistanceSensors
+C:\Users\patje\AppData\Local\Temp/ccoffo8Q.s:270    .text:00000154 I2C_transmissionError
+C:\Users\patje\AppData\Local\Temp/ccoffo8Q.s:799    .progmem.data:0000086e __c.1837
+C:\Users\patje\AppData\Local\Temp/ccoffo8Q.s:795    .progmem.data:00000837 __c.1841
+C:\Users\patje\AppData\Local\Temp/ccoffo8Q.s:791    .progmem.data:00000813 __c.1844
+C:\Users\patje\AppData\Local\Temp/ccoffo8Q.s:787    .progmem.data:000007d3 __c.1847
+C:\Users\patje\AppData\Local\Temp/ccoffo8Q.s:783    .progmem.data:00000794 __c.1850
+C:\Users\patje\AppData\Local\Temp/ccoffo8Q.s:778    .progmem.data:00000751 __c.1853
+C:\Users\patje\AppData\Local\Temp/ccoffo8Q.s:773    .progmem.data:0000070d __c.1856
+C:\Users\patje\AppData\Local\Temp/ccoffo8Q.s:769    .progmem.data:000006ce __c.1859
+C:\Users\patje\AppData\Local\Temp/ccoffo8Q.s:765    .progmem.data:0000068e __c.1862
+C:\Users\patje\AppData\Local\Temp/ccoffo8Q.s:760    .progmem.data:0000064b __c.1865
+C:\Users\patje\AppData\Local\Temp/ccoffo8Q.s:755    .progmem.data:00000607 __c.1868
+C:\Users\patje\AppData\Local\Temp/ccoffo8Q.s:750    .progmem.data:000005c1 __c.1871
+C:\Users\patje\AppData\Local\Temp/ccoffo8Q.s:745    .progmem.data:00000554 __c.1874
+C:\Users\patje\AppData\Local\Temp/ccoffo8Q.s:740    .progmem.data:00000503 __c.1877
+C:\Users\patje\AppData\Local\Temp/ccoffo8Q.s:735    .progmem.data:000004ae __c.1880
+C:\Users\patje\AppData\Local\Temp/ccoffo8Q.s:730    .progmem.data:0000044b __c.1883
+C:\Users\patje\AppData\Local\Temp/ccoffo8Q.s:725    .progmem.data:00000406 __c.1886
+C:\Users\patje\AppData\Local\Temp/ccoffo8Q.s:720    .progmem.data:00000399 __c.1889
+C:\Users\patje\AppData\Local\Temp/ccoffo8Q.s:715    .progmem.data:00000348 __c.1892
+C:\Users\patje\AppData\Local\Temp/ccoffo8Q.s:710    .progmem.data:000002d0 __c.1895
+C:\Users\patje\AppData\Local\Temp/ccoffo8Q.s:705    .progmem.data:0000026a __c.1898
+C:\Users\patje\AppData\Local\Temp/ccoffo8Q.s:700    .progmem.data:00000200 __c.1901
+C:\Users\patje\AppData\Local\Temp/ccoffo8Q.s:695    .progmem.data:00000197 __c.1904
+C:\Users\patje\AppData\Local\Temp/ccoffo8Q.s:690    .progmem.data:0000012a __c.1907
+C:\Users\patje\AppData\Local\Temp/ccoffo8Q.s:685    .progmem.data:000000b9 __c.1910
+C:\Users\patje\AppData\Local\Temp/ccoffo8Q.s:680    .progmem.data:00000071 __c.1913
+C:\Users\patje\AppData\Local\Temp/ccoffo8Q.s:675    .progmem.data:0000002a __c.1916
+C:\Users\patje\AppData\Local\Temp/ccoffo8Q.s:671    .progmem.data:00000020 __c.1919
+C:\Users\patje\AppData\Local\Temp/ccoffo8Q.s:585    .text:000002c8 readAllRegisters
+                            *COM*:00000020 RP6data
+C:\Users\patje\AppData\Local\Temp/ccoffo8Q.s:667    .progmem.data:00000004 __c.1926
+C:\Users\patje\AppData\Local\Temp/ccoffo8Q.s:663    .progmem.data:00000000 __c.1929
+                            *COM*:00000002 timer
+
+UNDEFINED SYMBOLS
+I2CTWI_transmitBytes
+I2CTWI_transmitByte
+I2CTWI_readBytes
+writeNStringP
+writeChar
+writeIntegerLength
+__do_clear_bss

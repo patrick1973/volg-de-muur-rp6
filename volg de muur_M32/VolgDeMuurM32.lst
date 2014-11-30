@@ -1,0 +1,243 @@
+   1               		.file	"VolgDeMuurM32.c"
+   2               	__SREG__ = 0x3f
+   3               	__SP_H__ = 0x3e
+   4               	__SP_L__ = 0x3d
+   5               	__CCP__  = 0x34
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+  15               	.Ltext0:
+  16               	.global	taskFrontSensors
+  18               	taskFrontSensors:
+  19               	.LFB6:
+  20               	.LM1:
+  21               	/* prologue: function */
+  22               	/* frame size = 0 */
+  23               	.LM2:
+  24 0000 8091 0000 		lds r24,stopwatches+3
+  25 0004 9091 0000 		lds r25,(stopwatches+3)+1
+  26 0008 895E      		subi r24,lo8(1001)
+  27 000a 9340      		sbci r25,hi8(1001)
+  28 000c 00F0      		brlo .L3
+  29               	.LM3:
+  30 000e 80E0      		ldi r24,lo8(sharpSensor)
+  31 0010 90E0      		ldi r25,hi8(sharpSensor)
+  32 0012 0E94 0000 		call getSharpSensorInfo
+  33               	.LM4:
+  34 0016 80E0      		ldi r24,lo8(sharpSensor)
+  35 0018 90E0      		ldi r25,hi8(sharpSensor)
+  36 001a 0E94 0000 		call printScharpSensorsValues
+  37               	.LM5:
+  38 001e 0E94 0000 		call getbatteryLevel
+  39 0022 BC01      		movw r22,r24
+  40 0024 80E0      		ldi r24,lo8(sharpSensor)
+  41 0026 90E0      		ldi r25,hi8(sharpSensor)
+  42 0028 0E94 0000 		call printDataToCSharpApplcation
+  43               	.LM6:
+  44 002c 1092 0000 		sts (stopwatches+3)+1,__zero_reg__
+  45 0030 1092 0000 		sts stopwatches+3,__zero_reg__
+  46               	.L3:
+  47 0034 0895      		ret
+  48               	.LFE6:
+  50               	.global	main
+  52               	main:
+  53               	.LFB7:
+  54               	.LM7:
+  55 0036 2F92      		push r2
+  56 0038 3F92      		push r3
+  57 003a 4F92      		push r4
+  58 003c 5F92      		push r5
+  59 003e 6F92      		push r6
+  60 0040 7F92      		push r7
+  61 0042 8F92      		push r8
+  62 0044 9F92      		push r9
+  63 0046 AF92      		push r10
+  64 0048 BF92      		push r11
+  65 004a CF92      		push r12
+  66 004c DF92      		push r13
+  67 004e EF92      		push r14
+  68 0050 FF92      		push r15
+  69 0052 0F93      		push r16
+  70 0054 1F93      		push r17
+  71               	/* prologue: function */
+  72               	/* frame size = 0 */
+  73               	.LM8:
+  74 0056 1BBA      		out 59-32,__zero_reg__
+  75 0058 87E0      		ldi r24,lo8(7)
+  76 005a 88BB      		out 56-32,r24
+  77 005c 8CEF      		ldi r24,lo8(-4)
+  78 005e 85BB      		out 53-32,r24
+  79 0060 81E6      		ldi r24,lo8(97)
+  80 0062 82BB      		out 50-32,r24
+  81 0064 1ABA      		out 58-32,__zero_reg__
+  82 0066 8BEB      		ldi r24,lo8(-69)
+  83 0068 87BB      		out 55-32,r24
+  84 006a 14BA      		out 52-32,__zero_reg__
+  85 006c 82E9      		ldi r24,lo8(-110)
+  86 006e 81BB      		out 49-32,r24
+  87               	.LM9:
+  88 0070 80E0      		ldi r24,lo8(gs(I2C_transmissionError))
+  89 0072 90E0      		ldi r25,hi8(gs(I2C_transmissionError))
+  90 0074 0E94 0000 		call I2CTWI_setTransmissionErrorHandler
+  91               	.LM10:
+  92 0078 0E94 0000 		call initRP6Control
+  93               	.LM11:
+  94 007c 0E94 0000 		call initLCD
+  95               	.LM12:
+  96 0080 88E4      		ldi r24,lo8(72)
+  97 0082 0E94 0000 		call __I2CTWI_initMaster
+  98               	.LM13:
+  99 0086 8091 0000 		lds r24,stopwatches
+ 100 008a 8160      		ori r24,lo8(1)
+ 101 008c 8093 0000 		sts stopwatches,r24
+ 102               	.LM14:
+ 103 0090 8091 0000 		lds r24,stopwatches
+ 104 0094 8260      		ori r24,lo8(2)
+ 105 0096 8093 0000 		sts stopwatches,r24
+ 106               	.LM15:
+ 107 009a 8091 0000 		lds r24,stopwatches
+ 108 009e 8860      		ori r24,lo8(8)
+ 109 00a0 8093 0000 		sts stopwatches,r24
+ 110               	.LM16:
+ 111 00a4 0F2E      		mov __tmp_reg__,r31
+ 112 00a6 F0E0      		ldi r31,lo8(0x0)
+ 113 00a8 EF2E      		mov r14,r31
+ 114 00aa F0E0      		ldi r31,hi8(0x0)
+ 115 00ac FF2E      		mov r15,r31
+ 116 00ae F0E0      		ldi r31,hlo8(0x0)
+ 117 00b0 0F2F      		mov r16,r31
+ 118 00b2 F0E0      		ldi r31,hhi8(0x0)
+ 119 00b4 1F2F      		mov r17,r31
+ 120 00b6 F02D      		mov r31,__tmp_reg__
+ 121               	.LM17:
+ 122 00b8 0F2E      		mov __tmp_reg__,r31
+ 123 00ba F0E0      		ldi r31,lo8(0x43fa0000)
+ 124 00bc 2F2E      		mov r2,r31
+ 125 00be F0E0      		ldi r31,hi8(0x43fa0000)
+ 126 00c0 3F2E      		mov r3,r31
+ 127 00c2 FAEF      		ldi r31,hlo8(0x43fa0000)
+ 128 00c4 4F2E      		mov r4,r31
+ 129 00c6 F3E4      		ldi r31,hhi8(0x43fa0000)
+ 130 00c8 5F2E      		mov r5,r31
+ 131 00ca F02D      		mov r31,__tmp_reg__
+ 132               	.LM18:
+ 133 00cc 0F2E      		mov __tmp_reg__,r31
+ 134 00ce F0E0      		ldi r31,lo8(0xc1a00000)
+ 135 00d0 6F2E      		mov r6,r31
+ 136 00d2 F0E0      		ldi r31,hi8(0xc1a00000)
+ 137 00d4 7F2E      		mov r7,r31
+ 138 00d6 F0EA      		ldi r31,hlo8(0xc1a00000)
+ 139 00d8 8F2E      		mov r8,r31
+ 140 00da F1EC      		ldi r31,hhi8(0xc1a00000)
+ 141 00dc 9F2E      		mov r9,r31
+ 142 00de F02D      		mov r31,__tmp_reg__
+ 143               	.LM19:
+ 144 00e0 0F2E      		mov __tmp_reg__,r31
+ 145 00e2 F0E0      		ldi r31,lo8(0x41a00000)
+ 146 00e4 AF2E      		mov r10,r31
+ 147 00e6 F0E0      		ldi r31,hi8(0x41a00000)
+ 148 00e8 BF2E      		mov r11,r31
+ 149 00ea F0EA      		ldi r31,hlo8(0x41a00000)
+ 150 00ec CF2E      		mov r12,r31
+ 151 00ee F1E4      		ldi r31,hhi8(0x41a00000)
+ 152 00f0 DF2E      		mov r13,r31
+ 153 00f2 F02D      		mov r31,__tmp_reg__
+ 154               	.L5:
+ 155               	.LM20:
+ 156 00f4 80E0      		ldi r24,lo8(0x3f000000)
+ 157 00f6 90E0      		ldi r25,hi8(0x3f000000)
+ 158 00f8 A0E0      		ldi r26,hlo8(0x3f000000)
+ 159 00fa BFE3      		ldi r27,hhi8(0x3f000000)
+ 160 00fc 8093 0000 		sts pidValues+16,r24
+ 161 0100 9093 0000 		sts (pidValues+16)+1,r25
+ 162 0104 A093 0000 		sts (pidValues+16)+2,r26
+ 163 0108 B093 0000 		sts (pidValues+16)+3,r27
+ 164               	.LM21:
+ 165 010c E092 0000 		sts pidValues+24,r14
+ 166 0110 F092 0000 		sts (pidValues+24)+1,r15
+ 167 0114 0093 0000 		sts (pidValues+24)+2,r16
+ 168 0118 1093 0000 		sts (pidValues+24)+3,r17
+ 169               	.LM22:
+ 170 011c 2092 0000 		sts pidValues+20,r2
+ 171 0120 3092 0000 		sts (pidValues+20)+1,r3
+ 172 0124 4092 0000 		sts (pidValues+20)+2,r4
+ 173 0128 5092 0000 		sts (pidValues+20)+3,r5
+ 174               	.LM23:
+ 175 012c 6091 0000 		lds r22,sharpSensor+8
+ 176 0130 7091 0000 		lds r23,(sharpSensor+8)+1
+ 177 0134 8827      		clr r24
+ 178 0136 77FD      		sbrc r23,7
+ 179 0138 8095      		com r24
+ 180 013a 982F      		mov r25,r24
+ 181 013c 0E94 0000 		call __floatsisf
+ 182 0140 6093 0000 		sts pidValues,r22
+ 183 0144 7093 0000 		sts (pidValues)+1,r23
+ 184 0148 8093 0000 		sts (pidValues)+2,r24
+ 185 014c 9093 0000 		sts (pidValues)+3,r25
+ 186               	.LM24:
+ 187 0150 E092 0000 		sts pidValues+4,r14
+ 188 0154 F092 0000 		sts (pidValues+4)+1,r15
+ 189 0158 0093 0000 		sts (pidValues+4)+2,r16
+ 190 015c 1093 0000 		sts (pidValues+4)+3,r17
+ 191               	.LM25:
+ 192 0160 6092 0000 		sts pidValues+12,r6
+ 193 0164 7092 0000 		sts (pidValues+12)+1,r7
+ 194 0168 8092 0000 		sts (pidValues+12)+2,r8
+ 195 016c 9092 0000 		sts (pidValues+12)+3,r9
+ 196               	.LM26:
+ 197 0170 A092 0000 		sts pidValues+8,r10
+ 198 0174 B092 0000 		sts (pidValues+8)+1,r11
+ 199 0178 C092 0000 		sts (pidValues+8)+2,r12
+ 200 017c D092 0000 		sts (pidValues+8)+3,r13
+ 201               	.LM27:
+ 202 0180 0E94 0000 		call taskFrontSensors
+ 203               	.LM28:
+ 204 0184 0E94 0000 		call runningLight
+ 205 0188 00C0      		rjmp .L5
+ 206               	.LFE7:
+ 208               	.global	arrayString
+ 209               		.data
+ 212               	arrayString:
+ 213 0000 7061 7472 		.string	"patrick 1973"
+ 213      6963 6B20 
+ 213      3139 3733 
+ 213      00
+ 214 000d 0000 0000 		.skip 7,0
+ 214      0000 00
+ 215               		.comm timer,2,1
+ 216               		.comm pid,4,1
+ 217               		.comm sharpSensor,12,1
+ 218               		.comm pidValues,32,1
+ 219               		.comm compassModule,18,1
+ 252               	.Letext0:
+DEFINED SYMBOLS
+                            *ABS*:00000000 VolgDeMuurM32.c
+C:\Users\patje\AppData\Local\Temp/ccStnaft.s:2      *ABS*:0000003f __SREG__
+C:\Users\patje\AppData\Local\Temp/ccStnaft.s:3      *ABS*:0000003e __SP_H__
+C:\Users\patje\AppData\Local\Temp/ccStnaft.s:4      *ABS*:0000003d __SP_L__
+C:\Users\patje\AppData\Local\Temp/ccStnaft.s:5      *ABS*:00000034 __CCP__
+C:\Users\patje\AppData\Local\Temp/ccStnaft.s:6      *ABS*:00000000 __tmp_reg__
+C:\Users\patje\AppData\Local\Temp/ccStnaft.s:7      *ABS*:00000001 __zero_reg__
+C:\Users\patje\AppData\Local\Temp/ccStnaft.s:18     .text:00000000 taskFrontSensors
+                            *COM*:0000000c sharpSensor
+C:\Users\patje\AppData\Local\Temp/ccStnaft.s:52     .text:00000036 main
+                            *COM*:00000020 pidValues
+C:\Users\patje\AppData\Local\Temp/ccStnaft.s:212    .data:00000000 arrayString
+                            *COM*:00000002 timer
+                            *COM*:00000004 pid
+                            *COM*:00000012 compassModule
+
+UNDEFINED SYMBOLS
+stopwatches
+getSharpSensorInfo
+printScharpSensorsValues
+getbatteryLevel
+printDataToCSharpApplcation
+I2C_transmissionError
+I2CTWI_setTransmissionErrorHandler
+initRP6Control
+initLCD
+__I2CTWI_initMaster
+__floatsisf
+runningLight
+__do_copy_data
+__do_clear_bss

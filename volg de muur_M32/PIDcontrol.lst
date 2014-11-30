@@ -1,0 +1,131 @@
+   1               		.file	"PIDcontrol.c"
+   2               	__SREG__ = 0x3f
+   3               	__SP_H__ = 0x3e
+   4               	__SP_L__ = 0x3d
+   5               	__CCP__  = 0x34
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+  15               	.Ltext0:
+  16               	.global	pidController
+  18               	pidController:
+  19               	.LFB6:
+  20               	.LM1:
+  21               	.LVL0:
+  22 0000 8F92      		push r8
+  23 0002 9F92      		push r9
+  24 0004 AF92      		push r10
+  25 0006 BF92      		push r11
+  26 0008 CF92      		push r12
+  27 000a DF92      		push r13
+  28 000c EF92      		push r14
+  29 000e FF92      		push r15
+  30 0010 0F93      		push r16
+  31 0012 1F93      		push r17
+  32               	/* prologue: function */
+  33               	/* frame size = 0 */
+  34 0014 6C01      		movw r12,r24
+  35               	.LM2:
+  36 0016 FC01      		movw r30,r24
+  37 0018 8080      		ld r8,Z
+  38 001a 9180      		ldd r9,Z+1
+  39 001c A280      		ldd r10,Z+2
+  40 001e B380      		ldd r11,Z+3
+  41               	.LM3:
+  42 0020 6481      		ldd r22,Z+4
+  43 0022 7581      		ldd r23,Z+5
+  44 0024 8681      		ldd r24,Z+6
+  45 0026 9781      		ldd r25,Z+7
+  46 0028 A501      		movw r20,r10
+  47 002a 9401      		movw r18,r8
+  48 002c 0E94 0000 		call __subsf3
+  49               	.LVL1:
+  50 0030 F601      		movw r30,r12
+  51 0032 2089      		ldd r18,Z+16
+  52 0034 3189      		ldd r19,Z+17
+  53 0036 4289      		ldd r20,Z+18
+  54 0038 5389      		ldd r21,Z+19
+  55 003a 0E94 0000 		call __mulsf3
+  56 003e 7B01      		movw r14,r22
+  57 0040 8C01      		movw r16,r24
+  58 0042 F601      		movw r30,r12
+  59 0044 2489      		ldd r18,Z+20
+  60 0046 3589      		ldd r19,Z+21
+  61 0048 4689      		ldd r20,Z+22
+  62 004a 5789      		ldd r21,Z+23
+  63 004c CA01      		movw r24,r20
+  64 004e B901      		movw r22,r18
+  65 0050 0E94 0000 		call __addsf3
+  66 0054 9B01      		movw r18,r22
+  67 0056 AC01      		movw r20,r24
+  68 0058 C801      		movw r24,r16
+  69 005a B701      		movw r22,r14
+  70 005c 0E94 0000 		call __addsf3
+  71 0060 7B01      		movw r14,r22
+  72 0062 8C01      		movw r16,r24
+  73 0064 6091 0000 		lds r22,last.1770
+  74 0068 7091 0000 		lds r23,(last.1770)+1
+  75 006c 8091 0000 		lds r24,(last.1770)+2
+  76 0070 9091 0000 		lds r25,(last.1770)+3
+  77 0074 A501      		movw r20,r10
+  78 0076 9401      		movw r18,r8
+  79 0078 0E94 0000 		call __subsf3
+  80 007c F601      		movw r30,r12
+  81 007e 208D      		ldd r18,Z+24
+  82 0080 318D      		ldd r19,Z+25
+  83 0082 428D      		ldd r20,Z+26
+  84 0084 538D      		ldd r21,Z+27
+  85 0086 0E94 0000 		call __mulsf3
+  86 008a 9B01      		movw r18,r22
+  87 008c AC01      		movw r20,r24
+  88 008e C801      		movw r24,r16
+  89 0090 B701      		movw r22,r14
+  90 0092 0E94 0000 		call __addsf3
+  91 0096 DC01      		movw r26,r24
+  92 0098 9B01      		movw r18,r22
+  93 009a AC01      		movw r20,r24
+  94 009c F601      		movw r30,r12
+  95 009e 2083      		st Z,r18
+  96 00a0 3183      		std Z+1,r19
+  97 00a2 4283      		std Z+2,r20
+  98 00a4 5383      		std Z+3,r21
+  99               	.LM4:
+ 100 00a6 CB01      		movw r24,r22
+ 101 00a8 8093 0000 		sts last.1770,r24
+ 102 00ac 9093 0000 		sts (last.1770)+1,r25
+ 103 00b0 A093 0000 		sts (last.1770)+2,r26
+ 104 00b4 B093 0000 		sts (last.1770)+3,r27
+ 105               	/* epilogue start */
+ 106               	.LM5:
+ 107 00b8 1F91      		pop r17
+ 108 00ba 0F91      		pop r16
+ 109 00bc FF90      		pop r15
+ 110 00be EF90      		pop r14
+ 111 00c0 DF90      		pop r13
+ 112 00c2 CF90      		pop r12
+ 113               	.LVL2:
+ 114 00c4 BF90      		pop r11
+ 115 00c6 AF90      		pop r10
+ 116 00c8 9F90      		pop r9
+ 117 00ca 8F90      		pop r8
+ 118 00cc 0895      		ret
+ 119               	.LFE6:
+ 121               		.lcomm last.1770,4
+ 122               		.comm timer,2,1
+ 147               	.Letext0:
+DEFINED SYMBOLS
+                            *ABS*:00000000 PIDcontrol.c
+C:\Users\patje\AppData\Local\Temp/ccodSXm2.s:2      *ABS*:0000003f __SREG__
+C:\Users\patje\AppData\Local\Temp/ccodSXm2.s:3      *ABS*:0000003e __SP_H__
+C:\Users\patje\AppData\Local\Temp/ccodSXm2.s:4      *ABS*:0000003d __SP_L__
+C:\Users\patje\AppData\Local\Temp/ccodSXm2.s:5      *ABS*:00000034 __CCP__
+C:\Users\patje\AppData\Local\Temp/ccodSXm2.s:6      *ABS*:00000000 __tmp_reg__
+C:\Users\patje\AppData\Local\Temp/ccodSXm2.s:7      *ABS*:00000001 __zero_reg__
+C:\Users\patje\AppData\Local\Temp/ccodSXm2.s:18     .text:00000000 pidController
+                             .bss:00000000 last.1770
+                            *COM*:00000002 timer
+
+UNDEFINED SYMBOLS
+__subsf3
+__mulsf3
+__addsf3
+__do_clear_bss

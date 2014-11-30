@@ -1,0 +1,596 @@
+   1               		.file	"CMP_S10_compass.c"
+   2               	__SREG__ = 0x3f
+   3               	__SP_H__ = 0x3e
+   4               	__SP_L__ = 0x3d
+   5               	__CCP__  = 0x34
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+  15               	.Ltext0:
+  16               	.global	WriteLCD
+  18               	WriteLCD:
+  19               	.LFB8:
+  20               	.LM1:
+  21               	.LVL0:
+  22 0000 0F93      		push r16
+  23 0002 1F93      		push r17
+  24               	/* prologue: function */
+  25               	/* frame size = 0 */
+  26 0004 8C01      		movw r16,r24
+  27               	.LM2:
+  28 0006 80E0      		ldi r24,lo8(0)
+  29               	.LVL1:
+  30 0008 60E0      		ldi r22,lo8(0)
+  31 000a 0E94 0000 		call setCursorPosLCD
+  32               	.LM3:
+  33 000e 0E94 0000 		call clearLCD
+  34               	.LM4:
+  35 0012 80E0      		ldi r24,lo8(__c.1978)
+  36 0014 90E0      		ldi r25,hi8(__c.1978)
+  37 0016 0E94 0000 		call writeNStringLCD_P
+  38               	.LM5:
+  39 001a 80E0      		ldi r24,lo8(0)
+  40 001c 62E0      		ldi r22,lo8(2)
+  41 001e 0E94 0000 		call setCursorPosLCD
+  42               	.LM6:
+  43 0022 F801      		movw r30,r16
+  44 0024 8481      		ldd r24,Z+4
+  45 0026 9581      		ldd r25,Z+5
+  46 0028 6AE0      		ldi r22,lo8(10)
+  47 002a 70E0      		ldi r23,hi8(10)
+  48 002c 0E94 0000 		call __udivmodhi4
+  49 0030 CB01      		movw r24,r22
+  50 0032 6AE0      		ldi r22,lo8(10)
+  51 0034 0E94 0000 		call writeIntegerLCD
+  52               	.LM7:
+  53 0038 8EE2      		ldi r24,lo8(46)
+  54 003a 0E94 0000 		call writeCharLCD
+  55               	.LM8:
+  56 003e F801      		movw r30,r16
+  57 0040 8481      		ldd r24,Z+4
+  58 0042 9581      		ldd r25,Z+5
+  59 0044 6AE0      		ldi r22,lo8(10)
+  60 0046 70E0      		ldi r23,hi8(10)
+  61 0048 0E94 0000 		call __udivmodhi4
+  62 004c 6AE0      		ldi r22,lo8(10)
+  63 004e 0E94 0000 		call writeIntegerLCD
+  64               	.LM9:
+  65 0052 80E0      		ldi r24,lo8(0)
+  66 0054 67E0      		ldi r22,lo8(7)
+  67 0056 0E94 0000 		call setCursorPosLCD
+  68               	.LM10:
+  69 005a 80E0      		ldi r24,lo8(__c.1980)
+  70 005c 90E0      		ldi r25,hi8(__c.1980)
+  71 005e 0E94 0000 		call writeNStringLCD_P
+  72               	.LM11:
+  73 0062 F801      		movw r30,r16
+  74 0064 8281      		ldd r24,Z+2
+  75 0066 9927      		clr r25
+  76 0068 87FD      		sbrc r24,7
+  77 006a 9095      		com r25
+  78 006c 6AE0      		ldi r22,lo8(10)
+  79 006e 0E94 0000 		call writeIntegerLCD
+  80               	.LM12:
+  81 0072 80E0      		ldi r24,lo8(0)
+  82 0074 6CE0      		ldi r22,lo8(12)
+  83 0076 0E94 0000 		call setCursorPosLCD
+  84               	.LM13:
+  85 007a 80E0      		ldi r24,lo8(__c.1982)
+  86 007c 90E0      		ldi r25,hi8(__c.1982)
+  87 007e 0E94 0000 		call writeNStringLCD_P
+  88               	.LM14:
+  89 0082 F801      		movw r30,r16
+  90 0084 8381      		ldd r24,Z+3
+  91 0086 9927      		clr r25
+  92 0088 87FD      		sbrc r24,7
+  93 008a 9095      		com r25
+  94 008c 6AE0      		ldi r22,lo8(10)
+  95 008e 0E94 0000 		call writeIntegerLCD
+  96               	.LM15:
+  97 0092 81E0      		ldi r24,lo8(1)
+  98 0094 60E0      		ldi r22,lo8(0)
+  99 0096 0E94 0000 		call setCursorPosLCD
+ 100               	/* epilogue start */
+ 101               	.LM16:
+ 102 009a 1F91      		pop r17
+ 103 009c 0F91      		pop r16
+ 104               	.LVL2:
+ 105 009e 0895      		ret
+ 106               	.LFE8:
+ 108               	.global	writeSerialCompass
+ 110               	writeSerialCompass:
+ 111               	.LFB7:
+ 112               	.LM17:
+ 113               	.LVL3:
+ 114 00a0 0F93      		push r16
+ 115 00a2 1F93      		push r17
+ 116               	/* prologue: function */
+ 117               	/* frame size = 0 */
+ 118 00a4 8C01      		movw r16,r24
+ 119               	.LM18:
+ 120 00a6 80E0      		ldi r24,lo8(__c.1907)
+ 121 00a8 90E0      		ldi r25,hi8(__c.1907)
+ 122               	.LVL4:
+ 123 00aa 0E94 0000 		call writeNStringP
+ 124               	.LM19:
+ 125 00ae 80E0      		ldi r24,lo8(__c.1909)
+ 126 00b0 90E0      		ldi r25,hi8(__c.1909)
+ 127 00b2 0E94 0000 		call writeNStringP
+ 128 00b6 F801      		movw r30,r16
+ 129 00b8 8081      		ld r24,Z
+ 130 00ba 9927      		clr r25
+ 131 00bc 87FD      		sbrc r24,7
+ 132 00be 9095      		com r25
+ 133 00c0 6AE0      		ldi r22,lo8(10)
+ 134 00c2 0E94 0000 		call writeInteger
+ 135 00c6 80E0      		ldi r24,lo8(__c.1911)
+ 136 00c8 90E0      		ldi r25,hi8(__c.1911)
+ 137 00ca 0E94 0000 		call writeNStringP
+ 138               	.LM20:
+ 139 00ce 80E0      		ldi r24,lo8(__c.1913)
+ 140 00d0 90E0      		ldi r25,hi8(__c.1913)
+ 141 00d2 0E94 0000 		call writeNStringP
+ 142 00d6 F801      		movw r30,r16
+ 143 00d8 8181      		ldd r24,Z+1
+ 144 00da 9927      		clr r25
+ 145 00dc 87FD      		sbrc r24,7
+ 146 00de 9095      		com r25
+ 147 00e0 6AE0      		ldi r22,lo8(10)
+ 148 00e2 0E94 0000 		call writeInteger
+ 149 00e6 80E0      		ldi r24,lo8(__c.1915)
+ 150 00e8 90E0      		ldi r25,hi8(__c.1915)
+ 151 00ea 0E94 0000 		call writeNStringP
+ 152               	.LM21:
+ 153 00ee 80E0      		ldi r24,lo8(__c.1917)
+ 154 00f0 90E0      		ldi r25,hi8(__c.1917)
+ 155 00f2 0E94 0000 		call writeNStringP
+ 156 00f6 F801      		movw r30,r16
+ 157 00f8 8481      		ldd r24,Z+4
+ 158 00fa 9581      		ldd r25,Z+5
+ 159 00fc 6AE0      		ldi r22,lo8(10)
+ 160 00fe 0E94 0000 		call writeInteger
+ 161 0102 80E0      		ldi r24,lo8(__c.1919)
+ 162 0104 90E0      		ldi r25,hi8(__c.1919)
+ 163 0106 0E94 0000 		call writeNStringP
+ 164               	.LM22:
+ 165 010a 80E0      		ldi r24,lo8(__c.1921)
+ 166 010c 90E0      		ldi r25,hi8(__c.1921)
+ 167 010e 0E94 0000 		call writeNStringP
+ 168 0112 F801      		movw r30,r16
+ 169 0114 8281      		ldd r24,Z+2
+ 170 0116 9927      		clr r25
+ 171 0118 87FD      		sbrc r24,7
+ 172 011a 9095      		com r25
+ 173 011c 6AE0      		ldi r22,lo8(10)
+ 174 011e 0E94 0000 		call writeInteger
+ 175 0122 80E0      		ldi r24,lo8(__c.1923)
+ 176 0124 90E0      		ldi r25,hi8(__c.1923)
+ 177 0126 0E94 0000 		call writeNStringP
+ 178               	.LM23:
+ 179 012a 80E0      		ldi r24,lo8(__c.1925)
+ 180 012c 90E0      		ldi r25,hi8(__c.1925)
+ 181 012e 0E94 0000 		call writeNStringP
+ 182 0132 F801      		movw r30,r16
+ 183 0134 8381      		ldd r24,Z+3
+ 184 0136 9927      		clr r25
+ 185 0138 87FD      		sbrc r24,7
+ 186 013a 9095      		com r25
+ 187 013c 6AE0      		ldi r22,lo8(10)
+ 188 013e 0E94 0000 		call writeInteger
+ 189 0142 80E0      		ldi r24,lo8(__c.1927)
+ 190 0144 90E0      		ldi r25,hi8(__c.1927)
+ 191 0146 0E94 0000 		call writeNStringP
+ 192               	.LM24:
+ 193 014a 80E0      		ldi r24,lo8(__c.1929)
+ 194 014c 90E0      		ldi r25,hi8(__c.1929)
+ 195 014e 0E94 0000 		call writeNStringP
+ 196 0152 F801      		movw r30,r16
+ 197 0154 8681      		ldd r24,Z+6
+ 198 0156 9781      		ldd r25,Z+7
+ 199 0158 6AE0      		ldi r22,lo8(10)
+ 200 015a 0E94 0000 		call writeInteger
+ 201 015e 80E0      		ldi r24,lo8(__c.1931)
+ 202 0160 90E0      		ldi r25,hi8(__c.1931)
+ 203 0162 0E94 0000 		call writeNStringP
+ 204               	.LM25:
+ 205 0166 80E0      		ldi r24,lo8(__c.1933)
+ 206 0168 90E0      		ldi r25,hi8(__c.1933)
+ 207 016a 0E94 0000 		call writeNStringP
+ 208 016e F801      		movw r30,r16
+ 209 0170 8085      		ldd r24,Z+8
+ 210 0172 9185      		ldd r25,Z+9
+ 211 0174 6AE0      		ldi r22,lo8(10)
+ 212 0176 0E94 0000 		call writeInteger
+ 213 017a 80E0      		ldi r24,lo8(__c.1935)
+ 214 017c 90E0      		ldi r25,hi8(__c.1935)
+ 215 017e 0E94 0000 		call writeNStringP
+ 216               	.LM26:
+ 217 0182 80E0      		ldi r24,lo8(__c.1937)
+ 218 0184 90E0      		ldi r25,hi8(__c.1937)
+ 219 0186 0E94 0000 		call writeNStringP
+ 220 018a F801      		movw r30,r16
+ 221 018c 8285      		ldd r24,Z+10
+ 222 018e 9385      		ldd r25,Z+11
+ 223 0190 6AE0      		ldi r22,lo8(10)
+ 224 0192 0E94 0000 		call writeInteger
+ 225 0196 80E0      		ldi r24,lo8(__c.1939)
+ 226 0198 90E0      		ldi r25,hi8(__c.1939)
+ 227 019a 0E94 0000 		call writeNStringP
+ 228               	.LM27:
+ 229 019e 80E0      		ldi r24,lo8(__c.1941)
+ 230 01a0 90E0      		ldi r25,hi8(__c.1941)
+ 231 01a2 0E94 0000 		call writeNStringP
+ 232 01a6 F801      		movw r30,r16
+ 233 01a8 8485      		ldd r24,Z+12
+ 234 01aa 9585      		ldd r25,Z+13
+ 235 01ac 6AE0      		ldi r22,lo8(10)
+ 236 01ae 0E94 0000 		call writeInteger
+ 237 01b2 80E0      		ldi r24,lo8(__c.1943)
+ 238 01b4 90E0      		ldi r25,hi8(__c.1943)
+ 239 01b6 0E94 0000 		call writeNStringP
+ 240               	.LM28:
+ 241 01ba 80E0      		ldi r24,lo8(__c.1945)
+ 242 01bc 90E0      		ldi r25,hi8(__c.1945)
+ 243 01be 0E94 0000 		call writeNStringP
+ 244 01c2 F801      		movw r30,r16
+ 245 01c4 8685      		ldd r24,Z+14
+ 246 01c6 9785      		ldd r25,Z+15
+ 247 01c8 6AE0      		ldi r22,lo8(10)
+ 248 01ca 0E94 0000 		call writeInteger
+ 249 01ce 80E0      		ldi r24,lo8(__c.1947)
+ 250 01d0 90E0      		ldi r25,hi8(__c.1947)
+ 251 01d2 0E94 0000 		call writeNStringP
+ 252               	.LM29:
+ 253 01d6 80E0      		ldi r24,lo8(__c.1949)
+ 254 01d8 90E0      		ldi r25,hi8(__c.1949)
+ 255 01da 0E94 0000 		call writeNStringP
+ 256 01de F801      		movw r30,r16
+ 257 01e0 8089      		ldd r24,Z+16
+ 258 01e2 9189      		ldd r25,Z+17
+ 259 01e4 6AE0      		ldi r22,lo8(10)
+ 260 01e6 0E94 0000 		call writeInteger
+ 261 01ea 80E0      		ldi r24,lo8(__c.1951)
+ 262 01ec 90E0      		ldi r25,hi8(__c.1951)
+ 263 01ee 0E94 0000 		call writeNStringP
+ 264               	/* epilogue start */
+ 265               	.LM30:
+ 266 01f2 1F91      		pop r17
+ 267 01f4 0F91      		pop r16
+ 268               	.LVL5:
+ 269 01f6 0895      		ret
+ 270               	.LFE7:
+ 272               	.global	ReadCompass
+ 274               	ReadCompass:
+ 275               	.LFB6:
+ 276               	.LM31:
+ 277               	.LVL6:
+ 278 01f8 0F93      		push r16
+ 279 01fa 1F93      		push r17
+ 280 01fc CF93      		push r28
+ 281 01fe DF93      		push r29
+ 282               	/* prologue: function */
+ 283               	/* frame size = 0 */
+ 284 0200 8C01      		movw r16,r24
+ 285               	.LM32:
+ 286 0202 8091 0000 		lds r24,TWI_operation
+ 287               	.LVL7:
+ 288 0206 8823      		tst r24
+ 289 0208 01F4      		brne .L6
+ 290               	.LM33:
+ 291 020a 8091 0000 		lds r24,stopwatches+7
+ 292 020e 9091 0000 		lds r25,(stopwatches+7)+1
+ 293 0212 8536      		cpi r24,101
+ 294 0214 9105      		cpc r25,__zero_reg__
+ 295 0216 00F0      		brlo .L6
+ 296               	.LM34:
+ 297 0218 1092 0000 		sts teller.1838,__zero_reg__
+ 298 021c 00C0      		rjmp .L7
+ 299               	.L8:
+ 300               	.LM35:
+ 301 021e 80EC      		ldi r24,lo8(-64)
+ 302 0220 0E94 0000 		call I2CTWI_transmitByte
+ 303               	.LM36:
+ 304 0224 8091 0000 		lds r24,teller.1838
+ 305 0228 C82F      		mov r28,r24
+ 306 022a DD27      		clr r29
+ 307 022c C7FD      		sbrc r28,7
+ 308 022e D095      		com r29
+ 309 0230 80EC      		ldi r24,lo8(-64)
+ 310 0232 0E94 0000 		call I2CTWI_readByte
+ 311 0236 C050      		subi r28,lo8(-(CompassResult.1839))
+ 312 0238 D040      		sbci r29,hi8(-(CompassResult.1839))
+ 313 023a 8883      		st Y,r24
+ 314               	.LM37:
+ 315 023c 8091 0000 		lds r24,teller.1838
+ 316 0240 8F5F      		subi r24,lo8(-(1))
+ 317 0242 8093 0000 		sts teller.1838,r24
+ 318               	.L7:
+ 319 0246 6091 0000 		lds r22,teller.1838
+ 320 024a 6631      		cpi r22,lo8(22)
+ 321 024c 04F0      		brlt .L8
+ 322               	.LM38:
+ 323 024e 1092 0000 		sts (stopwatches+7)+1,__zero_reg__
+ 324 0252 1092 0000 		sts stopwatches+7,__zero_reg__
+ 325               	.L6:
+ 326               	.LM39:
+ 327 0256 8091 0000 		lds r24,CompassResult.1839
+ 328 025a F801      		movw r30,r16
+ 329 025c 8083      		st Z,r24
+ 330               	.LM40:
+ 331 025e 8091 0000 		lds r24,CompassResult.1839+1
+ 332 0262 8183      		std Z+1,r24
+ 333               	.LM41:
+ 334 0264 8091 0000 		lds r24,CompassResult.1839+4
+ 335 0268 8283      		std Z+2,r24
+ 336               	.LM42:
+ 337 026a 8091 0000 		lds r24,CompassResult.1839+5
+ 338 026e 8383      		std Z+3,r24
+ 339               	.LM43:
+ 340 0270 8091 0000 		lds r24,CompassResult.1839+2
+ 341 0274 9927      		clr r25
+ 342 0276 87FD      		sbrc r24,7
+ 343 0278 9095      		com r25
+ 344 027a 982F      		mov r25,r24
+ 345 027c 8827      		clr r24
+ 346 027e 2091 0000 		lds r18,CompassResult.1839+3
+ 347 0282 3327      		clr r19
+ 348 0284 27FD      		sbrc r18,7
+ 349 0286 3095      		com r19
+ 350 0288 820F      		add r24,r18
+ 351 028a 931F      		adc r25,r19
+ 352 028c 9583      		std Z+5,r25
+ 353 028e 8483      		std Z+4,r24
+ 354               	.LM44:
+ 355 0290 8091 0000 		lds r24,CompassResult.1839+10
+ 356 0294 9927      		clr r25
+ 357 0296 87FD      		sbrc r24,7
+ 358 0298 9095      		com r25
+ 359 029a 982F      		mov r25,r24
+ 360 029c 8827      		clr r24
+ 361 029e 2091 0000 		lds r18,CompassResult.1839+11
+ 362 02a2 3327      		clr r19
+ 363 02a4 27FD      		sbrc r18,7
+ 364 02a6 3095      		com r19
+ 365 02a8 820F      		add r24,r18
+ 366 02aa 931F      		adc r25,r19
+ 367 02ac 9783      		std Z+7,r25
+ 368 02ae 8683      		std Z+6,r24
+ 369               	.LM45:
+ 370 02b0 8091 0000 		lds r24,CompassResult.1839+12
+ 371 02b4 9927      		clr r25
+ 372 02b6 87FD      		sbrc r24,7
+ 373 02b8 9095      		com r25
+ 374 02ba 982F      		mov r25,r24
+ 375 02bc 8827      		clr r24
+ 376 02be 2091 0000 		lds r18,CompassResult.1839+13
+ 377 02c2 3327      		clr r19
+ 378 02c4 27FD      		sbrc r18,7
+ 379 02c6 3095      		com r19
+ 380 02c8 820F      		add r24,r18
+ 381 02ca 931F      		adc r25,r19
+ 382 02cc 9187      		std Z+9,r25
+ 383 02ce 8087      		std Z+8,r24
+ 384               	.LM46:
+ 385 02d0 8091 0000 		lds r24,CompassResult.1839+14
+ 386 02d4 9927      		clr r25
+ 387 02d6 87FD      		sbrc r24,7
+ 388 02d8 9095      		com r25
+ 389 02da 982F      		mov r25,r24
+ 390 02dc 8827      		clr r24
+ 391 02de 2091 0000 		lds r18,CompassResult.1839+15
+ 392 02e2 3327      		clr r19
+ 393 02e4 27FD      		sbrc r18,7
+ 394 02e6 3095      		com r19
+ 395 02e8 820F      		add r24,r18
+ 396 02ea 931F      		adc r25,r19
+ 397 02ec 9387      		std Z+11,r25
+ 398 02ee 8287      		std Z+10,r24
+ 399               	.LM47:
+ 400 02f0 8091 0000 		lds r24,CompassResult.1839+16
+ 401 02f4 9927      		clr r25
+ 402 02f6 87FD      		sbrc r24,7
+ 403 02f8 9095      		com r25
+ 404 02fa 982F      		mov r25,r24
+ 405 02fc 8827      		clr r24
+ 406 02fe 2091 0000 		lds r18,CompassResult.1839+17
+ 407 0302 3327      		clr r19
+ 408 0304 27FD      		sbrc r18,7
+ 409 0306 3095      		com r19
+ 410 0308 820F      		add r24,r18
+ 411 030a 931F      		adc r25,r19
+ 412 030c 9587      		std Z+13,r25
+ 413 030e 8487      		std Z+12,r24
+ 414               	.LM48:
+ 415 0310 8091 0000 		lds r24,CompassResult.1839+18
+ 416 0314 9927      		clr r25
+ 417 0316 87FD      		sbrc r24,7
+ 418 0318 9095      		com r25
+ 419 031a 982F      		mov r25,r24
+ 420 031c 8827      		clr r24
+ 421 031e 2091 0000 		lds r18,CompassResult.1839+19
+ 422 0322 3327      		clr r19
+ 423 0324 27FD      		sbrc r18,7
+ 424 0326 3095      		com r19
+ 425 0328 820F      		add r24,r18
+ 426 032a 931F      		adc r25,r19
+ 427 032c 9787      		std Z+15,r25
+ 428 032e 8687      		std Z+14,r24
+ 429               	.LM49:
+ 430 0330 8091 0000 		lds r24,CompassResult.1839+20
+ 431 0334 9927      		clr r25
+ 432 0336 87FD      		sbrc r24,7
+ 433 0338 9095      		com r25
+ 434 033a 982F      		mov r25,r24
+ 435 033c 8827      		clr r24
+ 436 033e 2091 0000 		lds r18,CompassResult.1839+21
+ 437 0342 3327      		clr r19
+ 438 0344 27FD      		sbrc r18,7
+ 439 0346 3095      		com r19
+ 440 0348 820F      		add r24,r18
+ 441 034a 931F      		adc r25,r19
+ 442 034c 918B      		std Z+17,r25
+ 443 034e 808B      		std Z+16,r24
+ 444               	/* epilogue start */
+ 445               	.LM50:
+ 446 0350 DF91      		pop r29
+ 447 0352 CF91      		pop r28
+ 448 0354 1F91      		pop r17
+ 449 0356 0F91      		pop r16
+ 450               	.LVL8:
+ 451 0358 0895      		ret
+ 452               	.LFE6:
+ 454               		.section	.progmem.data,"a",@progbits
+ 457               	__c.1982:
+ 458 0000 5200      		.string	"R"
+ 461               	__c.1980:
+ 462 0002 5000      		.string	"P"
+ 465               	__c.1978:
+ 466 0004 423D 00   		.string	"B="
+ 469               	__c.1951:
+ 470 0007 0A00      		.string	"\n"
+ 473               	__c.1949:
+ 474 0009 436F 6D70 		.string	"Compass Accelerometer Z \t= "
+ 474      6173 7320 
+ 474      4163 6365 
+ 474      6C65 726F 
+ 474      6D65 7465 
+ 477               	__c.1947:
+ 478 0025 0A00      		.string	"\n"
+ 481               	__c.1945:
+ 482 0027 436F 6D70 		.string	"Compass Accelerometer Y \t= "
+ 482      6173 7320 
+ 482      4163 6365 
+ 482      6C65 726F 
+ 482      6D65 7465 
+ 485               	__c.1943:
+ 486 0043 0A00      		.string	"\n"
+ 489               	__c.1941:
+ 490 0045 436F 6D70 		.string	"Compass Accelerometer X \t= "
+ 490      6173 7320 
+ 490      4163 6365 
+ 490      6C65 726F 
+ 490      6D65 7465 
+ 493               	__c.1939:
+ 494 0061 0A00      		.string	"\n"
+ 497               	__c.1937:
+ 498 0063 436F 6D70 		.string	"Compass Magnetometer Z \t= "
+ 498      6173 7320 
+ 498      4D61 676E 
+ 498      6574 6F6D 
+ 498      6574 6572 
+ 501               	__c.1935:
+ 502 007e 0A00      		.string	"\n"
+ 505               	__c.1933:
+ 506 0080 436F 6D70 		.string	"Compass Magnetometer Y \t= "
+ 506      6173 7320 
+ 506      4D61 676E 
+ 506      6574 6F6D 
+ 506      6574 6572 
+ 509               	__c.1931:
+ 510 009b 0A00      		.string	"\n"
+ 513               	__c.1929:
+ 514 009d 436F 6D70 		.string	"Compass Magnetometer X \t= "
+ 514      6173 7320 
+ 514      4D61 676E 
+ 514      6574 6F6D 
+ 514      6574 6572 
+ 517               	__c.1927:
+ 518 00b8 0A00      		.string	"\n"
+ 521               	__c.1925:
+ 522 00ba 436F 6D70 		.string	"Compass Roll \t\t\t= "
+ 522      6173 7320 
+ 522      526F 6C6C 
+ 522      2009 0909 
+ 522      3D20 00
+ 525               	__c.1923:
+ 526 00cd 0A00      		.string	"\n"
+ 529               	__c.1921:
+ 530 00cf 436F 6D70 		.string	"Compass Pitch\t\t\t= "
+ 530      6173 7320 
+ 530      5069 7463 
+ 530      6809 0909 
+ 530      3D20 00
+ 533               	__c.1919:
+ 534 00e2 0A00      		.string	"\n"
+ 537               	__c.1917:
+ 538 00e4 436F 6D70 		.string	"Compass Bearing          = "
+ 538      6173 7320 
+ 538      4265 6172 
+ 538      696E 6720 
+ 538      2020 2020 
+ 541               	__c.1915:
+ 542 0100 0A00      		.string	"\n"
+ 545               	__c.1913:
+ 546 0102 436F 6D70 		.string	"Compass Bearing Byte     = "
+ 546      6173 7320 
+ 546      4265 6172 
+ 546      696E 6720 
+ 546      4279 7465 
+ 549               	__c.1911:
+ 550 011e 0A00      		.string	"\n"
+ 553               	__c.1909:
+ 554 0120 436F 6D70 		.string	"Compass Software Version = "
+ 554      6173 7320 
+ 554      536F 6674 
+ 554      7761 7265 
+ 554      2056 6572 
+ 557               	__c.1907:
+ 558 013c 0C00      		.string	"\f"
+ 559               		.lcomm CompassResult.1839,22
+ 560               		.lcomm teller.1838,1
+ 561               		.comm timer,2,1
+ 602               	.Letext0:
+DEFINED SYMBOLS
+                            *ABS*:00000000 CMP_S10_compass.c
+C:\Users\patje\AppData\Local\Temp/ccMfberd.s:2      *ABS*:0000003f __SREG__
+C:\Users\patje\AppData\Local\Temp/ccMfberd.s:3      *ABS*:0000003e __SP_H__
+C:\Users\patje\AppData\Local\Temp/ccMfberd.s:4      *ABS*:0000003d __SP_L__
+C:\Users\patje\AppData\Local\Temp/ccMfberd.s:5      *ABS*:00000034 __CCP__
+C:\Users\patje\AppData\Local\Temp/ccMfberd.s:6      *ABS*:00000000 __tmp_reg__
+C:\Users\patje\AppData\Local\Temp/ccMfberd.s:7      *ABS*:00000001 __zero_reg__
+C:\Users\patje\AppData\Local\Temp/ccMfberd.s:18     .text:00000000 WriteLCD
+C:\Users\patje\AppData\Local\Temp/ccMfberd.s:465    .progmem.data:00000004 __c.1978
+C:\Users\patje\AppData\Local\Temp/ccMfberd.s:461    .progmem.data:00000002 __c.1980
+C:\Users\patje\AppData\Local\Temp/ccMfberd.s:457    .progmem.data:00000000 __c.1982
+C:\Users\patje\AppData\Local\Temp/ccMfberd.s:110    .text:000000a0 writeSerialCompass
+C:\Users\patje\AppData\Local\Temp/ccMfberd.s:557    .progmem.data:0000013c __c.1907
+C:\Users\patje\AppData\Local\Temp/ccMfberd.s:553    .progmem.data:00000120 __c.1909
+C:\Users\patje\AppData\Local\Temp/ccMfberd.s:549    .progmem.data:0000011e __c.1911
+C:\Users\patje\AppData\Local\Temp/ccMfberd.s:545    .progmem.data:00000102 __c.1913
+C:\Users\patje\AppData\Local\Temp/ccMfberd.s:541    .progmem.data:00000100 __c.1915
+C:\Users\patje\AppData\Local\Temp/ccMfberd.s:537    .progmem.data:000000e4 __c.1917
+C:\Users\patje\AppData\Local\Temp/ccMfberd.s:533    .progmem.data:000000e2 __c.1919
+C:\Users\patje\AppData\Local\Temp/ccMfberd.s:529    .progmem.data:000000cf __c.1921
+C:\Users\patje\AppData\Local\Temp/ccMfberd.s:525    .progmem.data:000000cd __c.1923
+C:\Users\patje\AppData\Local\Temp/ccMfberd.s:521    .progmem.data:000000ba __c.1925
+C:\Users\patje\AppData\Local\Temp/ccMfberd.s:517    .progmem.data:000000b8 __c.1927
+C:\Users\patje\AppData\Local\Temp/ccMfberd.s:513    .progmem.data:0000009d __c.1929
+C:\Users\patje\AppData\Local\Temp/ccMfberd.s:509    .progmem.data:0000009b __c.1931
+C:\Users\patje\AppData\Local\Temp/ccMfberd.s:505    .progmem.data:00000080 __c.1933
+C:\Users\patje\AppData\Local\Temp/ccMfberd.s:501    .progmem.data:0000007e __c.1935
+C:\Users\patje\AppData\Local\Temp/ccMfberd.s:497    .progmem.data:00000063 __c.1937
+C:\Users\patje\AppData\Local\Temp/ccMfberd.s:493    .progmem.data:00000061 __c.1939
+C:\Users\patje\AppData\Local\Temp/ccMfberd.s:489    .progmem.data:00000045 __c.1941
+C:\Users\patje\AppData\Local\Temp/ccMfberd.s:485    .progmem.data:00000043 __c.1943
+C:\Users\patje\AppData\Local\Temp/ccMfberd.s:481    .progmem.data:00000027 __c.1945
+C:\Users\patje\AppData\Local\Temp/ccMfberd.s:477    .progmem.data:00000025 __c.1947
+C:\Users\patje\AppData\Local\Temp/ccMfberd.s:473    .progmem.data:00000009 __c.1949
+C:\Users\patje\AppData\Local\Temp/ccMfberd.s:469    .progmem.data:00000007 __c.1951
+C:\Users\patje\AppData\Local\Temp/ccMfberd.s:274    .text:000001f8 ReadCompass
+C:\Users\patje\AppData\Local\Temp/ccMfberd.s:559    .bss:00000016 teller.1838
+                             .bss:00000000 CompassResult.1839
+                            *COM*:00000002 timer
+
+UNDEFINED SYMBOLS
+setCursorPosLCD
+clearLCD
+writeNStringLCD_P
+__udivmodhi4
+writeIntegerLCD
+writeCharLCD
+writeNStringP
+writeInteger
+TWI_operation
+stopwatches
+I2CTWI_transmitByte
+I2CTWI_readByte
+__do_clear_bss

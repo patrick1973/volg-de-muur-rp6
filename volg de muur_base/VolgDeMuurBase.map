@@ -1,0 +1,1059 @@
+Archive member included because of file (symbol)
+
+d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mulsi3.o)
+                              ../RP6Lib/RP6base/RP6RobotBaseLib.o (__mulsi3)
+d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+                              ../RP6Lib/RP6base/RP6RobotBaseLib.o (__udivmodhi4)
+d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodhi4.o)
+                              ../RP6Lib/RP6base/RP6RobotBaseLib.o (__divmodhi4)
+d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
+                              ../RP6Lib/RP6base/RP6RobotBaseLib.o (__udivmodsi4)
+d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                              d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o (exit)
+d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+                              ../RP6Lib/RP6base/RP6RobotBaseLib.o (__do_copy_data)
+d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+                              VolgDeMuurBase.o (__do_clear_bss)
+d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(itoa.o)
+                              ../RP6Lib/RP6common/RP6uart.o (itoa)
+d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strrev.o)
+                              d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(itoa.o) (strrev)
+
+Allocating common symbols
+Common symbol       size              file
+
+bumper_left         0x1               ../RP6Lib/RP6base/RP6RobotBaseLib.o
+preStop_R           0x2               ../RP6Lib/RP6base/RP6RobotBaseLib.o
+mright_des_speed    0x2               ../RP6Lib/RP6base/RP6RobotBaseLib.o
+interrupt_status    0x1               VolgDeMuurBase.o
+I2CTWI_genCallCMD   0x1               ../RP6Lib/RP6common/RP6I2CslaveTWI.o
+timer               0x2               VolgDeMuurBase.o
+mleft_des_speed     0x2               ../RP6Lib/RP6base/RP6RobotBaseLib.o
+mleft_des_speed_tmp
+                    0x2               ../RP6Lib/RP6base/RP6RobotBaseLib.o
+uart_status         0x1               ../RP6Lib/RP6common/RP6uart.o
+I2CTWI_writeRegisters
+                    0x10              ../RP6Lib/RP6common/RP6I2CslaveTWI.o
+motion_status       0x1               VolgDeMuurBase.o
+sysStatACS          0x1               ../RP6Lib/RP6base/RP6RobotBaseLib.o
+ircomm_send         0x1               ../RP6Lib/RP6base/RP6RobotBaseLib.o
+overcurrent_error_clear
+                    0x1               ../RP6Lib/RP6base/RP6RobotBaseLib.o
+distanceToMove_R    0x2               ../RP6Lib/RP6base/RP6RobotBaseLib.o
+drive_status        0x1               VolgDeMuurBase.o
+acs_pulse           0x1               ../RP6Lib/RP6base/RP6RobotBaseLib.o
+param6              0x1               I2Cslave.o
+left_i              0x2               ../RP6Lib/RP6base/RP6RobotBaseLib.o
+IRCOMM_RC5_data     0x2               ../RP6Lib/RP6base/RP6RobotBaseLib.o
+motor_control       0x1               ../RP6Lib/RP6base/RP6RobotBaseLib.o
+leds_on             0x1               ../RP6Lib/RP6base/RP6RobotBaseLib.o
+param1              0x1               I2Cslave.o
+mleft_power         0x2               ../RP6Lib/RP6base/RP6RobotBaseLib.o
+mleft_speed         0x2               ../RP6Lib/RP6base/RP6RobotBaseLib.o
+preDecelerate_R     0x2               ../RP6Lib/RP6base/RP6RobotBaseLib.o
+param4              0x1               I2Cslave.o
+mright_des_speed_tmp
+                    0x2               ../RP6Lib/RP6base/RP6RobotBaseLib.o
+adc1                0x2               ../RP6Lib/RP6base/RP6RobotBaseLib.o
+differenceFront     0x2               VolgDeMuurBase.o
+adcLSL              0x2               ../RP6Lib/RP6base/RP6RobotBaseLib.o
+acs_timer           0x2               ../RP6Lib/RP6base/RP6RobotBaseLib.o
+preStop_L           0x2               ../RP6Lib/RP6base/RP6RobotBaseLib.o
+mright_power        0x2               ../RP6Lib/RP6base/RP6RobotBaseLib.o
+mright_counter      0x2               ../RP6Lib/RP6base/RP6RobotBaseLib.o
+ircomm_data_tmp     0x2               ../RP6Lib/RP6base/RP6RobotBaseLib.o
+distanceToMove_L    0x2               ../RP6Lib/RP6base/RP6RobotBaseLib.o
+stopwatches         0x11              ../RP6Lib/RP6base/RP6RobotBaseLib.o
+overcurrent_timeout
+                    0x1               ../RP6Lib/RP6base/RP6RobotBaseLib.o
+obstacle_left       0x1               ../RP6Lib/RP6base/RP6RobotBaseLib.o
+overcurrent_errors  0x1               ../RP6Lib/RP6base/RP6RobotBaseLib.o
+overcurrent_timer   0x1               ../RP6Lib/RP6base/RP6RobotBaseLib.o
+statusLEDs          0x1               VolgDeMuurBase.o
+mright_ptmp         0x1               ../RP6Lib/RP6base/RP6RobotBaseLib.o
+ircomm_data         0x2               ../RP6Lib/RP6base/RP6RobotBaseLib.o
+adcLSR              0x2               ../RP6Lib/RP6base/RP6RobotBaseLib.o
+speed_adjust_timer  0x1               ../RP6Lib/RP6base/RP6RobotBaseLib.o
+param2              0x1               I2Cslave.o
+obstacle_right      0x1               ../RP6Lib/RP6base/RP6RobotBaseLib.o
+speed_timer         0x1               ../RP6Lib/RP6base/RP6RobotBaseLib.o
+right_i             0x2               ../RP6Lib/RP6base/RP6RobotBaseLib.o
+bumper_timer        0x1               ../RP6Lib/RP6base/RP6RobotBaseLib.o
+param3              0x1               I2Cslave.o
+mright_dist         0x2               ../RP6Lib/RP6base/RP6RobotBaseLib.o
+preDecelerate_L     0x2               ../RP6Lib/RP6base/RP6RobotBaseLib.o
+mleft_counter       0x2               ../RP6Lib/RP6base/RP6RobotBaseLib.o
+adc0                0x2               ../RP6Lib/RP6base/RP6RobotBaseLib.o
+delay_timer         0x1               ../RP6Lib/RP6base/RP6RobotBaseLib.o
+I2CTWI_readRegisters
+                    0x30              ../RP6Lib/RP6common/RP6I2CslaveTWI.o
+adcMotorCurrentRight
+                    0x2               ../RP6Lib/RP6base/RP6RobotBaseLib.o
+ms_timer            0x1               ../RP6Lib/RP6base/RP6RobotBaseLib.o
+param5              0x1               I2Cslave.o
+mright_speed        0x2               ../RP6Lib/RP6base/RP6RobotBaseLib.o
+mleft_dist          0x2               ../RP6Lib/RP6base/RP6RobotBaseLib.o
+bumper_right        0x1               ../RP6Lib/RP6base/RP6RobotBaseLib.o
+acs_event_counter   0x1               ../RP6Lib/RP6base/RP6RobotBaseLib.o
+motion_status_tmp   0x1               ../RP6Lib/RP6base/RP6RobotBaseLib.o
+adcBat              0x2               ../RP6Lib/RP6base/RP6RobotBaseLib.o
+uart_receive_buffer
+                    0x21              ../RP6Lib/RP6common/RP6uart.o
+IRCOMM_RC5_data_ok  0x2               ../RP6Lib/RP6base/RP6RobotBaseLib.o
+status              0x1               VolgDeMuurBase.o
+mleft_ptmp          0x1               ../RP6Lib/RP6base/RP6RobotBaseLib.o
+adcMotorCurrentLeft
+                    0x2               ../RP6Lib/RP6base/RP6RobotBaseLib.o
+cmd                 0x1               I2Cslave.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x00000000         0x00020000         xr
+data             0x00800060         0x0000ffa0         rw !x
+eeprom           0x00810000         0x00010000         rw !x
+fuse             0x00820000         0x00000400         rw !x
+lock             0x00830000         0x00000400         rw !x
+signature        0x00840000         0x00000400         rw !x
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+LOAD VolgDeMuurBase.o
+LOAD ../RP6Lib/RP6base/RP6RobotBaseLib.o
+LOAD ../RP6Lib/RP6common/RP6uart.o
+LOAD ../RP6Lib/RP6common/RP6I2CslaveTWI.o
+LOAD functionsBase.o
+LOAD I2Cslave.o
+LOAD d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a
+LOAD d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
+LOAD d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a
+LOAD d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x00000000     0x220e
+ *(.vectors)
+ .vectors       0x00000000       0x54 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+                0x00000000                __vectors
+                0x00000000                __vector_default
+ *(.vectors)
+ *(.progmem.gcc*)
+ *(.progmem*)
+ .progmem.data  0x00000054      0x1be ../RP6Lib/RP6base/RP6RobotBaseLib.o
+ .progmem.data  0x00000212       0xf9 I2Cslave.o
+                0x0000030c                . = ALIGN (0x2)
+ *fill*         0x0000030b        0x1 00
+                0x0000030c                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x0000030c        0x0 linker stubs
+ *(.trampolines*)
+                0x0000030c                __trampolines_end = .
+ *(.jumptables)
+ *(.jumptables*)
+ *(.lowtext)
+ *(.lowtext*)
+                0x0000030c                __ctors_start = .
+ *(.ctors)
+                0x0000030c                __ctors_end = .
+                0x0000030c                __dtors_start = .
+ *(.dtors)
+                0x0000030c                __dtors_end = .
+ SORT(*)(.ctors)
+ SORT(*)(.dtors)
+ *(.init0)
+ .init0         0x0000030c        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+                0x0000030c                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x0000030c        0xc d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+ *(.init2)
+ *(.init3)
+ *(.init3)
+ *(.init4)
+ .init4         0x00000318       0x16 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+                0x00000318                __do_copy_data
+ .init4         0x0000032e       0x10 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+                0x0000032e                __do_clear_bss
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x0000033e        0x8 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+ *(.init9)
+ *(.text)
+ .text          0x00000346        0x4 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+                0x00000346                __vector_12
+                0x00000346                __bad_interrupt
+                0x00000346                __vector_6
+                0x00000346                __vector_11
+                0x00000346                __vector_17
+                0x00000346                __vector_7
+                0x00000346                __vector_5
+                0x00000346                __vector_9
+                0x00000346                __vector_15
+                0x00000346                __vector_8
+                0x00000346                __vector_14
+                0x00000346                __vector_16
+                0x00000346                __vector_18
+                0x00000346                __vector_20
+ .text          0x0000034a       0x6e VolgDeMuurBase.o
+                0x0000034a                main
+ .text          0x000003b8     0x1406 ../RP6Lib/RP6base/RP6RobotBaseLib.o
+                0x000003b8                enablePowerOnWarning
+                0x00000f68                mSleep
+                0x00000592                __vector_1
+                0x000006fe                setMotorPower
+                0x00000450                getBumperRight
+                0x00000612                MOTIONCONTROL_stateChanged_DUMMY
+                0x00000896                IRCOMM_RC5dataReady_DUMMY
+                0x00000668                moveAtSpeedDirection
+                0x000003c6                disablePowerOnWarning
+                0x0000042c                setLEDs
+                0x0000158a                rotate
+                0x0000071c                setMotorDir
+                0x00000f90                extIntON
+                0x00000ba8                powerOFF
+                0x00000f58                sleep
+                0x0000084c                __vector_3
+                0x000003ce                updateStatusLEDs
+                0x00000f84                delayCycles
+                0x00000742                IRCOMM_sendRC5
+                0x00000b34                disableACS
+                0x0000046c                BUMPERS_setStateChangedHandler
+                0x00000b82                setACSPwrMed
+                0x00000898                IRCOMM_setRC5DataReadyHandler
+                0x000008a4                ACS_setStateChangedHandler
+                0x000004b6                readADC
+                0x00001690                move
+                0x00000436                getBumperLeft
+                0x000008ae                task_ACS
+                0x0000061e                moveAtSpeed
+                0x0000063c                changeDirection
+                0x00000b8c                setACSPwrHigh
+                0x00000b6a                setACSPwrOff
+                0x00000b78                setACSPwrLow
+                0x00001028                emergencyShutdown
+                0x00000476                task_Bumpers
+                0x00001578                task_RP6System
+                0x000008a2                ACS_stateChanged_DUMMY
+                0x00000788                __vector_4
+                0x00000b4e                enableACS
+                0x000005d2                __vector_2
+                0x00000f96                extIntOFF
+                0x000004d6                startADC
+                0x00000b96                powerON
+                0x00000614                MOTIONCONTROL_setStateChangedHandler
+                0x00001112                task_motionControl
+                0x00000f9c                initRobotBase
+                0x0000046a                BUMPERS_stateChanged_DUMMY
+                0x00000bcc                __vector_10
+                0x000006c4                stop
+                0x000006b4                isMovementComplete
+                0x000004e0                task_ADC
+ .text          0x000017be      0x22e ../RP6Lib/RP6common/RP6uart.o
+                0x0000187a                readChar
+                0x000018b8                readChars
+                0x000018fe                getBufferLength
+                0x0000190a                clearReceptionBuffer
+                0x000017c6                writeString
+                0x0000196e                writeIntegerLength
+                0x0000180c                __vector_13
+                0x0000192a                writeInteger
+                0x000017be                writeChar
+                0x000017ee                writeStringLength
+                0x000017da                writeNStringP
+ .text          0x000019ec      0x10e ../RP6Lib/RP6common/RP6I2CslaveTWI.o
+                0x00001a00                __vector_19
+                0x000019ec                I2CTWI_initSlave
+ .text          0x00001afa       0xe8 functionsBase.o
+                0x00001b10                printScharpSensorsValuesFront
+                0x00001afa                sensorDifferenceLeftRight
+                0x00001b94                runningLight
+                0x00001b70                readDistanceSensors
+ .text          0x00001be2      0x4f6 I2Cslave.o
+                0x00001fa6                task_update
+                0x00001dd2                task_updateRegisters
+                0x00001eea                signalInterrupt
+                0x000020aa                acsStateChanged
+                0x00001da6                clearInterrupt
+                0x00001f06                task_MasterTimeout
+                0x00001c36                task_commandProcessor
+                0x00001be2                getCommand
+                0x00002058                motionControlStateChanged
+                0x00002082                bumpersStateChanged
+ .text          0x000020d8        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mulsi3.o)
+ .text          0x000020d8        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+ .text          0x000020d8        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodhi4.o)
+ .text          0x000020d8        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
+ .text          0x000020d8        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text          0x000020d8        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .text          0x000020d8        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .text          0x000020d8        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(itoa.o)
+ .text          0x000020d8        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strrev.o)
+                0x000020d8                . = ALIGN (0x2)
+ *(.text.*)
+ .text.libgcc   0x000020d8       0x3e d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mulsi3.o)
+                0x000020d8                __mulsi3
+ .text.libgcc   0x00002116       0x28 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+                0x00002116                __udivmodhi4
+ .text.libgcc   0x0000213e       0x26 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodhi4.o)
+                0x0000213e                __divmodhi4
+                0x0000213e                _div
+ .text.libgcc   0x00002164       0x44 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
+                0x00002164                __udivmodsi4
+ .text.libgcc   0x000021a8        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text.libgcc   0x000021a8        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc   0x000021a8        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .text.avr-libc
+                0x000021a8       0x42 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(itoa.o)
+                0x000021a8                itoa
+ .text.avr-libc
+                0x000021ea       0x20 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strrev.o)
+                0x000021ea                strrev
+                0x0000220a                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x0000220a        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                0x0000220a                exit
+                0x0000220a                _exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x0000220a        0x4 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ *(.fini0)
+                0x0000220e                _etext = .
+
+.data           0x00800060       0x2e load address 0x0000220e
+                0x00800060                PROVIDE (__data_start, .)
+ *(.data)
+ .data          0x00800060        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+ .data          0x00800060        0x0 VolgDeMuurBase.o
+ .data          0x00800060        0x9 ../RP6Lib/RP6base/RP6RobotBaseLib.o
+                0x00800060                acs_state
+ .data          0x00800069        0x0 ../RP6Lib/RP6common/RP6uart.o
+ .data          0x00800069        0x0 ../RP6Lib/RP6common/RP6I2CslaveTWI.o
+ .data          0x00800069       0x21 functionsBase.o
+ .data          0x0080008a        0x3 I2Cslave.o
+                0x0080008a                uBat_measure
+                0x0080008c                leds
+ .data          0x0080008d        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mulsi3.o)
+ .data          0x0080008d        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+ .data          0x0080008d        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodhi4.o)
+ .data          0x0080008d        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
+ .data          0x0080008d        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .data          0x0080008d        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .data          0x0080008d        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .data          0x0080008d        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(itoa.o)
+ .data          0x0080008d        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strrev.o)
+ *(.data*)
+ *(.rodata)
+ *(.rodata*)
+ *(.gnu.linkonce.d*)
+                0x0080008e                . = ALIGN (0x2)
+ *fill*         0x0080008d        0x1 00
+                0x0080008e                _edata = .
+                0x0080008e                PROVIDE (__data_end, .)
+
+.bss            0x0080008e      0x104
+                0x0080008e                PROVIDE (__bss_start, .)
+ *(.bss)
+ .bss           0x0080008e        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+ .bss           0x0080008e        0x8 VolgDeMuurBase.o
+                0x0080008e                sensorWaardes
+ .bss           0x00800096       0x12 ../RP6Lib/RP6base/RP6RobotBaseLib.o
+                0x00800096                mleft_des_dir
+                0x0080009a                drive_dir
+                0x00800097                mright_des_dir
+                0x00800099                mright_dir
+                0x00800098                mleft_dir
+ .bss           0x008000a8        0x6 ../RP6Lib/RP6common/RP6uart.o
+                0x008000aa                read_size
+                0x008000a9                write_pos
+                0x008000ab                write_size
+                0x008000a8                read_pos
+ .bss           0x008000ae        0x6 ../RP6Lib/RP6common/RP6I2CslaveTWI.o
+                0x008000b0                I2CTWI_readBusy
+                0x008000ae                I2CTWI_dataWasRead
+                0x008000b1                I2CTWI_writeBusy
+                0x008000af                I2CTWI_dataReadFromReg
+ .bss           0x008000b4        0x3 functionsBase.o
+ .bss           0x008000b7        0x1 I2Cslave.o
+                0x008000b7                uBat_count
+ .bss           0x008000b8        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mulsi3.o)
+ .bss           0x008000b8        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+ .bss           0x008000b8        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodhi4.o)
+ .bss           0x008000b8        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
+ .bss           0x008000b8        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .bss           0x008000b8        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .bss           0x008000b8        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .bss           0x008000b8        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(itoa.o)
+ .bss           0x008000b8        0x0 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strrev.o)
+ *(.bss*)
+ *(COMMON)
+ COMMON         0x008000b8        0x9 VolgDeMuurBase.o
+                0x008000b8                interrupt_status
+                0x008000b9                timer
+                0x008000bb                motion_status
+                0x008000bc                drive_status
+                0x008000bd                differenceFront
+                0x008000bf                statusLEDs
+                0x008000c0                status
+ COMMON         0x008000c1       0x67 ../RP6Lib/RP6base/RP6RobotBaseLib.o
+                0x008000c1                bumper_left
+                0x008000c2                preStop_R
+                0x008000c4                mright_des_speed
+                0x008000c6                mleft_des_speed
+                0x008000c8                mleft_des_speed_tmp
+                0x008000ca                sysStatACS
+                0x008000cb                ircomm_send
+                0x008000cc                overcurrent_error_clear
+                0x008000cd                distanceToMove_R
+                0x008000cf                acs_pulse
+                0x008000d0                left_i
+                0x008000d2                IRCOMM_RC5_data
+                0x008000d4                motor_control
+                0x008000d5                leds_on
+                0x008000d6                mleft_power
+                0x008000d8                mleft_speed
+                0x008000da                preDecelerate_R
+                0x008000dc                mright_des_speed_tmp
+                0x008000de                adc1
+                0x008000e0                adcLSL
+                0x008000e2                acs_timer
+                0x008000e4                preStop_L
+                0x008000e6                mright_power
+                0x008000e8                mright_counter
+                0x008000ea                ircomm_data_tmp
+                0x008000ec                distanceToMove_L
+                0x008000ee                stopwatches
+                0x008000ff                overcurrent_timeout
+                0x00800100                obstacle_left
+                0x00800101                overcurrent_errors
+                0x00800102                overcurrent_timer
+                0x00800103                mright_ptmp
+                0x00800104                ircomm_data
+                0x00800106                adcLSR
+                0x00800108                speed_adjust_timer
+                0x00800109                obstacle_right
+                0x0080010a                speed_timer
+                0x0080010b                right_i
+                0x0080010d                bumper_timer
+                0x0080010e                mright_dist
+                0x00800110                preDecelerate_L
+                0x00800112                mleft_counter
+                0x00800114                adc0
+                0x00800116                delay_timer
+                0x00800117                adcMotorCurrentRight
+                0x00800119                ms_timer
+                0x0080011a                mright_speed
+                0x0080011c                mleft_dist
+                0x0080011e                bumper_right
+                0x0080011f                acs_event_counter
+                0x00800120                motion_status_tmp
+                0x00800121                adcBat
+                0x00800123                IRCOMM_RC5_data_ok
+                0x00800125                mleft_ptmp
+                0x00800126                adcMotorCurrentLeft
+ COMMON         0x00800128       0x22 ../RP6Lib/RP6common/RP6uart.o
+                0x00800128                uart_status
+                0x00800129                uart_receive_buffer
+ COMMON         0x0080014a       0x41 ../RP6Lib/RP6common/RP6I2CslaveTWI.o
+                0x0080014a                I2CTWI_genCallCMD
+                0x0080014b                I2CTWI_writeRegisters
+                0x0080015b                I2CTWI_readRegisters
+ COMMON         0x0080018b        0x7 I2Cslave.o
+                0x0080018b                param6
+                0x0080018c                param1
+                0x0080018d                param4
+                0x0080018e                param2
+                0x0080018f                param3
+                0x00800190                param5
+                0x00800191                cmd
+                0x00800192                PROVIDE (__bss_end, .)
+                0x0000220e                __data_load_start = LOADADDR (.data)
+                0x0000223c                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x00800192        0x0
+                0x00800192                PROVIDE (__noinit_start, .)
+ *(.noinit*)
+                0x00800192                PROVIDE (__noinit_end, .)
+                0x00800192                _end = .
+                0x00800192                PROVIDE (__heap_start, .)
+
+.eeprom         0x00810000        0x0
+ *(.eeprom*)
+                0x00810000                __eeprom_end = .
+
+.fuse
+ *(.fuse)
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature
+ *(.signature*)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment
+ *(.comment)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000       0xc0
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x20 VolgDeMuurBase.o
+ .debug_aranges
+                0x00000020       0x20 ../RP6Lib/RP6base/RP6RobotBaseLib.o
+ .debug_aranges
+                0x00000040       0x20 ../RP6Lib/RP6common/RP6uart.o
+ .debug_aranges
+                0x00000060       0x20 ../RP6Lib/RP6common/RP6I2CslaveTWI.o
+ .debug_aranges
+                0x00000080       0x20 functionsBase.o
+ .debug_aranges
+                0x000000a0       0x20 I2Cslave.o
+
+.debug_pubnames
+                0x00000000      0xd3a
+ *(.debug_pubnames)
+ .debug_pubnames
+                0x00000000       0x9d VolgDeMuurBase.o
+ .debug_pubnames
+                0x0000009d      0x829 ../RP6Lib/RP6base/RP6RobotBaseLib.o
+ .debug_pubnames
+                0x000008c6      0x138 ../RP6Lib/RP6common/RP6uart.o
+ .debug_pubnames
+                0x000009fe       0xdb ../RP6Lib/RP6common/RP6I2CslaveTWI.o
+ .debug_pubnames
+                0x00000ad9       0xa6 functionsBase.o
+ .debug_pubnames
+                0x00000b7f      0x1bb I2Cslave.o
+
+.debug_info     0x00000000     0x2b3a
+ *(.debug_info)
+ .debug_info    0x00000000      0x4e7 VolgDeMuurBase.o
+ .debug_info    0x000004e7     0x14bf ../RP6Lib/RP6base/RP6RobotBaseLib.o
+ .debug_info    0x000019a6      0x3fd ../RP6Lib/RP6common/RP6uart.o
+ .debug_info    0x00001da3      0x177 ../RP6Lib/RP6common/RP6I2CslaveTWI.o
+ .debug_info    0x00001f1a      0x39c functionsBase.o
+ .debug_info    0x000022b6      0x884 I2Cslave.o
+ *(.gnu.linkonce.wi.*)
+
+.debug_abbrev   0x00000000      0x9ce
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000      0x10f VolgDeMuurBase.o
+ .debug_abbrev  0x0000010f      0x36d ../RP6Lib/RP6base/RP6RobotBaseLib.o
+ .debug_abbrev  0x0000047c      0x1da ../RP6Lib/RP6common/RP6uart.o
+ .debug_abbrev  0x00000656       0x9f ../RP6Lib/RP6common/RP6I2CslaveTWI.o
+ .debug_abbrev  0x000006f5      0x14c functionsBase.o
+ .debug_abbrev  0x00000841      0x18d I2Cslave.o
+
+.debug_line     0x00000000     0x2248
+ *(.debug_line)
+ .debug_line    0x00000000      0x160 VolgDeMuurBase.o
+ .debug_line    0x00000160     0x155c ../RP6Lib/RP6base/RP6RobotBaseLib.o
+ .debug_line    0x000016bc      0x315 ../RP6Lib/RP6common/RP6uart.o
+ .debug_line    0x000019d1      0x1af ../RP6Lib/RP6common/RP6I2CslaveTWI.o
+ .debug_line    0x00001b80      0x197 functionsBase.o
+ .debug_line    0x00001d17      0x531 I2Cslave.o
+
+.debug_frame    0x00000000      0x550
+ *(.debug_frame)
+ .debug_frame   0x00000000       0x20 VolgDeMuurBase.o
+ .debug_frame   0x00000020      0x340 ../RP6Lib/RP6base/RP6RobotBaseLib.o
+ .debug_frame   0x00000360       0xc0 ../RP6Lib/RP6common/RP6uart.o
+ .debug_frame   0x00000420       0x30 ../RP6Lib/RP6common/RP6I2CslaveTWI.o
+ .debug_frame   0x00000450       0x50 functionsBase.o
+ .debug_frame   0x000004a0       0xb0 I2Cslave.o
+
+.debug_str      0x00000000      0xf2e
+ *(.debug_str)
+ .debug_str     0x00000000      0x2ad VolgDeMuurBase.o
+                                0x2f6 (size before relaxing)
+ .debug_str     0x000002ad      0x868 ../RP6Lib/RP6base/RP6RobotBaseLib.o
+                                0xa78 (size before relaxing)
+ .debug_str     0x00000b15      0x19b ../RP6Lib/RP6common/RP6uart.o
+                                0x246 (size before relaxing)
+ .debug_str     0x00000cb0       0xed ../RP6Lib/RP6common/RP6I2CslaveTWI.o
+                                0x1c1 (size before relaxing)
+ .debug_str     0x00000d9d       0x92 functionsBase.o
+                                0x24e (size before relaxing)
+ .debug_str     0x00000e2f       0xff I2Cslave.o
+                                0x53b (size before relaxing)
+
+.debug_loc      0x00000000      0x5aa
+ *(.debug_loc)
+ .debug_loc     0x00000000      0x3de ../RP6Lib/RP6base/RP6RobotBaseLib.o
+ .debug_loc     0x000003de      0x110 ../RP6Lib/RP6common/RP6uart.o
+ .debug_loc     0x000004ee       0x13 ../RP6Lib/RP6common/RP6I2CslaveTWI.o
+ .debug_loc     0x00000501       0x96 functionsBase.o
+ .debug_loc     0x00000597       0x13 I2Cslave.o
+
+.debug_macinfo
+ *(.debug_macinfo)
+OUTPUT(VolgDeMuurBase.elf elf32-avr)
+LOAD linker stubs
+
+.debug_ranges   0x00000000       0x48
+ .debug_ranges  0x00000000       0x48 ../RP6Lib/RP6common/RP6uart.o
+
+Cross Reference Table
+
+Symbol                                            File
+ACS_setStateChangedHandler                        ../RP6Lib/RP6base/RP6RobotBaseLib.o
+                                                  VolgDeMuurBase.o
+ACS_stateChanged_DUMMY                            ../RP6Lib/RP6base/RP6RobotBaseLib.o
+BUMPERS_setStateChangedHandler                    ../RP6Lib/RP6base/RP6RobotBaseLib.o
+                                                  VolgDeMuurBase.o
+BUMPERS_stateChanged_DUMMY                        ../RP6Lib/RP6base/RP6RobotBaseLib.o
+I2CTWI_dataReadFromReg                            ../RP6Lib/RP6common/RP6I2CslaveTWI.o
+                                                  I2Cslave.o
+I2CTWI_dataWasRead                                ../RP6Lib/RP6common/RP6I2CslaveTWI.o
+                                                  I2Cslave.o
+I2CTWI_genCallCMD                                 ../RP6Lib/RP6common/RP6I2CslaveTWI.o
+I2CTWI_initSlave                                  ../RP6Lib/RP6common/RP6I2CslaveTWI.o
+                                                  VolgDeMuurBase.o
+I2CTWI_readBusy                                   ../RP6Lib/RP6common/RP6I2CslaveTWI.o
+                                                  I2Cslave.o
+I2CTWI_readRegisters                              I2Cslave.o
+                                                  ../RP6Lib/RP6common/RP6I2CslaveTWI.o
+I2CTWI_writeBusy                                  ../RP6Lib/RP6common/RP6I2CslaveTWI.o
+                                                  I2Cslave.o
+I2CTWI_writeRegisters                             I2Cslave.o
+                                                  ../RP6Lib/RP6common/RP6I2CslaveTWI.o
+IRCOMM_RC5_data                                   ../RP6Lib/RP6base/RP6RobotBaseLib.o
+IRCOMM_RC5_data_ok                                ../RP6Lib/RP6base/RP6RobotBaseLib.o
+IRCOMM_RC5dataReady_DUMMY                         ../RP6Lib/RP6base/RP6RobotBaseLib.o
+IRCOMM_sendRC5                                    ../RP6Lib/RP6base/RP6RobotBaseLib.o
+                                                  I2Cslave.o
+IRCOMM_setRC5DataReadyHandler                     ../RP6Lib/RP6base/RP6RobotBaseLib.o
+MOTIONCONTROL_setStateChangedHandler              ../RP6Lib/RP6base/RP6RobotBaseLib.o
+                                                  VolgDeMuurBase.o
+MOTIONCONTROL_stateChanged_DUMMY                  ../RP6Lib/RP6base/RP6RobotBaseLib.o
+__bad_interrupt                                   d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__bss_end                                         d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+__bss_start                                       d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+__data_end                                        d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+__data_load_start                                 d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+__data_start                                      d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+__divmodhi4                                       d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodhi4.o)
+                                                  ../RP6Lib/RP6base/RP6RobotBaseLib.o
+__do_clear_bss                                    d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+                                                  I2Cslave.o
+                                                  functionsBase.o
+                                                  ../RP6Lib/RP6common/RP6I2CslaveTWI.o
+                                                  ../RP6Lib/RP6common/RP6uart.o
+                                                  ../RP6Lib/RP6base/RP6RobotBaseLib.o
+                                                  VolgDeMuurBase.o
+__do_copy_data                                    d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+                                                  I2Cslave.o
+                                                  functionsBase.o
+                                                  ../RP6Lib/RP6base/RP6RobotBaseLib.o
+__heap_end                                        d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__init                                            d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__mulsi3                                          d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mulsi3.o)
+                                                  ../RP6Lib/RP6base/RP6RobotBaseLib.o
+__stack                                           d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__udivmodhi4                                      d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+                                                  d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(itoa.o)
+                                                  d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodhi4.o)
+                                                  ../RP6Lib/RP6base/RP6RobotBaseLib.o
+__udivmodsi4                                      d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
+                                                  ../RP6Lib/RP6base/RP6RobotBaseLib.o
+__vector_1                                        ../RP6Lib/RP6base/RP6RobotBaseLib.o
+                                                  d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__vector_10                                       ../RP6Lib/RP6base/RP6RobotBaseLib.o
+                                                  d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__vector_11                                       d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__vector_12                                       d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__vector_13                                       ../RP6Lib/RP6common/RP6uart.o
+                                                  d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__vector_14                                       d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__vector_15                                       d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__vector_16                                       d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__vector_17                                       d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__vector_18                                       d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__vector_19                                       ../RP6Lib/RP6common/RP6I2CslaveTWI.o
+                                                  d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__vector_2                                        ../RP6Lib/RP6base/RP6RobotBaseLib.o
+                                                  d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__vector_20                                       d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__vector_3                                        ../RP6Lib/RP6base/RP6RobotBaseLib.o
+                                                  d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__vector_4                                        ../RP6Lib/RP6base/RP6RobotBaseLib.o
+                                                  d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__vector_5                                        d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__vector_6                                        d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__vector_7                                        d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__vector_8                                        d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__vector_9                                        d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__vector_default                                  d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__vectors                                         d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+_div                                              d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodhi4.o)
+_exit                                             d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+acsStateChanged                                   I2Cslave.o
+                                                  VolgDeMuurBase.o
+acs_event_counter                                 ../RP6Lib/RP6base/RP6RobotBaseLib.o
+acs_pulse                                         ../RP6Lib/RP6base/RP6RobotBaseLib.o
+acs_state                                         ../RP6Lib/RP6base/RP6RobotBaseLib.o
+acs_timer                                         ../RP6Lib/RP6base/RP6RobotBaseLib.o
+adc0                                              I2Cslave.o
+                                                  ../RP6Lib/RP6base/RP6RobotBaseLib.o
+adc1                                              I2Cslave.o
+                                                  ../RP6Lib/RP6base/RP6RobotBaseLib.o
+adcBat                                            I2Cslave.o
+                                                  ../RP6Lib/RP6base/RP6RobotBaseLib.o
+adcLSL                                            I2Cslave.o
+                                                  ../RP6Lib/RP6base/RP6RobotBaseLib.o
+adcLSR                                            I2Cslave.o
+                                                  ../RP6Lib/RP6base/RP6RobotBaseLib.o
+adcMotorCurrentLeft                               I2Cslave.o
+                                                  ../RP6Lib/RP6base/RP6RobotBaseLib.o
+adcMotorCurrentRight                              I2Cslave.o
+                                                  ../RP6Lib/RP6base/RP6RobotBaseLib.o
+bumper_left                                       I2Cslave.o
+                                                  ../RP6Lib/RP6base/RP6RobotBaseLib.o
+bumper_right                                      I2Cslave.o
+                                                  ../RP6Lib/RP6base/RP6RobotBaseLib.o
+bumper_timer                                      ../RP6Lib/RP6base/RP6RobotBaseLib.o
+bumpersStateChanged                               I2Cslave.o
+                                                  VolgDeMuurBase.o
+changeDirection                                   ../RP6Lib/RP6base/RP6RobotBaseLib.o
+                                                  I2Cslave.o
+clearInterrupt                                    I2Cslave.o
+clearReceptionBuffer                              ../RP6Lib/RP6common/RP6uart.o
+cmd                                               I2Cslave.o
+delayCycles                                       ../RP6Lib/RP6base/RP6RobotBaseLib.o
+                                                  I2Cslave.o
+delay_timer                                       ../RP6Lib/RP6base/RP6RobotBaseLib.o
+differenceFront                                   VolgDeMuurBase.o
+disableACS                                        ../RP6Lib/RP6base/RP6RobotBaseLib.o
+                                                  I2Cslave.o
+                                                  VolgDeMuurBase.o
+disablePowerOnWarning                             ../RP6Lib/RP6base/RP6RobotBaseLib.o
+distanceToMove_L                                  ../RP6Lib/RP6base/RP6RobotBaseLib.o
+distanceToMove_R                                  ../RP6Lib/RP6base/RP6RobotBaseLib.o
+drive_dir                                         ../RP6Lib/RP6base/RP6RobotBaseLib.o
+                                                  I2Cslave.o
+drive_status                                      I2Cslave.o
+                                                  VolgDeMuurBase.o
+emergencyShutdown                                 ../RP6Lib/RP6base/RP6RobotBaseLib.o
+enableACS                                         ../RP6Lib/RP6base/RP6RobotBaseLib.o
+                                                  I2Cslave.o
+enablePowerOnWarning                              ../RP6Lib/RP6base/RP6RobotBaseLib.o
+exit                                              d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                                                  d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+extIntOFF                                         ../RP6Lib/RP6base/RP6RobotBaseLib.o
+                                                  I2Cslave.o
+extIntON                                          ../RP6Lib/RP6base/RP6RobotBaseLib.o
+                                                  I2Cslave.o
+getBufferLength                                   ../RP6Lib/RP6common/RP6uart.o
+getBumperLeft                                     ../RP6Lib/RP6base/RP6RobotBaseLib.o
+getBumperRight                                    ../RP6Lib/RP6base/RP6RobotBaseLib.o
+getCommand                                        I2Cslave.o
+initRobotBase                                     ../RP6Lib/RP6base/RP6RobotBaseLib.o
+                                                  VolgDeMuurBase.o
+interrupt_status                                  I2Cslave.o
+                                                  VolgDeMuurBase.o
+ircomm_data                                       ../RP6Lib/RP6base/RP6RobotBaseLib.o
+ircomm_data_tmp                                   ../RP6Lib/RP6base/RP6RobotBaseLib.o
+ircomm_send                                       ../RP6Lib/RP6base/RP6RobotBaseLib.o
+isMovementComplete                                ../RP6Lib/RP6base/RP6RobotBaseLib.o
+                                                  I2Cslave.o
+itoa                                              d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(itoa.o)
+                                                  ../RP6Lib/RP6common/RP6uart.o
+leds                                              I2Cslave.o
+leds_on                                           ../RP6Lib/RP6base/RP6RobotBaseLib.o
+left_i                                            ../RP6Lib/RP6base/RP6RobotBaseLib.o
+mSleep                                            ../RP6Lib/RP6base/RP6RobotBaseLib.o
+main                                              VolgDeMuurBase.o
+                                                  d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+mleft_counter                                     ../RP6Lib/RP6base/RP6RobotBaseLib.o
+mleft_des_dir                                     ../RP6Lib/RP6base/RP6RobotBaseLib.o
+mleft_des_speed                                   I2Cslave.o
+                                                  ../RP6Lib/RP6base/RP6RobotBaseLib.o
+mleft_des_speed_tmp                               ../RP6Lib/RP6base/RP6RobotBaseLib.o
+mleft_dir                                         ../RP6Lib/RP6base/RP6RobotBaseLib.o
+mleft_dist                                        I2Cslave.o
+                                                  ../RP6Lib/RP6base/RP6RobotBaseLib.o
+mleft_power                                       I2Cslave.o
+                                                  ../RP6Lib/RP6base/RP6RobotBaseLib.o
+mleft_ptmp                                        ../RP6Lib/RP6base/RP6RobotBaseLib.o
+mleft_speed                                       I2Cslave.o
+                                                  ../RP6Lib/RP6base/RP6RobotBaseLib.o
+motionControlStateChanged                         I2Cslave.o
+                                                  VolgDeMuurBase.o
+motion_status                                     I2Cslave.o
+                                                  functionsBase.o
+                                                  ../RP6Lib/RP6base/RP6RobotBaseLib.o
+                                                  VolgDeMuurBase.o
+motion_status_tmp                                 ../RP6Lib/RP6base/RP6RobotBaseLib.o
+motor_control                                     ../RP6Lib/RP6base/RP6RobotBaseLib.o
+move                                              ../RP6Lib/RP6base/RP6RobotBaseLib.o
+                                                  I2Cslave.o
+moveAtSpeed                                       ../RP6Lib/RP6base/RP6RobotBaseLib.o
+                                                  I2Cslave.o
+moveAtSpeedDirection                              ../RP6Lib/RP6base/RP6RobotBaseLib.o
+mright_counter                                    ../RP6Lib/RP6base/RP6RobotBaseLib.o
+mright_des_dir                                    ../RP6Lib/RP6base/RP6RobotBaseLib.o
+mright_des_speed                                  I2Cslave.o
+                                                  ../RP6Lib/RP6base/RP6RobotBaseLib.o
+mright_des_speed_tmp                              ../RP6Lib/RP6base/RP6RobotBaseLib.o
+mright_dir                                        ../RP6Lib/RP6base/RP6RobotBaseLib.o
+mright_dist                                       I2Cslave.o
+                                                  ../RP6Lib/RP6base/RP6RobotBaseLib.o
+mright_power                                      I2Cslave.o
+                                                  ../RP6Lib/RP6base/RP6RobotBaseLib.o
+mright_ptmp                                       ../RP6Lib/RP6base/RP6RobotBaseLib.o
+mright_speed                                      I2Cslave.o
+                                                  ../RP6Lib/RP6base/RP6RobotBaseLib.o
+ms_timer                                          ../RP6Lib/RP6base/RP6RobotBaseLib.o
+obstacle_left                                     I2Cslave.o
+                                                  ../RP6Lib/RP6base/RP6RobotBaseLib.o
+obstacle_right                                    I2Cslave.o
+                                                  ../RP6Lib/RP6base/RP6RobotBaseLib.o
+overcurrent_error_clear                           ../RP6Lib/RP6base/RP6RobotBaseLib.o
+overcurrent_errors                                ../RP6Lib/RP6base/RP6RobotBaseLib.o
+overcurrent_timeout                               ../RP6Lib/RP6base/RP6RobotBaseLib.o
+overcurrent_timer                                 ../RP6Lib/RP6base/RP6RobotBaseLib.o
+param1                                            I2Cslave.o
+param2                                            I2Cslave.o
+param3                                            I2Cslave.o
+param4                                            I2Cslave.o
+param5                                            I2Cslave.o
+param6                                            I2Cslave.o
+powerOFF                                          ../RP6Lib/RP6base/RP6RobotBaseLib.o
+                                                  I2Cslave.o
+powerON                                           ../RP6Lib/RP6base/RP6RobotBaseLib.o
+                                                  I2Cslave.o
+                                                  VolgDeMuurBase.o
+preDecelerate_L                                   ../RP6Lib/RP6base/RP6RobotBaseLib.o
+preDecelerate_R                                   ../RP6Lib/RP6base/RP6RobotBaseLib.o
+preStop_L                                         ../RP6Lib/RP6base/RP6RobotBaseLib.o
+preStop_R                                         ../RP6Lib/RP6base/RP6RobotBaseLib.o
+printScharpSensorsValuesFront                     functionsBase.o
+readADC                                           ../RP6Lib/RP6base/RP6RobotBaseLib.o
+                                                  functionsBase.o
+readChar                                          ../RP6Lib/RP6common/RP6uart.o
+readChars                                         ../RP6Lib/RP6common/RP6uart.o
+readDistanceSensors                               functionsBase.o
+read_pos                                          ../RP6Lib/RP6common/RP6uart.o
+read_size                                         ../RP6Lib/RP6common/RP6uart.o
+right_i                                           ../RP6Lib/RP6base/RP6RobotBaseLib.o
+rotate                                            ../RP6Lib/RP6base/RP6RobotBaseLib.o
+                                                  I2Cslave.o
+runningLight                                      functionsBase.o
+sensorDifferenceLeftRight                         functionsBase.o
+sensorWaardes                                     VolgDeMuurBase.o
+setACSPwrHigh                                     ../RP6Lib/RP6base/RP6RobotBaseLib.o
+                                                  I2Cslave.o
+setACSPwrLow                                      ../RP6Lib/RP6base/RP6RobotBaseLib.o
+                                                  I2Cslave.o
+setACSPwrMed                                      ../RP6Lib/RP6base/RP6RobotBaseLib.o
+                                                  I2Cslave.o
+setACSPwrOff                                      ../RP6Lib/RP6base/RP6RobotBaseLib.o
+                                                  I2Cslave.o
+                                                  VolgDeMuurBase.o
+setLEDs                                           ../RP6Lib/RP6base/RP6RobotBaseLib.o
+                                                  I2Cslave.o
+                                                  functionsBase.o
+setMotorDir                                       ../RP6Lib/RP6base/RP6RobotBaseLib.o
+setMotorPower                                     ../RP6Lib/RP6base/RP6RobotBaseLib.o
+signalInterrupt                                   I2Cslave.o
+sleep                                             ../RP6Lib/RP6base/RP6RobotBaseLib.o
+speed_adjust_timer                                ../RP6Lib/RP6base/RP6RobotBaseLib.o
+speed_timer                                       ../RP6Lib/RP6base/RP6RobotBaseLib.o
+startADC                                          ../RP6Lib/RP6base/RP6RobotBaseLib.o
+status                                            I2Cslave.o
+                                                  VolgDeMuurBase.o
+statusLEDs                                        I2Cslave.o
+                                                  functionsBase.o
+                                                  ../RP6Lib/RP6base/RP6RobotBaseLib.o
+                                                  VolgDeMuurBase.o
+stop                                              ../RP6Lib/RP6base/RP6RobotBaseLib.o
+                                                  I2Cslave.o
+stopwatches                                       I2Cslave.o
+                                                  functionsBase.o
+                                                  ../RP6Lib/RP6base/RP6RobotBaseLib.o
+                                                  VolgDeMuurBase.o
+strrev                                            d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strrev.o)
+                                                  d:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(itoa.o)
+sysStatACS                                        ../RP6Lib/RP6base/RP6RobotBaseLib.o
+task_ACS                                          ../RP6Lib/RP6base/RP6RobotBaseLib.o
+task_ADC                                          ../RP6Lib/RP6base/RP6RobotBaseLib.o
+task_Bumpers                                      ../RP6Lib/RP6base/RP6RobotBaseLib.o
+task_MasterTimeout                                I2Cslave.o
+                                                  VolgDeMuurBase.o
+task_RP6System                                    ../RP6Lib/RP6base/RP6RobotBaseLib.o
+                                                  VolgDeMuurBase.o
+task_commandProcessor                             I2Cslave.o
+                                                  VolgDeMuurBase.o
+task_motionControl                                ../RP6Lib/RP6base/RP6RobotBaseLib.o
+task_update                                       I2Cslave.o
+                                                  VolgDeMuurBase.o
+task_updateRegisters                              I2Cslave.o
+                                                  VolgDeMuurBase.o
+timer                                             I2Cslave.o
+                                                  functionsBase.o
+                                                  ../RP6Lib/RP6base/RP6RobotBaseLib.o
+                                                  VolgDeMuurBase.o
+uBat_count                                        I2Cslave.o
+uBat_measure                                      I2Cslave.o
+uart_receive_buffer                               ../RP6Lib/RP6common/RP6uart.o
+uart_status                                       ../RP6Lib/RP6common/RP6uart.o
+updateStatusLEDs                                  ../RP6Lib/RP6base/RP6RobotBaseLib.o
+writeChar                                         ../RP6Lib/RP6common/RP6uart.o
+writeInteger                                      ../RP6Lib/RP6common/RP6uart.o
+                                                  functionsBase.o
+writeIntegerLength                                ../RP6Lib/RP6common/RP6uart.o
+writeNStringP                                     ../RP6Lib/RP6common/RP6uart.o
+                                                  I2Cslave.o
+                                                  ../RP6Lib/RP6base/RP6RobotBaseLib.o
+writeString                                       ../RP6Lib/RP6common/RP6uart.o
+                                                  functionsBase.o
+writeStringLength                                 ../RP6Lib/RP6common/RP6uart.o
+write_pos                                         ../RP6Lib/RP6common/RP6uart.o
+write_size                                        ../RP6Lib/RP6common/RP6uart.o
