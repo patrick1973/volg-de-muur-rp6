@@ -1,0 +1,119 @@
+   1               		.file	"VolgDeMuurBase.c"
+   2               	__SREG__ = 0x3f
+   3               	__SP_H__ = 0x3e
+   4               	__SP_L__ = 0x3d
+   5               	__CCP__  = 0x34
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+  15               	.Ltext0:
+  16               	.global	main
+  18               	main:
+  19               	.LFB2:
+  20               	.LM1:
+  21               	/* prologue: function */
+  22               	/* frame size = 0 */
+  23               	.LM2:
+  24 0000 0E94 0000 		call initRobotBase
+  25               	.LM3:
+  26 0004 8AE0      		ldi r24,lo8(10)
+  27 0006 0E94 0000 		call I2CTWI_initSlave
+  28               	.LM4:
+  29 000a 80E0      		ldi r24,lo8(gs(acsStateChanged))
+  30 000c 90E0      		ldi r25,hi8(gs(acsStateChanged))
+  31 000e 0E94 0000 		call ACS_setStateChangedHandler
+  32               	.LM5:
+  33 0012 80E0      		ldi r24,lo8(gs(bumpersStateChanged))
+  34 0014 90E0      		ldi r25,hi8(gs(bumpersStateChanged))
+  35 0016 0E94 0000 		call BUMPERS_setStateChangedHandler
+  36               	.LM6:
+  37 001a 80E0      		ldi r24,lo8(gs(motionControlStateChanged))
+  38 001c 90E0      		ldi r25,hi8(gs(motionControlStateChanged))
+  39 001e 0E94 0000 		call MOTIONCONTROL_setStateChangedHandler
+  40               	.LM7:
+  41 0022 0E94 0000 		call powerON
+  42               	.LM8:
+  43 0026 8091 0000 		lds r24,stopwatches
+  44 002a 8160      		ori r24,lo8(1)
+  45 002c 8093 0000 		sts stopwatches,r24
+  46               	.LM9:
+  47 0030 0E94 0000 		call disableACS
+  48               	.LM10:
+  49 0034 0E94 0000 		call setACSPwrOff
+  50               	.LM11:
+  51 0038 1092 0000 		sts interrupt_status,__zero_reg__
+  52               	.LM12:
+  53 003c 1092 0000 		sts drive_status,__zero_reg__
+  54               	.LM13:
+  55 0040 1092 0000 		sts status,__zero_reg__
+  56               	.LM14:
+  57 0044 8091 0000 		lds r24,stopwatches
+  58 0048 8460      		ori r24,lo8(4)
+  59 004a 8093 0000 		sts stopwatches,r24
+  60               	.LM15:
+  61 004e 8091 0000 		lds r24,stopwatches
+  62 0052 8860      		ori r24,lo8(8)
+  63 0054 8093 0000 		sts stopwatches,r24
+  64               	.L2:
+  65               	.LM16:
+  66 0058 0E94 0000 		call task_commandProcessor
+  67               	.LM17:
+  68 005c 0E94 0000 		call task_update
+  69               	.LM18:
+  70 0060 0E94 0000 		call task_updateRegisters
+  71               	.LM19:
+  72 0064 0E94 0000 		call task_RP6System
+  73               	.LM20:
+  74 0068 0E94 0000 		call task_MasterTimeout
+  75 006c 00C0      		rjmp .L2
+  76               	.LFE2:
+  78               	.global	sensorWaardes
+  79               	.global	sensorWaardes
+  80               		.section .bss
+  83               	sensorWaardes:
+  84 0000 0000 0000 		.skip 8,0
+  84      0000 0000 
+  85               		.comm statusLEDs,1,1
+  86               		.comm motion_status,1,1
+  87               		.comm timer,2,1
+  88               		.comm interrupt_status,1,1
+  89               		.comm status,1,1
+  90               		.comm drive_status,1,1
+  91               		.comm differenceFront,2,1
+ 116               	.Letext0:
+DEFINED SYMBOLS
+                            *ABS*:00000000 VolgDeMuurBase.c
+C:\Users\patje\AppData\Local\Temp/ccJ7j3vN.s:2      *ABS*:0000003f __SREG__
+C:\Users\patje\AppData\Local\Temp/ccJ7j3vN.s:3      *ABS*:0000003e __SP_H__
+C:\Users\patje\AppData\Local\Temp/ccJ7j3vN.s:4      *ABS*:0000003d __SP_L__
+C:\Users\patje\AppData\Local\Temp/ccJ7j3vN.s:5      *ABS*:00000034 __CCP__
+C:\Users\patje\AppData\Local\Temp/ccJ7j3vN.s:6      *ABS*:00000000 __tmp_reg__
+C:\Users\patje\AppData\Local\Temp/ccJ7j3vN.s:7      *ABS*:00000001 __zero_reg__
+C:\Users\patje\AppData\Local\Temp/ccJ7j3vN.s:18     .text:00000000 main
+                            *COM*:00000001 interrupt_status
+                            *COM*:00000001 drive_status
+                            *COM*:00000001 status
+C:\Users\patje\AppData\Local\Temp/ccJ7j3vN.s:83     .bss:00000000 sensorWaardes
+                            *COM*:00000001 statusLEDs
+                            *COM*:00000001 motion_status
+                            *COM*:00000002 timer
+                            *COM*:00000002 differenceFront
+
+UNDEFINED SYMBOLS
+initRobotBase
+I2CTWI_initSlave
+acsStateChanged
+ACS_setStateChangedHandler
+bumpersStateChanged
+BUMPERS_setStateChangedHandler
+motionControlStateChanged
+MOTIONCONTROL_setStateChangedHandler
+powerON
+stopwatches
+disableACS
+setACSPwrOff
+task_commandProcessor
+task_update
+task_updateRegisters
+task_RP6System
+task_MasterTimeout
+__do_clear_bss
