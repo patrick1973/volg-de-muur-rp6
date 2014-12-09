@@ -1,0 +1,218 @@
+   1               		.file	"functionsBase.c"
+   2               	__SREG__ = 0x3f
+   3               	__SP_H__ = 0x3e
+   4               	__SP_L__ = 0x3d
+   5               	__CCP__  = 0x34
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+  15               	.Ltext0:
+  16               	.global	sensorDifferenceLeftRight
+  18               	sensorDifferenceLeftRight:
+  19               	.LFB5:
+  20               	.LM1:
+  21               	.LVL0:
+  22               	/* prologue: function */
+  23               	/* frame size = 0 */
+  24 0000 FC01      		movw r30,r24
+  25               	.LM2:
+  26 0002 2081      		ld r18,Z
+  27 0004 3181      		ldd r19,Z+1
+  28 0006 8281      		ldd r24,Z+2
+  29 0008 9381      		ldd r25,Z+3
+  30               	.LVL1:
+  31 000a 281B      		sub r18,r24
+  32 000c 390B      		sbc r19,r25
+  33 000e 3595      		asr r19
+  34 0010 2795      		ror r18
+  35               	.LM3:
+  36 0012 C901      		movw r24,r18
+  37               	/* epilogue start */
+  38 0014 0895      		ret
+  39               	.LFE5:
+  41               		.data
+  42               	.LC0:
+  43 0000 4672 6F6E 		.string	"Front right : "
+  43      7420 7269 
+  43      6768 7420 
+  43      3A20 00
+  44               	.LC1:
+  45 000f 4672 6F6E 		.string	"Front left  : "
+  45      7420 6C65 
+  45      6674 2020 
+  45      3A20 00
+  46               	.LC2:
+  47 001e 0A00      		.string	"\n"
+  48               		.text
+  49               	.global	printScharpSensorsValuesFront
+  51               	printScharpSensorsValuesFront:
+  52               	.LFB4:
+  53               	.LM4:
+  54               	.LVL2:
+  55 0016 CF93      		push r28
+  56 0018 DF93      		push r29
+  57               	/* prologue: function */
+  58               	/* frame size = 0 */
+  59 001a EC01      		movw r28,r24
+  60               	.LM5:
+  61 001c 8091 0000 		lds r24,nonBlocking.1792
+  62 0020 9091 0000 		lds r25,(nonBlocking.1792)+1
+  63               	.LVL3:
+  64 0024 885E      		subi r24,lo8(1000)
+  65 0026 9340      		sbci r25,hi8(1000)
+  66 0028 00F0      		brlo .L4
+  67               	.LM6:
+  68 002a 80E0      		ldi r24,lo8(.LC0)
+  69 002c 90E0      		ldi r25,hi8(.LC0)
+  70 002e 0E94 0000 		call writeString
+  71               	.LVL4:
+  72               	.LM7:
+  73 0032 8881      		ld r24,Y
+  74 0034 9981      		ldd r25,Y+1
+  75 0036 6AE0      		ldi r22,lo8(10)
+  76 0038 0E94 0000 		call writeInteger
+  77               	.LM8:
+  78 003c 80E0      		ldi r24,lo8(.LC1)
+  79 003e 90E0      		ldi r25,hi8(.LC1)
+  80 0040 0E94 0000 		call writeString
+  81               	.LM9:
+  82 0044 8A81      		ldd r24,Y+2
+  83 0046 9B81      		ldd r25,Y+3
+  84 0048 6AE0      		ldi r22,lo8(10)
+  85 004a 0E94 0000 		call writeInteger
+  86               	.LM10:
+  87 004e 80E0      		ldi r24,lo8(.LC2)
+  88 0050 90E0      		ldi r25,hi8(.LC2)
+  89 0052 0E94 0000 		call writeString
+  90               	.LM11:
+  91 0056 1092 0000 		sts (nonBlocking.1792)+1,__zero_reg__
+  92 005a 1092 0000 		sts nonBlocking.1792,__zero_reg__
+  93               	.LVL5:
+  94               	.L4:
+  95               	.LM12:
+  96 005e 8091 0000 		lds r24,nonBlocking.1792
+  97 0062 9091 0000 		lds r25,(nonBlocking.1792)+1
+  98 0066 0196      		adiw r24,1
+  99 0068 9093 0000 		sts (nonBlocking.1792)+1,r25
+ 100 006c 8093 0000 		sts nonBlocking.1792,r24
+ 101               	/* epilogue start */
+ 102               	.LM13:
+ 103 0070 DF91      		pop r29
+ 104 0072 CF91      		pop r28
+ 105               	.LVL6:
+ 106 0074 0895      		ret
+ 107               	.LFE4:
+ 109               	.global	readDistanceSensors
+ 111               	readDistanceSensors:
+ 112               	.LFB3:
+ 113               	.LM14:
+ 114               	.LVL7:
+ 115 0076 0F93      		push r16
+ 116 0078 1F93      		push r17
+ 117               	/* prologue: function */
+ 118               	/* frame size = 0 */
+ 119 007a 8C01      		movw r16,r24
+ 120               	.LM15:
+ 121 007c 80E0      		ldi r24,lo8(0)
+ 122               	.LVL8:
+ 123 007e 0E94 0000 		call readADC
+ 124 0082 F801      		movw r30,r16
+ 125 0084 9183      		std Z+1,r25
+ 126 0086 8083      		st Z,r24
+ 127               	.LM16:
+ 128 0088 81E0      		ldi r24,lo8(1)
+ 129 008a 0E94 0000 		call readADC
+ 130 008e F801      		movw r30,r16
+ 131 0090 9383      		std Z+3,r25
+ 132 0092 8283      		std Z+2,r24
+ 133               	/* epilogue start */
+ 134               	.LM17:
+ 135 0094 1F91      		pop r17
+ 136 0096 0F91      		pop r16
+ 137               	.LVL9:
+ 138 0098 0895      		ret
+ 139               	.LFE3:
+ 141               	.global	runningLight
+ 143               	runningLight:
+ 144               	.LFB2:
+ 145               	.LM18:
+ 146               	/* prologue: function */
+ 147               	/* frame size = 0 */
+ 148               	.LM19:
+ 149 009a 8091 0000 		lds r24,stopwatches+1
+ 150 009e 9091 0000 		lds r25,(stopwatches+1)+1
+ 151 00a2 8536      		cpi r24,101
+ 152 00a4 9105      		cpc r25,__zero_reg__
+ 153 00a6 00F0      		brlo .L14
+ 154               	.LM20:
+ 155 00a8 8091 0000 		lds r24,runLight.1773
+ 156 00ac 0E94 0000 		call setLEDs
+ 157               	.LM21:
+ 158 00b0 8091 0000 		lds r24,dir.1774
+ 159 00b4 9091 0000 		lds r25,runLight.1773
+ 160 00b8 8823      		tst r24
+ 161 00ba 01F4      		brne .L10
+ 162               	.LM22:
+ 163 00bc 990F      		lsl r25
+ 164 00be 00C0      		rjmp .L15
+ 165               	.L10:
+ 166               	.LM23:
+ 167 00c0 9695      		lsr r25
+ 168               	.L15:
+ 169 00c2 9093 0000 		sts runLight.1773,r25
+ 170               	.LM24:
+ 171 00c6 8091 0000 		lds r24,runLight.1773
+ 172 00ca 8830      		cpi r24,lo8(8)
+ 173 00cc 00F0      		brlo .L12
+ 174               	.LM25:
+ 175 00ce 81E0      		ldi r24,lo8(1)
+ 176 00d0 8093 0000 		sts dir.1774,r24
+ 177 00d4 00C0      		rjmp .L13
+ 178               	.L12:
+ 179               	.LM26:
+ 180 00d6 8230      		cpi r24,lo8(2)
+ 181 00d8 00F4      		brsh .L13
+ 182               	.LM27:
+ 183 00da 1092 0000 		sts dir.1774,__zero_reg__
+ 184               	.L13:
+ 185               	.LM28:
+ 186 00de 1092 0000 		sts (stopwatches+1)+1,__zero_reg__
+ 187 00e2 1092 0000 		sts stopwatches+1,__zero_reg__
+ 188               	.L14:
+ 189 00e6 0895      		ret
+ 190               	.LFE2:
+ 192               		.lcomm nonBlocking.1792,2
+ 193               		.lcomm dir.1774,1
+ 194               		.data
+ 197               	runLight.1773:
+ 198 0020 01        		.byte	1
+ 199               		.comm statusLEDs,1,1
+ 200               		.comm motion_status,1,1
+ 201               		.comm timer,2,1
+ 250               	.Letext0:
+DEFINED SYMBOLS
+                            *ABS*:00000000 functionsBase.c
+C:\Users\patje\AppData\Local\Temp/ccps5kBn.s:2      *ABS*:0000003f __SREG__
+C:\Users\patje\AppData\Local\Temp/ccps5kBn.s:3      *ABS*:0000003e __SP_H__
+C:\Users\patje\AppData\Local\Temp/ccps5kBn.s:4      *ABS*:0000003d __SP_L__
+C:\Users\patje\AppData\Local\Temp/ccps5kBn.s:5      *ABS*:00000034 __CCP__
+C:\Users\patje\AppData\Local\Temp/ccps5kBn.s:6      *ABS*:00000000 __tmp_reg__
+C:\Users\patje\AppData\Local\Temp/ccps5kBn.s:7      *ABS*:00000001 __zero_reg__
+C:\Users\patje\AppData\Local\Temp/ccps5kBn.s:18     .text:00000000 sensorDifferenceLeftRight
+C:\Users\patje\AppData\Local\Temp/ccps5kBn.s:51     .text:00000016 printScharpSensorsValuesFront
+                             .bss:00000000 nonBlocking.1792
+C:\Users\patje\AppData\Local\Temp/ccps5kBn.s:111    .text:00000076 readDistanceSensors
+C:\Users\patje\AppData\Local\Temp/ccps5kBn.s:143    .text:0000009a runningLight
+C:\Users\patje\AppData\Local\Temp/ccps5kBn.s:197    .data:00000020 runLight.1773
+C:\Users\patje\AppData\Local\Temp/ccps5kBn.s:192    .bss:00000002 dir.1774
+                            *COM*:00000001 statusLEDs
+                            *COM*:00000001 motion_status
+                            *COM*:00000002 timer
+
+UNDEFINED SYMBOLS
+writeString
+writeInteger
+readADC
+stopwatches
+setLEDs
+__do_copy_data
+__do_clear_bss
